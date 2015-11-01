@@ -16,9 +16,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var homeScrollViewOffsetX: CGFloat!
     
     // REQUESTS
+
     @IBOutlet weak var timRequestView: UIView!
-    @IBOutlet weak var williamRequestView: UIImageView!
-    @IBOutlet weak var oaklandRequestView: UIImageView!
+    @IBOutlet weak var williamRequestView: UIView!
+    @IBOutlet weak var oaklandRequestView: UIView!
     
     // SELECTED REQUESTS
     var selectedView: UIView!

@@ -485,55 +485,20 @@ other users. Fast!</string>
                                 <animations/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="oze-Ek-2fq" userLabel="Request Scroll View">
-                                <rect key="frame" x="0.0" y="72" width="1665" height="544"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1665" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Jeremie" id="J1W-8v-iUK">
-                                        <rect key="frame" x="139" y="233" width="219" height="209"/>
+                                        <rect key="frame" x="139" y="328" width="219" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - USCF" id="DCc-sB-Dtq">
-                                        <rect key="frame" x="455" y="339" width="180" height="159"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Annabel" id="PiN-kB-OwK">
-                                        <rect key="frame" x="571" y="100" width="227" height="217"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Caroline" id="VpN-Nd-wzm">
-                                        <rect key="frame" x="783" y="207" width="182" height="175"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Oakland Donation" id="k9B-6E-nEp">
-                                        <rect key="frame" x="956" y="15" width="173" height="162"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Jessica Sanchez" id="xB8-fx-cb1">
-                                        <rect key="frame" x="1041" y="335" width="186" height="175"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Mark" id="can-p8-z30">
-                                        <rect key="frame" x="1213" y="50" width="227" height="217"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Impact Hub" id="Tq6-KH-Fkb">
-                                        <rect key="frame" x="1438" y="212" width="204" height="190"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="Th4-3K-Kgr" userLabel="Request - William">
-                                        <rect key="frame" x="311" y="42" width="182" height="175"/>
+                                    <view contentMode="scaleToFill" id="Dt8-rp-a2P">
+                                        <rect key="frame" x="956" y="109" width="173" height="162"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="center" image="Blob - Pink" id="H9N-En-Qwk">
-                                                <rect key="frame" x="0.0" y="0.0" width="182" height="175"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Oakland Donation" id="k9B-6E-nEp">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="162"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <animations/>
                                             </imageView>
@@ -542,7 +507,7 @@ other users. Fast!</string>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view tag="20" contentMode="scaleToFill" id="1Db-3s-Rbo" userLabel="Request - Tim">
-                                        <rect key="frame" x="43" y="66" width="178" height="167"/>
+                                        <rect key="frame" x="43" y="161" width="178" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="center" image="Blob - Medium" id="udY-bP-AHe" userLabel="Blob - Red Medium">
@@ -575,6 +540,49 @@ other users. Fast!</string>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.3852647569" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - USCF" id="DCc-sB-Dtq">
+                                        <rect key="frame" x="455" y="434" width="180" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Annabel" id="PiN-kB-OwK">
+                                        <rect key="frame" x="571" y="195" width="227" height="217"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Caroline" id="VpN-Nd-wzm">
+                                        <rect key="frame" x="783" y="302" width="182" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Jessica Sanchez" id="xB8-fx-cb1">
+                                        <rect key="frame" x="1041" y="430" width="186" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Mark" id="can-p8-z30">
+                                        <rect key="frame" x="1213" y="145" width="227" height="217"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Request - Impact Hub" id="Tq6-KH-Fkb">
+                                        <rect key="frame" x="1438" y="307" width="204" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="Th4-3K-Kgr" userLabel="Request - William">
+                                        <rect key="frame" x="311" y="137" width="182" height="175"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="center" image="Blob - Pink" id="H9N-En-Qwk">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="175"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <animations/>
                             </scrollView>
@@ -602,9 +610,9 @@ other users. Fast!</string>
                     <size key="freeformSize" width="1665" height="667"/>
                     <connections>
                         <outlet property="homeScrollView" destination="oze-Ek-2fq" id="qL0-QF-e7v"/>
-                        <outlet property="oaklandRequestView" destination="k9B-6E-nEp" id="NQJ-KX-vK4"/>
-                        <outlet property="timRequestView" destination="1Db-3s-Rbo" id="UuC-ae-bdO"/>
-                        <outlet property="williamRequestView" destination="H9N-En-Qwk" id="iDM-Lr-aW4"/>
+                        <outlet property="oaklandRequestView" destination="Dt8-rp-a2P" id="AVH-Kv-h95"/>
+                        <outlet property="timRequestView" destination="1Db-3s-Rbo" id="wwQ-Ku-AYH"/>
+                        <outlet property="williamRequestView" destination="Th4-3K-Kgr" id="Jlf-sZ-BOt"/>
                         <segue destination="vrC-u6-YWv" kind="modal" identifier="requestDetailSegue" id="nAD-sV-W5c"/>
                     </connections>
                 </viewController>
