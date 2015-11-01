@@ -45,6 +45,38 @@ class SignUpViewController: UIViewController {
                 //..
         }
         
+        for i in 0...18 {
+            
+            let platelet = UIView()
+            platelet.frame = CGRect(x: 55, y: 300, width: 100, height: 100)
+            platelet.backgroundColor = UIColor(red:0.76, green:0.18, blue:0.18, alpha:0.9)
+            platelet.layer.cornerRadius = 50
+            
+            self.view.addSubview(platelet)
+            
+            let randomYOffset = CGFloat(arc4random_uniform(150))
+            
+            let path = UIBezierPath()
+            path.moveToPoint(CGPoint(x: -106, y: 439 + randomYOffset))
+            path .addCurveToPoint(CGPoint(x: 481, y: 539 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 473 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 310 + randomYOffset))
+            
+            
+            
+            let anim = CAKeyframeAnimation(keyPath: "position")
+            
+            anim.path = path.CGPath
+            
+            anim.rotationMode = kCAAnimationRotateAuto
+            anim.repeatCount = Float.infinity
+            anim.duration = Double(arc4random_uniform(40)+30) / 7
+            anim.timeOffset = Double(arc4random_uniform(90))
+            
+            platelet.layer.addAnimation(anim, forKey: "animate position along path")
+            
+            self.view.sendSubviewToBack(platelet)
+            
+        }
+
     }
     
     @IBAction func signUpButtonDidTouch(sender: UIButton) {
