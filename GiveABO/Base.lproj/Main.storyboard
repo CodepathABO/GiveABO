@@ -584,7 +584,7 @@ other users. Fast!</string>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OJO-Vb-PBj" userLabel="New Request">
-                                <rect key="frame" x="172" y="29" width="30" height="30"/>
+                                <rect key="frame" x="330" y="36" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" title=" "/>
@@ -611,6 +611,37 @@ other users. Fast!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWE-ph-wo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2391.5" y="1150.5"/>
+        </scene>
+        <!--New Request View Controller-->
+        <scene sceneID="fOj-xe-yZB">
+            <objects>
+                <viewController id="HZh-Hl-Rgb" customClass="NewRequestViewController" customModule="GiveABO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lkj-pk-FyV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="New Request" id="hlu-bV-t4U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qPm-L3-HiI">
+                                <rect key="frame" x="57" y="575" width="260" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="onPost:" destination="HZh-Hl-Rgb" eventType="touchUpInside" id="uYl-xh-LDu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1z-pn-M6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3523.5" y="1150.5"/>
         </scene>
         <!--Request Detail View Controller-->
         <scene sceneID="yhy-KT-0in">
@@ -657,6 +688,7 @@ other users. Fast!</string>
         <image name="GiveABO-Logo" width="98" height="86"/>
         <image name="Initial Screen" width="375" height="667"/>
         <image name="Jessica Sanchez" width="186" height="175"/>
+        <image name="New Request" width="375" height="667"/>
         <image name="Request - Annabel" width="227" height="217"/>
         <image name="Request - Caroline" width="182" height="175"/>
         <image name="Request - Impact Hub" width="204" height="190"/>

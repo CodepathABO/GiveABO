@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var newRequestListener = 0
+
 func CGAffineTransformMakeDegreeRotation(rotation: CGFloat) -> CGAffineTransform {
     return CGAffineTransformMakeRotation(rotation * CGFloat(M_PI / 180))
 }
