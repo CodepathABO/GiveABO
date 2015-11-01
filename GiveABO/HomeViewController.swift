@@ -2,8 +2,8 @@
 //  HomeViewController.swift
 //  GiveABO
 //
-//  Created by Sebastian Drew on 10/31/15.
-//  Copyright © 2015 los. All rights reserved.
+//  Created by Sybico, Christopher on 10/30/15.
+//  Copyright © 2015 Sybico, Christopher. All rights reserved.
 //
 
 import UIKit
