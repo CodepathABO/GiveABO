@@ -24,6 +24,10 @@
 		3AC2AEBD1BE5D563003D5E88 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */; };
 		3AC2AEBE1BE5D563003D5E88 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */; };
 		3AC2AEBF1BE5D563003D5E88 /* BlobTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */; };
+<<<<<<< HEAD
+=======
+		A7B9B3FC1BE6E30E0021D277 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B9B3FB1BE6E30E0021D277 /* Home.storyboard */; };
+>>>>>>> origin/master
 		C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C950C01BE6DAA700D04638 /* Signup.storyboard */; };
 		C3C950C31BE6DF2000D04638 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C950C21BE6DF2000D04638 /* HelloViewController.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,7 @@
 		3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlobTransition.swift; sourceTree = "<group>"; };
+		A7B9B3FB1BE6E30E0021D277 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C3C950C01BE6DAA700D04638 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		C3C950C21BE6DF2000D04638 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +144,18 @@
 				3A8275251BE53EFC00CF68C7 /* ViewController.swift */,
 				3A8275271BE53EFC00CF68C7 /* Main.storyboard */,
 				C3C950C01BE6DAA700D04638 /* Signup.storyboard */,
+<<<<<<< HEAD
 				3A47B1CF1BE6E2FF001016AD /* Controllers */,
+=======
+				A7B9B3FB1BE6E30E0021D277 /* Home.storyboard */,
+				C3C950C21BE6DF2000D04638 /* HelloViewController.swift */,
+				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
+				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
+				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
+				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
+				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
+				3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */,
+>>>>>>> origin/master
 				3AC2AEB81BE5CE77003D5E88 /* Common.swift */,
 				3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */,
 				3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */,
@@ -275,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A82752E1BE53EFC00CF68C7 /* LaunchScreen.storyboard in Resources */,
+				A7B9B3FC1BE6E30E0021D277 /* Home.storyboard in Resources */,
 				C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */,
 				3A82752B1BE53EFC00CF68C7 /* Assets.xcassets in Resources */,
 				3A8275291BE53EFC00CF68C7 /* Main.storyboard in Resources */,
