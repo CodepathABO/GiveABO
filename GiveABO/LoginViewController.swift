@@ -85,7 +85,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         }
         
         if usernameField.text == "x" && passwordField.text == "x" {
-            performSegueWithIdentifier("requestsSegue", sender: self)
+           //  performSegueWithIdentifier("requestsSegue", sender: self)
+            
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            
+            let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
+            
+            self.presentViewController(controller, animated: true, completion: nil)
         }
         
     }
