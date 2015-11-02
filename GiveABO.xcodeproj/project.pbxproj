@@ -24,8 +24,8 @@
 		3AC2AEBD1BE5D563003D5E88 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */; };
 		3AC2AEBE1BE5D563003D5E88 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */; };
 		3AC2AEBF1BE5D563003D5E88 /* BlobTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */; };
-		C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C950C01BE6DAA700D04638 /* Signup.storyboard */; settings = {ASSET_TAGS = (); }; };
-		C3C950C31BE6DF2000D04638 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C950C21BE6DF2000D04638 /* HelloViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C950C01BE6DAA700D04638 /* Signup.storyboard */; };
+		C3C950C31BE6DF2000D04638 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C950C21BE6DF2000D04638 /* HelloViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +98,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A47B1CF1BE6E2FF001016AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3C950C21BE6DF2000D04638 /* HelloViewController.swift */,
+				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
+				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
+				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
+				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
+				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
+				3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		3A8275171BE53EFB00CF68C7 = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +139,7 @@
 				3A8275251BE53EFC00CF68C7 /* ViewController.swift */,
 				3A8275271BE53EFC00CF68C7 /* Main.storyboard */,
 				C3C950C01BE6DAA700D04638 /* Signup.storyboard */,
-				C3C950C21BE6DF2000D04638 /* HelloViewController.swift */,
-				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
-				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
-				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
-				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
-				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
-				3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */,
+				3A47B1CF1BE6E2FF001016AD /* Controllers */,
 				3AC2AEB81BE5CE77003D5E88 /* Common.swift */,
 				3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */,
 				3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */,
