@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */; };
+		3A47B20B1BE6E707001016AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A47B20A1BE6E707001016AD /* Home.storyboard */; };
 		3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */; };
 		3A8275261BE53EFC00CF68C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275251BE53EFC00CF68C7 /* ViewController.swift */; };
 		3A8275291BE53EFC00CF68C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8275271BE53EFC00CF68C7 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
+		3A47B20A1BE6E707001016AD /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3A8275201BE53EFB00CF68C7 /* GiveABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiveABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8275251BE53EFC00CF68C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				3A8275251BE53EFC00CF68C7 /* ViewController.swift */,
 				3A8275271BE53EFC00CF68C7 /* Main.storyboard */,
 				C3C950C01BE6DAA700D04638 /* Signup.storyboard */,
+				3A47B20A1BE6E707001016AD /* Home.storyboard */,
 				3A47B1CF1BE6E2FF001016AD /* Controllers */,
 				3AC2AEB81BE5CE77003D5E88 /* Common.swift */,
 				3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A82752E1BE53EFC00CF68C7 /* LaunchScreen.storyboard in Resources */,
+				3A47B20B1BE6E707001016AD /* Home.storyboard in Resources */,
 				C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */,
 				3A82752B1BE53EFC00CF68C7 /* Assets.xcassets in Resources */,
 				3A8275291BE53EFC00CF68C7 /* Main.storyboard in Resources */,
