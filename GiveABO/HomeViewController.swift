@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  GiveABO
+//  abo-v2
 //
 //  Created by Sybico, Christopher on 10/30/15.
 //  Copyright © 2015 Sybico, Christopher. All rights reserved.
@@ -9,17 +9,25 @@
 import UIKit
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
-
+    
     
     // REQUEST SCROLL
     @IBOutlet weak var homeScrollView: UIScrollView!
     var homeScrollViewOffsetX: CGFloat!
     
+    
     // REQUESTS
-
     @IBOutlet weak var timRequestView: UIView!
-    @IBOutlet weak var williamRequestView: UIView!
-    @IBOutlet weak var oaklandRequestView: UIView!
+    @IBOutlet weak var jeremieRequestView: UIView!
+    @IBOutlet weak var annabelRequestView: UIView!
+    @IBOutlet weak var carolineRequestView: UIView!
+    @IBOutlet weak var markRequestView: UIView!
+    @IBOutlet weak var ucsfRequestView: UIView!
+    
+    // BLOBS
+    var blob: UIImageView!
+    var blobCoat: UIImageView!
+    
     
     // SELECTED REQUESTS
     var selectedView: UIView!
@@ -32,14 +40,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var blobTransition: BlobTransition!
     
     
+    // DID LOAD
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        // STATUSBAR STYLES
         
-        UIApplication.sharedApplication().statusBarStyle = .Default
-        UIApplication.sharedApplication().statusBarHidden = false
-
         // SETUP HOME SCROLLVIEW
         homeScrollView.contentSize = CGSize(width: 1665, height: 381)
         homeScrollView.delegate = self
@@ -47,26 +53,86 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         
         // SET UP TAP GESTURE RECOGNISER
-        let williamTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let timtap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-        let oaklandTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let jeremieTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let annabelTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let carolineTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let markTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let ucsfTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         
         
         // SET UP TAPS FOR REQUESTS
-        williamRequestView.addGestureRecognizer(williamTap)
         timRequestView.addGestureRecognizer(timtap)
-        oaklandRequestView.addGestureRecognizer(oaklandTap)
+        jeremieRequestView.addGestureRecognizer(jeremieTap)
+        annabelRequestView.addGestureRecognizer(annabelTap)
+        carolineRequestView.addGestureRecognizer(carolineTap)
+        markRequestView.addGestureRecognizer(markTap)
+        ucsfRequestView.addGestureRecognizer(ucsfTap)
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+
+        showBlobs(timRequestView)
+        showBlobs(jeremieRequestView)
+        showBlobs(annabelRequestView)
+        showBlobs(carolineRequestView)
+        showBlobs(markRequestView)
+        showBlobs(ucsfRequestView)
+    }
+    
+    func showBlobs(requestView: UIView) {
+        
+        print("move blobs")
+        
+        let blob = requestView.viewWithTag(10) as! UIImageView
+        let blobCoat = requestView.viewWithTag(11) as! UIImageView
+        
+        let rotation = 180
+        blob.alpha = 1
+        
+        
+        // BLOB SIZE
+        UIView.animateWithDuration(
+            2,
+            delay: 0,
+            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
+            animations: { () -> Void in
+                
+                blob.transform = CGAffineTransformScale(blob.transform, 1.05, 1.03)
+            },
+            
+            completion: nil
+        )
+        
+        
+        
+        
+        // BLOB COAT ROTATION
+        UIView.animateWithDuration(
+            16,
+            delay: 0,
+            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
+            animations: { () -> Void in
+                
+                blobCoat.transform = CGAffineTransformMakeRotation(CGFloat(Double(rotation) * M_PI / 180))
+            },
+            
+            completion: nil
+        )
+    }
+    
     
     // LISTEN TO HOME SCROLL
     func scrollViewDidScroll(scrollView: UIScrollView) {
         homeScrollViewOffsetX = homeScrollView.contentOffset.x
     }
-
+    
     
     // TAP ON REQUEST
     func didTapRequest(sender: UITapGestureRecognizer) {
+        
+        print("tap")
         
         // STORE SELECTED VIEW
         selectedView = sender.view
@@ -96,6 +162,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
+    
 }

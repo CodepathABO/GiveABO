@@ -48,6 +48,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        
 
     }
     
@@ -62,6 +64,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
             }) { (Bool) -> Void in
                 // ..
         }
+        
+        
         
         
     }
@@ -86,15 +90,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         
         if usernameField.text == "x" && passwordField.text == "x" {
            //  performSegueWithIdentifier("requestsSegue", sender: self)
-            
+
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            
             let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
-            
             self.presentViewController(controller, animated: true, completion: nil)
+            
         }
         
     }
+    
+    
+    
     
     @IBAction func cancelButtonDidTouch(sender: UIButton) {
         loginView.endEditing(true)
