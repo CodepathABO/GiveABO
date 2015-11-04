@@ -16,12 +16,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var registerCheckView: UIView!
+    @IBOutlet weak var registeredLabel: UILabel!
+    @IBOutlet weak var signupButton: UIButton!
+    
+    var signupActive = false
     
     var initialY: CGFloat!
     let offset: CGFloat = -100
     
     var cancelInitialY: CGFloat!
     let cancelOffset: CGFloat = -180
+    
+    var registeredInitialY: CGFloat!
+    let registeredOffset: CGFloat = -100
     
     var forgotInitialY: CGFloat!
     let forgotOffset: CGFloat = -100
@@ -37,14 +46,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         usernameField.becomeFirstResponder()
         
         usernameField.attributedPlaceholder = NSAttributedString(string:"Username",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+            attributes:[NSForegroundColorAttributeName: UIColor(red:0.53, green:0.05, blue:0.00, alpha:1.0)])
         
         passwordField.attributedPlaceholder = NSAttributedString(string:"Password",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+            attributes:[NSForegroundColorAttributeName: UIColor(red:0.53, green:0.05, blue:0.00, alpha:1.0)])
         
         initialY = loginView.frame.origin.y
+        registeredInitialY = registerCheckView.frame.origin.y
         forgotInitialY = forgotPassword.frame.origin.y
         cancelInitialY = cancelButton.frame.origin.y
+        
+        activityIndicator.hidesWhenStopped = true
+
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
@@ -86,20 +99,110 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
                     })
             })
             
-        }
+        } else {
         
-        if usernameField.text == "x" && passwordField.text == "x" {
-           //  performSegueWithIdentifier("requestsSegue", sender: self)
-
-            let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
-            self.presentViewController(controller, animated: true, completion: nil)
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            activityIndicator.startAnimating()
             
+            
+            var errorMessage = "Please try again later"
+            
+            if signupActive == true {
+                
+                
+                var user = PFUser()
+                user.username = usernameField.text
+                user.password = passwordField.text
+                
+                user.signUpInBackgroundWithBlock {
+                    (succeeded: Bool, error: NSError?) -> Void in
+                    
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    
+                    if let error = error {
+                        let errorString = error.userInfo["error"] as? String
+                        
+                        
+                        print("error")
+                        
+                        errorMessage = errorString!
+                        
+                        self.displayAlert("Failed signup", message: errorMessage)
+                        
+                    } else {
+                        // Hooray! Let them use the app now.
+                        
+                        self.performSegueWithIdentifier("parseit", sender: self)
+                    }
+                    
+                }
+                
+            } else {
+
+        
+        PFUser.logInWithUsernameInBackground(usernameField.text!, password:passwordField.text!) {
+            (user: PFUser?, error: NSError?) -> Void in
+            
+            self.activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            
+            if user != nil {
+                
+                // Do stuff after successful login.
+                
+//                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//                let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
+//                self.presentViewController(controller, animated: true, completion: nil)
+
+                
+                print("YAY!")
+                
+            } else {
+                
+                // The login failed. Check error to see why.
+                
+                if let error = error {
+                    let errorString = error.userInfo["error"] as? String
+                    
+                    
+                    print("error")
+                    
+                    errorMessage = errorString!
+                    
+                    self.displayAlert("Failed Login", message: errorMessage)
+                    }
+                    
+                }
+                
+            }
         }
         
+        }
     }
     
     
+    @IBAction func signUpButtonDidTouch(sender: UIButton) {
+        
+        if signupActive == false {
+            loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
+            
+            registeredLabel.text = "Already registered?"
+            
+            signupButton.setTitle("Log In", forState: UIControlState.Normal)
+            
+            signupActive = true
+            
+        } else {
+             loginButton.setTitle("Log In", forState: UIControlState.Normal)
+            
+            registeredLabel.text = "Not registered?"
+            
+            signupButton.setTitle("Sign In", forState: UIControlState.Normal)
+            
+        }
+
+    }
     
     
     @IBAction func cancelButtonDidTouch(sender: UIButton) {
@@ -115,7 +218,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         
         loginView.frame.origin = CGPoint(x: loginView.frame.origin.x, y: initialY + offset)
         forgotPassword.frame.origin = CGPoint(x: forgotPassword.frame.origin.x, y: forgotInitialY + forgotOffset)
-        
+        registerCheckView.frame.origin = CGPoint(x: registerCheckView.frame.origin.x, y: registeredInitialY + forgotOffset)
         cancelButton.frame.origin = CGPoint(x: cancelButton.frame.origin.x, y: cancelInitialY + cancelOffset)
     }
     
@@ -123,7 +226,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         
         loginView.frame.origin = CGPoint(x: loginView.frame.origin.x, y: initialY)
         forgotPassword.frame.origin = CGPoint(x: forgotPassword.frame.origin.x, y: forgotInitialY)
-        
+        registerCheckView.frame.origin = CGPoint(x: registerCheckView.frame.origin.x, y: registeredInitialY)
         cancelButton.frame.origin = CGPoint(x: cancelButton.frame.origin.x, y: cancelInitialY)
         
     }
@@ -134,6 +237,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         return true
     }
     
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        })))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
