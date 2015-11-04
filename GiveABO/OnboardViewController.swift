@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
+class OnboardViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -19,7 +19,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewContr
     @IBOutlet weak var introContentFourView: UIView!
     
     @IBOutlet weak var getStartedButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     
     var btnOriginYPos: CGFloat!
@@ -70,6 +70,39 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewContr
         getStartedButton.transform = CGAffineTransformMakeRotation(CGFloat(20 * M_PI / 180))
         
         pageControl.alpha = 0
+        
+        for i in 0...18 {
+            
+            let platelet = UIView()
+            platelet.frame = CGRect(x: 55, y: 300, width: 100, height: 100)
+            platelet.backgroundColor = UIColor(red:0.59, green:0.14, blue:0.14, alpha:1.0)
+            platelet.layer.cornerRadius = 50
+            
+            self.view.addSubview(platelet)
+            
+            let randomYOffset = CGFloat(arc4random_uniform(150))
+            
+            let path = UIBezierPath()
+            path.moveToPoint(CGPoint(x: -106, y: 439 + randomYOffset))
+            path .addCurveToPoint(CGPoint(x: 481, y: 539 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 473 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 310 + randomYOffset))
+            
+            
+            
+            let anim = CAKeyframeAnimation(keyPath: "position")
+            
+            anim.path = path.CGPath
+            
+            anim.rotationMode = kCAAnimationRotateAuto
+            anim.repeatCount = Float.infinity
+            anim.duration = Double(arc4random_uniform(40)+30) / 7
+            anim.timeOffset = Double(arc4random_uniform(90))
+            
+            platelet.layer.addAnimation(anim, forKey: "animate position along path")
+            
+            self.view.sendSubviewToBack(platelet)
+            
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -94,15 +127,24 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewContr
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
+    
+    
+    
     
     // MARK: ACTIONS
     
     
-    @IBAction func cancelButtonDidTouch(sender: UIButton) {
+    @IBAction func signInButtonDidTouch(sender: UIButton) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        performSegueWithIdentifier("signInSegue", sender: self)
         
     }
+
     
     
     // MARK: SCROLLVIEW CONTROL
@@ -132,7 +174,6 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewContr
             introContentOneView.transform = CGAffineTransformScale(introContentOneView.transform, CGFloat(scale), CGFloat(scale))
             introContentOneView.transform = CGAffineTransformRotate(introContentOneView.transform, CGFloat(Double(rotation) * M_PI / 180))
             introContentOneView.alpha = bubbleAlpha
-            
         }
         
         
@@ -151,7 +192,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewContr
             introContentOneView.transform = CGAffineTransformScale(introContentOneView.transform, CGFloat(scale), CGFloat(scale))
             introContentOneView.transform = CGAffineTransformRotate(introContentOneView.transform, CGFloat(Double(rotation) * M_PI / 180))
             introContentOneView.alpha = bubbleAlpha
-            cancelButton.alpha = bubbleAlpha
+            signInButton.alpha = bubbleAlpha
             
             
             let introTwoX = convertValue(currentOffset, r1Min: 0, r1Max: 375, r2Min: 0, r2Max: 0)
@@ -300,12 +341,6 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate, UIViewContr
         }
         
         
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        modalPresentationStyle = UIModalPresentationStyle.Custom
-        transitioningDelegate = self
     }
     
 
