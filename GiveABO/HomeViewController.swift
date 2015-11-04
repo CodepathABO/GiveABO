@@ -24,7 +24,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var markRequestView: UIView!
     @IBOutlet weak var ucsfRequestView: UIView!
     
-    
     // BLOBS
     var blob: UIImageView!
     var blobCoat: UIImageView!
@@ -35,10 +34,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var selectedViewOriginalFrame: CGRect!
     var selectedBlobImageView: UIImageView!
     var selectedBlobImage: UIImage!
-    
-    var selectedNameLabel: UILabel!
-    var selectedNameText = ""
-    var selectedMessage: UILabel!
     
     
     // CUSTOM TRANSITION
@@ -88,7 +83,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     func showBlobs(requestView: UIView) {
         
-      
+        print("move blobs")
         
         let blob = requestView.viewWithTag(10) as! UIImageView
         let blobCoat = requestView.viewWithTag(11) as! UIImageView
@@ -109,6 +104,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             
             completion: nil
         )
+        
+        
+        
         
         // BLOB COAT ROTATION
         UIView.animateWithDuration(
@@ -141,15 +139,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         selectedViewOriginalFrame = selectedView.frame
         selectedBlobImageView = selectedView.viewWithTag(10) as! UIImageView
         selectedBlobImage = selectedBlobImageView.image
-//        selectedNameLabel = selectedView.viewWithTag(20) as! UILabel
-//        print(selectedNameLabel.text)
-        
-        
-        let requestContent = getLabelsInView(timRequestView)
-        
-        for label in labels {
-            print(label.text)
-        }
         
         
         // SEGUE TO REQUEST DETAIL
@@ -157,27 +146,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    
-    // GET ALL TEXT INSIDE UIVIEW
-    
-    func getLabelsInView(view: UIView) -> [UILabel] {
-        var results = [UILabel]()
-        for subview in view.subviews as [UIView] {
-            if let labelView = subview as? UILabel {
-                results += [labelView]
-            } else {
-                results += getLabelsInView(subview)
-            }
-        }
-        return results
-    }
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let destinationVC = segue.destinationViewController as! RequestDetailViewController
         
-        // SEND CONTENT
+        // SEND IMAGE
         destinationVC.blobImage = selectedBlobImage
         
         // SETUP BLOB TRANSITION
@@ -189,5 +162,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
 }

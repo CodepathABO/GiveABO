@@ -32,6 +32,8 @@ class SignUpViewController: UIViewController {
         loginButton.layer.borderWidth = 1
         
         
+        // CHRIS: THIS IS FOR ME SKIP LOGIN WHILE IM WORKING...
+//        presentHome()
         
     }
 
@@ -91,7 +93,12 @@ class SignUpViewController: UIViewController {
         performSegueWithIdentifier("loginSegue", sender: self)
     }
 
-    
+    // CHRIS: THIS IS FOR ME SKIP LOGIN WHILE IM WORKING...
+    func presentHome() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
