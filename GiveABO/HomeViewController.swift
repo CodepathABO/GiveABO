@@ -17,12 +17,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     
     // REQUESTS
-    @IBOutlet weak var timRequestView: UIView!
+//    @IBOutlet weak var timRequestView: UIView!
     @IBOutlet weak var jeremieRequestView: UIView!
     @IBOutlet weak var annabelRequestView: UIView!
-    @IBOutlet weak var carolineRequestView: UIView!
-    @IBOutlet weak var markRequestView: UIView!
-    @IBOutlet weak var ucsfRequestView: UIView!
+//    @IBOutlet weak var carolineRequestView: UIView!
+//    @IBOutlet weak var markRequestView: UIView!
+//    @IBOutlet weak var ucsfRequestView: UIView!
     
     // BLOBS
     var blob: UIImageView!
@@ -34,7 +34,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var selectedViewOriginalFrame: CGRect!
     var selectedBlobImageView: UIImageView!
     var selectedBlobImage: UIImage!
-    
+    var selectedBloblFrame: CGRect!
+    var selectedNameLabel: UILabel!
     
     // CUSTOM TRANSITION
     var blobTransition: BlobTransition!
@@ -44,6 +45,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        
+        // SETUP STATUS BAR
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        UIApplication.sharedApplication().statusBarHidden = false
         
         
         // SETUP HOME SCROLLVIEW
@@ -62,28 +68,29 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         
         // SET UP TAPS FOR REQUESTS
-        timRequestView.addGestureRecognizer(timtap)
+//        timRequestView.addGestureRecognizer(timtap)
         jeremieRequestView.addGestureRecognizer(jeremieTap)
         annabelRequestView.addGestureRecognizer(annabelTap)
-        carolineRequestView.addGestureRecognizer(carolineTap)
-        markRequestView.addGestureRecognizer(markTap)
-        ucsfRequestView.addGestureRecognizer(ucsfTap)
+//        carolineRequestView.addGestureRecognizer(carolineTap)
+//        markRequestView.addGestureRecognizer(markTap)
+//        ucsfRequestView.addGestureRecognizer(ucsfTap)
+        
         
     }
     
     override func viewDidAppear(animated: Bool) {
 
-        showBlobs(timRequestView)
+//        showBlobs(timRequestView)
         showBlobs(jeremieRequestView)
         showBlobs(annabelRequestView)
-        showBlobs(carolineRequestView)
-        showBlobs(markRequestView)
-        showBlobs(ucsfRequestView)
+//        showBlobs(carolineRequestView)
+//        showBlobs(markRequestView)
+//        showBlobs(ucsfRequestView)
     }
     
     func showBlobs(requestView: UIView) {
         
-        print("move blobs")
+        
         
         let blob = requestView.viewWithTag(10) as! UIImageView
         let blobCoat = requestView.viewWithTag(11) as! UIImageView
@@ -132,19 +139,19 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     // TAP ON REQUEST
     func didTapRequest(sender: UITapGestureRecognizer) {
         
-        print("tap")
-        
         // STORE SELECTED VIEW
         selectedView = sender.view
         selectedViewOriginalFrame = selectedView.frame
         selectedBlobImageView = selectedView.viewWithTag(10) as! UIImageView
         selectedBlobImage = selectedBlobImageView.image
-        
+        selectedBloblFrame = selectedBlobImageView.frame
+
         
         // SEGUE TO REQUEST DETAIL
         performSegueWithIdentifier("requestDetailSegue", sender: nil)
         
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -152,6 +159,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         // SEND IMAGE
         destinationVC.blobImage = selectedBlobImage
+
+        
+        // SEND NAME
+        selectedNameLabel = selectedView.viewWithTag(20) as! UILabel
+        destinationVC.nameText = selectedNameLabel.text!
+        
+        
+        // SEND MESSAGE
+        let selectedMessage = selectedView.viewWithTag(30) as! UILabel
+        destinationVC.messageText = selectedMessage.text!
+        
+        
         
         // SETUP BLOB TRANSITION
         blobTransition = BlobTransition()

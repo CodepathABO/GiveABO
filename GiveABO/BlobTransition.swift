@@ -19,21 +19,26 @@ class BlobTransition: BaseTransition {
         let requestView = requestDetialVC.requestView
         
         // SETUP REQUEST IN DETAL VIEW
-        //let requestView = UIView(frame: homeVC.selectedViewOriginalFrame)
-        requestView.frame = homeVC.selectedViewOriginalFrame
+        // REQUEST VIEW'S INITIAL FRAME IS SIMILAR TO INITIAL BLOB FRAME
+        requestView.frame.size = homeVC.selectedBloblFrame.size
+        requestView.frame.origin.x = homeVC.selectedView.frame.origin.x + homeVC.selectedBloblFrame.origin.x
+        requestView.frame.origin.y = homeVC.selectedView.frame.origin.y + homeVC.selectedBloblFrame.origin.y
         
         // ADD SCROLL OFFSET FROM HOME
         requestView.frame.origin.x -= homeVC.homeScrollViewOffsetX
         
         // DISPLAY REQUEST IN DETAIL VIEW
         requestDetialVC.view.addSubview(requestView)
+        requestDetialVC.view.sendSubviewToBack(requestView)
         
         // SETUP BLOB IMAGE VIEW
         let blobImageView = UIImageView (image: requestDetialVC.blobImage)
         requestView.addSubview(blobImageView)
         
+        
         // HIDE SELECTED VIEW IN HOME
         homeVC.selectedView.alpha = 0
+        
         
         // ANIMATE
         UIView.animateWithDuration(
@@ -45,9 +50,9 @@ class BlobTransition: BaseTransition {
             options: UIViewAnimationOptions.CurveEaseInOut,
             
             animations: { () -> Void in
-                requestView.center = CGPoint(x: 230, y: 350)
                 
-                requestView.transform = CGAffineTransformMakeScale(5, 5)
+                requestView.center = CGPoint(x: 230, y: 350)
+                requestView.transform = CGAffineTransformMakeScale(5.5, 5.5)
                 
             }
             )
@@ -55,6 +60,7 @@ class BlobTransition: BaseTransition {
                 (finished: Bool) -> Void in
                 self.finish()
         }
+    
         // self.finish()
     }
     
@@ -68,34 +74,49 @@ class BlobTransition: BaseTransition {
         
         let requestView = requestDetialVC.requestView
         
-        // GET X & Y POSITION OF SELECTED BLOB IN HOME
-        let currentX = homeVC.selectedView.center.x - homeVC.homeScrollViewOffsetX
-        let currentY = homeVC.selectedView.center.y
+        
+        var delay = 0.0
+        
+        for content in requestDetialVC.requestContents {
+            
+            UIView.animateWithDuration(
+                0.1,
+                delay: delay,
+                options: UIViewAnimationOptions.CurveEaseIn,
+                animations: { () -> Void in
+                    content.alpha = 0
+                },
+                completion: nil
+            )
+            delay += 0.05
+        }
+        
         
         // ANIMATE
         UIView.animateWithDuration(
             
             duration,
-            delay: 0,
+            delay: 0.5,
             usingSpringWithDamping: 1.2,
             initialSpringVelocity: 0.8,
             options: UIViewAnimationOptions.CurveEaseInOut,
             
             animations: { () -> Void in
                 
-                requestView.center = CGPoint(
-                    x: currentX + 12,
-                    y: currentY + 10
-                )
-                
                 requestView.transform = CGAffineTransformMakeScale(1, 1)
+                requestView.frame.origin.x = homeVC.selectedView.frame.origin.x + homeVC.selectedBloblFrame.origin.x
+                requestView.frame.origin.x -= homeVC.homeScrollViewOffsetX
+                requestView.frame.origin.y = homeVC.selectedView.frame.origin.y + homeVC.selectedBloblFrame.origin.y
                 
             }
             )
-            {
-                (finished: Bool) -> Void in
+        {
+        
+            (finished: Bool) -> Void in
+            
                 homeVC.selectedView.alpha = 1
                 self.finish()
+            
         }
         
         // self.finish()
