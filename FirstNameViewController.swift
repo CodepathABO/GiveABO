@@ -22,6 +22,9 @@ class FirstNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        UIApplication.sharedApplication().statusBarHidden = false
+        
         initialY = continueButton.frame.origin.y
         offset = -240
         
@@ -112,6 +115,10 @@ class FirstNameViewController: UIViewController {
         
     }
     
+    @IBAction func onBack(sender: AnyObject) {
+        
+        
+    }
     
     @IBAction func didTap(sender: UITapGestureRecognizer) {
         
