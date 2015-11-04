@@ -71,28 +71,6 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         
         pageControl.alpha = 0
         
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIView.animateWithDuration(0.7) { () -> Void in
-            self.introContentOneView.alpha = 1
-        }
-        
-        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-            
-            self.introContentOneView.center.y = 280
-            self.introContentOneView.transform = CGAffineTransformMakeScale(1, 1)
-            self.introContentOneView.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
-            
-            }, completion: { (Bool) -> Void in
-                
-                UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.pageControl.alpha = 1
-                })
-        })
-        
         for i in 0...18 {
             
             let platelet = UIView()
@@ -125,19 +103,34 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             
         }
 
-        
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-       
+        UIView.animateWithDuration(0.7) { () -> Void in
+            self.introContentOneView.alpha = 1
+        }
+        
+        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            
+            self.introContentOneView.center.y = 280
+            self.introContentOneView.transform = CGAffineTransformMakeScale(1, 1)
+            self.introContentOneView.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
+            
+            }, completion: { (Bool) -> Void in
+                
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.pageControl.alpha = 1
+                })
+        })
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-               
+        
     }
     
     
@@ -148,11 +141,21 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func signInButtonDidTouch(sender: UIButton) {
         
-        
         performSegueWithIdentifier("signInSegue", sender: self)
         
     }
+    
+    @IBAction func skitButtonDidTouch(sender: UIButton) {
+        
+        goToHome()
+        
+    }
 
+    @IBAction func getStartedButtonDidTouch(sender: UIButton) {
+        
+        goToHome()
+        
+    }
     
     
     // MARK: SCROLLVIEW CONTROL
@@ -348,6 +351,16 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             })
         }
         
+        
+    }
+    
+    func goToHome() {
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
         
     }
     
