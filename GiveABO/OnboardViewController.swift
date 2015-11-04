@@ -71,11 +71,33 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         
         pageControl.alpha = 0
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animateWithDuration(0.7) { () -> Void in
+            self.introContentOneView.alpha = 1
+        }
+        
+        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            
+            self.introContentOneView.center.y = 280
+            self.introContentOneView.transform = CGAffineTransformMakeScale(1, 1)
+            self.introContentOneView.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
+            
+            }, completion: { (Bool) -> Void in
+                
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.pageControl.alpha = 1
+                })
+        })
+        
         for i in 0...18 {
             
             let platelet = UIView()
             platelet.frame = CGRect(x: 55, y: 300, width: 100, height: 100)
-            platelet.backgroundColor = UIColor(red:0.59, green:0.14, blue:0.14, alpha:1.0)
+            platelet.backgroundColor = UIColor(red:0.39, green:0.00, blue:0.14, alpha:1.0)
             platelet.layer.cornerRadius = 50
             
             self.view.addSubview(platelet)
@@ -103,34 +125,19 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             
         }
 
+        
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        UIView.animateWithDuration(0.7) { () -> Void in
-            self.introContentOneView.alpha = 1
-        }
-        
-        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-            
-            self.introContentOneView.center.y = 280
-            self.introContentOneView.transform = CGAffineTransformMakeScale(1, 1)
-            self.introContentOneView.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
-            
-            }, completion: { (Bool) -> Void in
-                
-                UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.pageControl.alpha = 1
-                })
-        })
-        
+       
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+               
     }
     
     
@@ -140,6 +147,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
     
     
     @IBAction func signInButtonDidTouch(sender: UIButton) {
+        
         
         performSegueWithIdentifier("signInSegue", sender: self)
         

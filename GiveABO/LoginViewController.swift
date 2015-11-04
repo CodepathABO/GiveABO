@@ -85,7 +85,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
 
     @IBAction func loginButtonDidTouch(sender: UIButton) {
         
-        if usernameField.text == "" && passwordField.text == "" {
+        if usernameField.text == "" || passwordField.text == "" {
             
             UIView.animateWithDuration(0.1, delay: 0.1, options: [], animations: { () -> Void in
                 self.loginView.frame.origin.x = 5
@@ -133,7 +133,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
                     } else {
                         // Hooray! Let them use the app now.
                         
-                        self.performSegueWithIdentifier("parseit", sender: self)
+                        // self.performSegueWithIdentifier("parseit", sender: self)
                     }
                     
                 }
@@ -198,7 +198,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
             
             registeredLabel.text = "Not registered?"
             
-            signupButton.setTitle("Sign In", forState: UIControlState.Normal)
+            signupButton.setTitle("Sign Up", forState: UIControlState.Normal)
+            
+            signupActive = false
             
         }
 
@@ -238,15 +240,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     }
     
     func displayAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
-        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-        })))
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            // ...
+        }
+        alert.addAction(OKAction)
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.presentViewController(alert, animated: true) {
+            // ...
+        }
     }
     
     required init(coder aDecoder: NSCoder) {

@@ -21,7 +21,10 @@ class RequestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        UIApplication.sharedApplication().statusBarHidden = false
+        
         // Do any additional setup after loading the view.
     }
 
