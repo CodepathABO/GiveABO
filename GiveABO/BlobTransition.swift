@@ -27,6 +27,7 @@ class BlobTransition: BaseTransition {
         
         // DISPLAY REQUEST IN DETAIL VIEW
         requestDetialVC.view.addSubview(requestView)
+        requestDetialVC.view.sendSubviewToBack(requestView)
         
         // SETUP BLOB IMAGE VIEW
         let blobImageView = UIImageView (image: requestDetialVC.blobImage)

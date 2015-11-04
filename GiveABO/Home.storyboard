@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="QrJ-Ov-ioM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -283,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vmv-LC-VNl" userLabel="Name">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vmv-LC-VNl" userLabel="Message">
                                 <rect key="frame" x="38" y="141" width="299" height="266"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">I have liver cancer stage 3.  I am trying to fight this for my children,  they need me. But the chemotherapy drugs are affecting the blood-making cells in the bone marrow.  I am advised to have blood transfusions due to my low blood cell counts.</string>
@@ -292,11 +292,21 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t3J-xo-luj" userLabel="Donate Button">
+                                <rect key="frame" x="38" y="557" width="299" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Donate Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90980392156862744" green="0.33725490196078434" blue="0.19215686274509805" alpha="0.63" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="ujF-Q9-9Kj" id="O6f-Zt-46z"/>
+                        <outlet property="messageLabel" destination="vmv-LC-VNl" id="gFr-2D-fIW"/>
+                        <outlet property="nameLabel" destination="PKx-uG-GqN" id="YH6-KC-9Oj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpA-Jp-cqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,6 +314,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Donate Button" width="298" height="61"/>
         <image name="blob_1" width="178" height="169"/>
         <image name="blob_1_coat" width="198" height="197"/>
         <image name="blob_2" width="217" height="203"/>

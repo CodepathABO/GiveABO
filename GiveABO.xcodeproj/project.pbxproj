@@ -26,11 +26,11 @@
 		3AC2AEBD1BE5D563003D5E88 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */; };
 		3AC2AEBE1BE5D563003D5E88 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */; };
 		3AC2AEBF1BE5D563003D5E88 /* BlobTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */; };
-		C37FC9CF1BE90EA300671427 /* FirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C37FC9D11BE922A200671427 /* BloodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C37FC9D51BE9904F00671427 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D41BE9904F00671427 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C37FC9CF1BE90EA300671427 /* FirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */; };
+		C37FC9D11BE922A200671427 /* BloodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */; };
+		C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */; };
+		C37FC9D51BE9904F00671427 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D41BE9904F00671427 /* ProfileViewController.swift */; };
+		C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */; };
 		C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C950C01BE6DAA700D04638 /* Signup.storyboard */; };
 		C3C950C31BE6DF2000D04638 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C950C21BE6DF2000D04638 /* HelloViewController.swift */; };
 /* End PBXBuildFile section */
