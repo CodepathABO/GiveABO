@@ -16,6 +16,8 @@ class ConfirmViewController: UIViewController {
     
     @IBOutlet weak var bloodDetailImage: UIImageView!
     
+    @IBOutlet weak var typeImage: UIImageView!
+    
     var bloodType: Int = 0
     var arrayOfImages: [UIImage]!
     
@@ -37,13 +39,22 @@ class ConfirmViewController: UIViewController {
 
         let defaults = NSUserDefaults.standardUserDefaults()
         let firstName = defaults.objectForKey("first_name") as! String
+        let sign = defaults.objectForKey("sign") as! Int
         
         messageLabel.text = "Great! \(firstName),"
         
         
         bloodType = defaults.objectForKey("index") as! Int
         
-         bloodDetailImage.image = arrayOfImages[bloodType]
+        bloodDetailImage.image = arrayOfImages[bloodType]
+        
+        if (sign == 1){
+            
+            typeImage.image = UIImage(named: "photo_icon")
+        }
+        else{
+            typeImage.image = UIImage(named: "quote_icon")
+        }
         
         // Do any additional setup after loading the view.
     }
