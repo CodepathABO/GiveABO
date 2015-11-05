@@ -325,6 +325,7 @@
                                 <connections>
                                     <action selector="onContinue:" destination="ty3-E4-sXD" eventType="touchUpInside" id="Xkx-Qc-wPl"/>
                                     <action selector="onContinue:" destination="GUi-kc-w8a" eventType="touchUpInside" id="gJn-Ne-3Nx"/>
+                                    <action selector="onFinish:" destination="TiQ-H2-uVa" eventType="touchUpInside" id="iri-wR-vl6"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="O3y-Bd-UiG">
