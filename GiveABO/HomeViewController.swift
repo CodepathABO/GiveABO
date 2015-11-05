@@ -28,8 +28,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var markRequestView: UIView!
     @IBOutlet weak var helenRequestView: UIView!
     @IBOutlet weak var oaklandRequestView: UIView!
-//    @IBOutlet weak var markRequestView: UIView!
-//    @IBOutlet weak var ucsfRequestView: UIView!
     @IBOutlet weak var newRequestView: UIView!
     
     
@@ -82,6 +80,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         let markTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let helenTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let oaklandTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let newRequesTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         
         
         // SET UP TAPS FOR REQUESTS
@@ -94,9 +93,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         markRequestView.addGestureRecognizer(markTap)
         helenRequestView.addGestureRecognizer(helenTap)
         oaklandRequestView.addGestureRecognizer(oaklandTap)
+        newRequestView.addGestureRecognizer(newRequesTap)
+        
     }
-    
-    
     
     // VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {

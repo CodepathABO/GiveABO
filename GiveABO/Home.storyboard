@@ -141,7 +141,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="Pos-xh-kry" userLabel="Request - American Red Cross">
-                                        <rect key="frame" x="209" y="309" width="282" height="300"/>
+                                        <rect key="frame" x="209" y="279" width="282" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="11" contentMode="center" image="blob_2_coat" id="wfO-aG-gfa">
@@ -521,7 +521,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="QYP-4Y-u2x" userLabel="Request - Mark">
-                                        <rect key="frame" x="1437" y="382" width="198" height="197"/>
+                                        <rect key="frame" x="1452" y="357" width="198" height="197"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="11" contentMode="center" image="blob_1_coat" id="sbG-9D-PII">
@@ -618,7 +618,7 @@
                         <outlet property="homeScrollView" destination="FJd-k2-ih9" id="xJZ-CD-3e3"/>
                         <outlet property="jeremieRequestView" destination="Q3I-RW-hPj" id="o1U-VX-SUo"/>
                         <outlet property="markRequestView" destination="QYP-4Y-u2x" id="feZ-ZL-8aH"/>
-                        <outlet property="newRequestView" destination="lcL-0T-SD3" id="IFC-SL-Qd6"/>
+                        <outlet property="newRequestView" destination="lcL-0T-SD3" id="bbF-JQ-liM"/>
                         <outlet property="oaklandRequestView" destination="B2P-JQ-1bq" id="N4r-Xt-duw"/>
                         <outlet property="ucsfRequestView" destination="lbt-5K-Wl0" id="mSd-VX-czs"/>
                         <segue destination="bRA-Cq-BHp" kind="modal" identifier="requestDetailSegue" id="cox-nb-zyb"/>
