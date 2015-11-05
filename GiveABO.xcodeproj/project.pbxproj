@@ -23,6 +23,11 @@
 		3A0292591BEA115900576300 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0292581BEA115900576300 /* RequestViewController.swift */; };
 		3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */; };
 		3A47B20B1BE6E707001016AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A47B20A1BE6E707001016AD /* Home.storyboard */; };
+		3A7181791BEB48B90054BB47 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */; };
+		3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */; };
+		3A71817D1BEB491B0054BB47 /* UserEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */; };
+		3A71817F1BEB49330054BB47 /* UserStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */; };
+		3A7181811BEB49640054BB47 /* UserBadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */; };
 		3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */; };
 		3A8275261BE53EFC00CF68C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275251BE53EFC00CF68C7 /* ViewController.swift */; };
 		3A8275291BE53EFC00CF68C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8275271BE53EFC00CF68C7 /* Main.storyboard */; };
@@ -84,6 +89,11 @@
 		3A0292581BEA115900576300 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		3A47B20A1BE6E707001016AD /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAccountViewController.swift; path = ../UserAccountViewController.swift; sourceTree = "<group>"; };
+		3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRewardsViewController.swift; sourceTree = "<group>"; };
+		3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEventsViewController.swift; sourceTree = "<group>"; };
+		3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoriesViewController.swift; sourceTree = "<group>"; };
+		3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBadgesViewController.swift; sourceTree = "<group>"; };
 		3A8275201BE53EFB00CF68C7 /* GiveABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiveABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8275251BE53EFC00CF68C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +187,11 @@
 		3A47B1CF1BE6E2FF001016AD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */,
+				3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */,
+				3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */,
+				3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */,
+				3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */,
 				C3C950C21BE6DF2000D04638 /* HelloViewController.swift */,
 				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
 				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
@@ -398,8 +413,10 @@
 				3AC2AEBD1BE5D563003D5E88 /* FadeTransition.swift in Sources */,
 				C37FC9D51BE9904F00671427 /* ProfileViewController.swift in Sources */,
 				3AC2AEB71BE5C29E003D5E88 /* LoginViewController.swift in Sources */,
+				3A71817F1BEB49330054BB47 /* UserStoriesViewController.swift in Sources */,
 				3AC2AEB51BE5C280003D5E88 /* SignUpViewController.swift in Sources */,
 				3AC2AEB31BE5C260003D5E88 /* OnboardViewController.swift in Sources */,
+				3A7181811BEB49640054BB47 /* UserBadgesViewController.swift in Sources */,
 				C37FC9D11BE922A200671427 /* BloodTypeViewController.swift in Sources */,
 				3AC2AEBF1BE5D563003D5E88 /* BlobTransition.swift in Sources */,
 				3A8275261BE53EFC00CF68C7 /* ViewController.swift in Sources */,
@@ -407,8 +424,11 @@
 				3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */,
 				3AC2AEB11BE5C20B003D5E88 /* HomeViewController.swift in Sources */,
 				C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */,
+				3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */,
 				3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */,
+				3A71817D1BEB491B0054BB47 /* UserEventsViewController.swift in Sources */,
 				C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */,
+				3A7181791BEB48B90054BB47 /* UserAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
