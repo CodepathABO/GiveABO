@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 //    @IBOutlet weak var markRequestView: UIView!
 //    @IBOutlet weak var ucsfRequestView: UIView!
     
+    
     // BLOBS
     var blob: UIImageView!
     var blobCoat: UIImageView!
@@ -37,8 +39,14 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var selectedBloblFrame: CGRect!
     var selectedNameLabel: UILabel!
     
+    
     // CUSTOM TRANSITION
     var blobTransition: BlobTransition!
+    
+
+    // PARSE USERS
+    var user = PFUser.currentUser()
+    var query = PFQuery(className:"Simple")
     
     
     // DID LOAD
@@ -74,6 +82,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 //        carolineRequestView.addGestureRecognizer(carolineTap)
 //        markRequestView.addGestureRecognizer(markTap)
 //        ucsfRequestView.addGestureRecognizer(ucsfTap)
+        
+        
+
         
         
     }
@@ -153,29 +164,60 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // TAP ON CREATE NEW REQUEST
+    @IBAction func didPressCreateRequest(sender: AnyObject) {
         
-        let destinationVC = segue.destinationViewController as! RequestDetailViewController
-        
-        // SEND IMAGE
-        destinationVC.blobImage = selectedBlobImage
+        // IF LOGGED IN, GO TO CREATE NEW REQUEST
+        if user != nil  {
+            performSegueWithIdentifier("createRequestSegue", sender: nil)
+        }
+            
+        // IF LOGGED OUT, GO TO SIGN UP
+        else {
+            goToSignup()
+        }
 
+    }
+    
+    // GO TO SIGNUP STORYBOARD
+    func goToSignup() {
         
-        // SEND NAME
-        selectedNameLabel = selectedView.viewWithTag(20) as! UILabel
-        destinationVC.nameText = selectedNameLabel.text!
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpNavigationViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+    }
+    
+    
+    // PREPARE FOR SEGUE
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        if (segue.identifier == "requestDetailSegue") {
+            
+            let destinationVC = segue.destinationViewController as! RequestDetailViewController
+            
+            // SEND IMAGE
+            destinationVC.blobImage = selectedBlobImage
+            
+            // SEND NAME
+            selectedNameLabel = selectedView.viewWithTag(20) as! UILabel
+            destinationVC.nameText = selectedNameLabel.text!
+            
+            // SEND MESSAGE
+            let selectedMessage = selectedView.viewWithTag(30) as! UILabel
+            destinationVC.messageText = selectedMessage.text!
+            
+            // SETUP BLOB TRANSITION
+            blobTransition = BlobTransition()
+            destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+            destinationVC.transitioningDelegate = blobTransition
+            
+        
+        }
         
         
-        // SEND MESSAGE
-        let selectedMessage = selectedView.viewWithTag(30) as! UILabel
-        destinationVC.messageText = selectedMessage.text!
-        
-        
-        
-        // SETUP BLOB TRANSITION
-        blobTransition = BlobTransition()
-        destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
-        destinationVC.transitioningDelegate = blobTransition
     }
     
     override func didReceiveMemoryWarning() {

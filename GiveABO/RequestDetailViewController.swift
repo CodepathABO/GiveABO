@@ -41,6 +41,11 @@ class RequestDetailViewController: UIViewController {
     
     var requestContents: [UILabel]!
     var confirmContents: [UIImageView]!
+    
+    
+    // PARSE USERS
+    var user = PFUser.currentUser()
+    var query = PFQuery(className:"Simple")
 
     
     // VIEW DID LOAD
@@ -82,9 +87,7 @@ class RequestDetailViewController: UIViewController {
         confirmButton.alpha = 0
         confirmButton.frame.origin.x += 300
         
-        
     }
-    
     
     
     // VIEW DID APPEAR
@@ -206,9 +209,16 @@ class RequestDetailViewController: UIViewController {
     // ON PRESS DONATE
     @IBAction func didPressDonate(sender: AnyObject) {
         
-        hideRequestContent()
-        //showConfirmContent()
-        goToSignup()
+        if user != nil  {
+            
+            hideRequestContent()
+            showConfirmContent()
+            
+        } else {
+            
+            goToSignup()
+            
+        }
         
     }
     
