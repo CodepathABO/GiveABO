@@ -207,7 +207,8 @@ class RequestDetailViewController: UIViewController {
     @IBAction func didPressDonate(sender: AnyObject) {
         
         hideRequestContent()
-        showConfirmContent()
+        //showConfirmContent()
+        goToSignup()
         
     }
     
@@ -217,6 +218,17 @@ class RequestDetailViewController: UIViewController {
     
     @IBAction func didPressX(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // GO TO SIGNUP STORYBOARD
+    func goToSignup() {
+        
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpNavigationViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
     }
 
     // PAN ON REQUEST
