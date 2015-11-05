@@ -72,6 +72,24 @@ class ProfileViewController: UIViewController {
 
     }
     
+    @IBAction func onFinish(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    /*
+    
+    func goToHome() {
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+    }
+    */
+    
     /*
     // MARK: - Navigation
 
