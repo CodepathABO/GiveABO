@@ -514,7 +514,7 @@ rewards it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="C29AAC90-D1E1-4B4C-A3E1-6871EE23C14B" id="hlu-bV-t4U">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="2B0622FE-F891-47EE-973F-9EC8FA017712" id="hlu-bV-t4U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -838,7 +838,7 @@ rewards it.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="VhU-du-eJa">
-                                <rect key="frame" x="0.0" y="20" width="375" height="177"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 22, 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rDs-Lx-mGK">
@@ -902,7 +902,7 @@ rewards it.</string>
                                 <color key="backgroundColor" red="0.86903782890000003" green="0.88545949840000004" blue="0.91771175989999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="dDj-VP-zmW">
-                                <rect key="frame" x="0.0" y="392" width="375" height="277"/>
+                                <rect key="frame" x="0.0" y="372" width="375" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -920,7 +920,7 @@ rewards it.</string>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" id="D0U-Pk-1cB">
-                                <rect key="frame" x="0.0" y="347" width="375" height="37"/>
+                                <rect key="frame" x="0.0" y="327" width="375" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Latest Donations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cwv-a3-Rqh">
@@ -936,7 +936,7 @@ rewards it.</string>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.85098039215686272" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="WEa-a6-Q2o">
-                                <rect key="frame" x="0.0" y="197" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="177" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view alpha="0.75" contentMode="scaleToFill" id="rFG-x3-TEP">
@@ -1218,7 +1218,7 @@ rewards it.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="C29AAC90-D1E1-4B4C-A3E1-6871EE23C14B" width="375" height="667">
+        <image name="2B0622FE-F891-47EE-973F-9EC8FA017712" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

@@ -24,6 +24,9 @@ class UserAccountViewController: UIViewController {
     @IBOutlet weak var menuScrollView: UIScrollView!
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
