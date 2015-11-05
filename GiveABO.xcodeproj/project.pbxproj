@@ -48,6 +48,7 @@
 		3AC2AEBD1BE5D563003D5E88 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */; };
 		3AC2AEBE1BE5D563003D5E88 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */; };
 		3AC2AEBF1BE5D563003D5E88 /* BlobTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */; };
+		3ADEB9451BEBE37C00DEB632 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADEB9441BEBE37C00DEB632 /* UserProfileViewController.swift */; };
 		A71D036D1BEB435F00351C26 /* CreateRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */; };
 		C37FC9CF1BE90EA300671427 /* FirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */; };
 		C37FC9D11BE922A200671427 /* BloodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */; };
@@ -124,6 +125,7 @@
 		3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlobTransition.swift; sourceTree = "<group>"; };
+		3ADEB9441BEBE37C00DEB632 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRequestViewController.swift; sourceTree = "<group>"; };
 		C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstNameViewController.swift; path = ../FirstNameViewController.swift; sourceTree = "<group>"; };
 		C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodTypeViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */,
 				3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */,
+				3ADEB9441BEBE37C00DEB632 /* UserProfileViewController.swift */,
 				3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */,
 				3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */,
 				3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */,
@@ -417,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC2AEB91BE5CE77003D5E88 /* Common.swift in Sources */,
+				3ADEB9451BEBE37C00DEB632 /* UserProfileViewController.swift in Sources */,
 				3AC2AEBE1BE5D563003D5E88 /* BaseTransition.swift in Sources */,
 				3A0292591BEA115900576300 /* RequestViewController.swift in Sources */,
 				C37FC9CF1BE90EA300671427 /* FirstNameViewController.swift in Sources */,

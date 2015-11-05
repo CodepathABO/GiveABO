@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserAccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UserAccountViewController: UIViewController {
     
     var screenOriginalCenter: CGPoint!
     
@@ -17,18 +17,12 @@ class UserAccountViewController: UIViewController, UITableViewDataSource, UITabl
     
     var friction: CGFloat!
 
-    let data = ["Blood bank: Cal Pacific Blood bank", "Direct Request", "Direct Request", "Blood bank: SF General", "Blood drive: American Red Cross"]
+
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var menuScrollView: UIScrollView!
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
-    @IBOutlet weak var totalDonationsView: UIView!
-    @IBOutlet weak var yearlyDonationsView: UIView!
-    @IBOutlet weak var dontationStreakView: UIView!
-    @IBOutlet weak var donateButton: UIButton!
-    @IBOutlet weak var requestButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +33,6 @@ class UserAccountViewController: UIViewController, UITableViewDataSource, UITabl
         menuScrollView.alpha = 1
         // settingsScrollView.alpha = 0
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
         screenUp = CGPoint(x: 0, y: 20)
         screenDown = CGPoint(x: 0, y: 580)
         
@@ -50,28 +41,7 @@ class UserAccountViewController: UIViewController, UITableViewDataSource, UITabl
         contentView.layer.shadowOffset = CGSizeMake(0, -2)
         contentView.layer.shadowRadius = 2
         
-        donateButton.layer.cornerRadius = 16
-        donateButton.layer.borderColor = UIColor(red:0.25, green:0.32, blue:0.38, alpha:0.4).CGColor
-        donateButton.layer.borderWidth = 1
         
-        requestButton.layer.cornerRadius = 16
-        requestButton.layer.borderColor = UIColor(red:0.25, green:0.32, blue:0.38, alpha:0.4).CGColor
-        requestButton.layer.borderWidth = 1
-        
-        dontationStreakView.layer.cornerRadius = dontationStreakView.frame.size.width / 2
-        
-        dontationStreakView.layer.borderColor = UIColor(red:0.97, green:0.95, blue:0.95, alpha:1.0).CGColor
-        dontationStreakView.layer.borderWidth = 8
-        
-        yearlyDonationsView.layer.cornerRadius = yearlyDonationsView.frame.size.width / 2
-        
-        yearlyDonationsView.layer.borderColor = UIColor(red:0.97, green:0.95, blue:0.95, alpha:1.0).CGColor
-        yearlyDonationsView.layer.borderWidth = 8
-        
-        totalDonationsView.layer.cornerRadius = totalDonationsView.frame.size.width / 2
-        
-        totalDonationsView.layer.borderColor = UIColor(red:0.97, green:0.95, blue:0.95, alpha:1.0).CGColor
-        totalDonationsView.layer.borderWidth = 8
         
         friction = 10
 
@@ -161,29 +131,6 @@ class UserAccountViewController: UIViewController, UITableViewDataSource, UITabl
         }
 
             
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        return 1
-        
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return data.count
-    }
-
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-        
-        cell.textLabel?.text = data[indexPath.row]
-        cell.accessoryType = .Checkmark
-        
-        return cell
-        
     }
     
     
