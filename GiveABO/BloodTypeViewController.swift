@@ -68,6 +68,12 @@ class BloodTypeViewController: UIViewController {
         
         self.performSegueWithIdentifier("TypeToDetails", sender: nil)
     }
+    
+    @IBAction func onBack(sender: AnyObject) {
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
 
     /*
     // MARK: - Navigation
