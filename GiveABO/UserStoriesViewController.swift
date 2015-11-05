@@ -12,6 +12,7 @@ class UserStoriesViewController: UIViewController, UICollectionViewDelegate,
     UICollectionViewDataSource {
 
     @IBOutlet weak var storiesCollectionView: UICollectionView!
+    @IBOutlet weak var successPageTitle: UILabel!
 
     
     @IBOutlet weak var successTextLabel: UILabel!
@@ -30,8 +31,34 @@ class UserStoriesViewController: UIViewController, UICollectionViewDelegate,
         successTextLabel.lineBreakMode = .ByWordWrapping
         successTextLabel.numberOfLines = 0
         successTextLabel.sizeToFit()
+        
+        storiesCollectionView.alpha = 0
+        successTextLabel.alpha = 0
+        successPageTitle.alpha = 0
+        
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+            self.storiesCollectionView.alpha = 1
+            self.successTextLabel.alpha = 1
+            self.successPageTitle.alpha = 1
+            }) { (Bool) -> Void in
+                // ..
+        }
+    }
+    
+    
+    
+    // MARK: ACTIONS
+    
+    @IBAction func closeButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
     {

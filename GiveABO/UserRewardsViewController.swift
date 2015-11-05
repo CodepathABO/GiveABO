@@ -10,11 +10,53 @@ import UIKit
 
 class UserRewardsViewController: UIViewController {
 
+    @IBOutlet weak var awardsNumberView: UIView!
+    @IBOutlet weak var donationsLabel: UILabel!
+    @IBOutlet weak var AwardsvViewContain: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        awardsNumberView.layer.cornerRadius = awardsNumberView.frame.size.width / 2
+        
+        awardsNumberView.layer.borderColor = UIColor(red:0.97, green:0.95, blue:0.95, alpha:1.0).CGColor
+        awardsNumberView.layer.borderWidth = 8
+        
+        
+        donationsLabel.lineBreakMode = .ByWordWrapping
+        donationsLabel.numberOfLines = 0
+        donationsLabel.sizeToFit()
+       
+        AwardsvViewContain.alpha = 0
+        
+       
+        
+        
+
     }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+            self.AwardsvViewContain.alpha = 1
+            }) { (Bool) -> Void in
+                // ..
+                 }
+    }
+    
+    
+    // MARK: ACTIONS
+    
+    @IBAction func closeButton(sender: UIButton) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
