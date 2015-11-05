@@ -59,12 +59,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         
         // SET UP TAP GESTURE RECOGNISER
-        let timtap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+//        let timtap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let jeremieTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let annabelTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-        let carolineTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-        let markTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-        let ucsfTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+//        let carolineTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+//        let markTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+//        let ucsfTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         
         
         // SET UP TAPS FOR REQUESTS
