@@ -207,7 +207,9 @@ class RequestDetailViewController: UIViewController {
     @IBAction func didPressDonate(sender: AnyObject) {
         
         hideRequestContent()
-        showConfirmContent()
+        // showConfirmContent()
+        
+        goToSignUp()
         
     }
     
@@ -246,4 +248,15 @@ class RequestDetailViewController: UIViewController {
         }
     
     }
+    
+    func goToSignUp() {
+        
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("FirstNameViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+    }
+
 }
