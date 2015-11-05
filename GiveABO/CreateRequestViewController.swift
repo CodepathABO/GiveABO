@@ -9,10 +9,11 @@
 import UIKit
 import Parse
 
-class CreateRequestViewController: UIViewController {
+class CreateRequestViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userBloodTypeLabel: UILabel!
+    @IBOutlet weak var messageTextView: UITextView!
     
     var user = PFUser.currentUser()
     var query = PFQuery(className:"Simple")
@@ -21,12 +22,11 @@ class CreateRequestViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // Run the query on user data and perform logged in user interactions
-        print ("youre logged in")
-        
         // HIDE STATUSBAR
-        UIApplication.sharedApplication().statusBarHidden = false
+        UIApplication.sharedApplication().statusBarHidden = true
         
+        
+        // PARSE USER INFO
         query.whereKey("user", equalTo: (user?.objectId)!)
         
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
@@ -44,11 +44,25 @@ class CreateRequestViewController: UIViewController {
                     self.userNameLabel.text = firstname + " " + lastname
                     self.userBloodTypeLabel.text = bloodtype
                 }
-                
             }
-            
         }
         
+        
+        // SET UP TEXT VIEW
+        
+        messageTextView.text = "Write your message"
+        messageTextView.alpha = 0.6
+        
+        messageTextView.delegate = self
+        
+        
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.text == "Write your message" {
+            textView.text = nil
+            textView.alpha = 1
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +74,15 @@ class CreateRequestViewController: UIViewController {
     // DISMISS CREATE REQUEST SCREEN
     @IBAction func didPressPost(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+        
+        newRequestName = userNameLabel.text!
+        newRequestBloodType = userBloodTypeLabel.text!
+        newRequestMessage = messageTextView.text
+        newRequestListener = true
     }
+    
+    
+    
+    
 
 }

@@ -20,7 +20,7 @@ class RequestDetailViewController: UIViewController {
     
     
     // CONFIRM DETAILS
-    @IBOutlet weak var donatingToImageView: UIImageView!
+
     @IBOutlet weak var confirmMessageImageView: UIImageView!
     @IBOutlet weak var bloodTypeImageView: UIImageView!
     @IBOutlet weak var phoneNumberImageView: UIImageView!
@@ -37,6 +37,7 @@ class RequestDetailViewController: UIViewController {
     
     var nameText = ""
     var messageText = ""
+    var bloodTypeText = ""
     
     
     var requestContents: [UILabel]!
@@ -67,6 +68,7 @@ class RequestDetailViewController: UIViewController {
         
         nameLabel.text = nameText
         messageLabel.text = messageText
+        bloodTypeLabel.text = bloodTypeText
         
         let requestViewPan = UIPanGestureRecognizer(target: self, action: "didPanRequest:")
         requestView.addGestureRecognizer(requestViewPan)
@@ -77,7 +79,7 @@ class RequestDetailViewController: UIViewController {
         
         
         // CONFIRM CONTENT ARRAY
-        confirmContents = [donatingToImageView, confirmMessageImageView, bloodTypeImageView, phoneNumberImageView]
+        confirmContents = [confirmMessageImageView, bloodTypeImageView, phoneNumberImageView]
         
         for content in confirmContents {
             content.alpha = 0

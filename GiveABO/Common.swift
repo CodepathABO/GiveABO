@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-var newRequestListener = 0
+var newRequestListener = false
+var newRequestName = ""
+var newRequestBloodType = ""
+var newRequestMessage = ""
 
 func CGAffineTransformMakeDegreeRotation(rotation: CGFloat) -> CGAffineTransform {
     return CGAffineTransformMakeRotation(rotation * CGFloat(M_PI / 180))

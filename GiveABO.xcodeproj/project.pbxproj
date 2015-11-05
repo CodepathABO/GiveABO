@@ -21,7 +21,6 @@
 		3A0292521BE9F26E00576300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292511BE9F26E00576300 /* libz.tbd */; };
 		3A0292541BE9F27B00576300 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292531BE9F27B00576300 /* libsqlite3.tbd */; };
 		3A0292591BEA115900576300 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0292581BEA115900576300 /* RequestViewController.swift */; };
-		3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */; };
 		3A47B20B1BE6E707001016AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A47B20A1BE6E707001016AD /* Home.storyboard */; };
 		3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */; };
 		3A8275261BE53EFC00CF68C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275251BE53EFC00CF68C7 /* ViewController.swift */; };
@@ -83,7 +82,6 @@
 		3A0292531BE9F27B00576300 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3A0292551BE9F2BD00576300 /* GiveABO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiveABO-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A0292581BEA115900576300 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
-		3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		3A47B20A1BE6E707001016AD /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3A8275201BE53EFB00CF68C7 /* GiveABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiveABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
 				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
 				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
-				3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */,
 				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
 			);
 			name = Controllers;
@@ -326,7 +323,7 @@
 				TargetAttributes = {
 					3A82751F1BE53EFB00CF68C7 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = EW3567CNKM;
+						DevelopmentTeam = V32Q7L73GY;
 					};
 					3A8275331BE53EFC00CF68C7 = {
 						CreatedOnToolsVersion = 7.1;
@@ -411,7 +408,6 @@
 				3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */,
 				3AC2AEB11BE5C20B003D5E88 /* HomeViewController.swift in Sources */,
 				C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */,
-				3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */,
 				C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
