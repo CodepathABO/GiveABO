@@ -188,6 +188,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     @IBAction func signUpButtonDidTouch(sender: UIButton) {
         
         if signupActive == false {
+            
+            
             loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
             
             registeredLabel.text = "Already registered?"
@@ -195,6 +197,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
             signupButton.setTitle("Log In", forState: UIControlState.Normal)
             
             signupActive = true
+
+            
+            goToSignup()
+            
             
         } else {
              loginButton.setTitle("Log In", forState: UIControlState.Normal)
@@ -263,6 +269,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
+    
+    // GO TO SIGNUP STORYBOARD
+    func goToSignup() {
+        
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpNavigationViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+    }
+
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
