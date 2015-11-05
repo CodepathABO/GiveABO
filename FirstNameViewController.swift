@@ -117,6 +117,8 @@ class FirstNameViewController: UIViewController {
     
     @IBAction func onBack(sender: AnyObject) {
         
+        navigationController?.popViewControllerAnimated(true)
+        
         
     }
     

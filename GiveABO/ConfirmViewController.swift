@@ -14,8 +14,20 @@ class ConfirmViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var bloodDetailImage: UIImageView!
+    
+    var bloodType: Int = 0
+    var arrayOfImages: [UIImage]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        arrayOfImages = [
+            UIImage(named: "typeA")!,
+            UIImage(named: "typeB")!,
+            UIImage(named: "typeAB")!,
+            UIImage(named: "typeO")!,
+        ]
         
         confirmButton.layer.cornerRadius = 25
         confirmButton.layer.borderWidth = 1
@@ -28,6 +40,11 @@ class ConfirmViewController: UIViewController {
         
         messageLabel.text = "Great! \(firstName),"
         
+        
+        bloodType = defaults.objectForKey("index") as! Int
+        
+         bloodDetailImage.image = arrayOfImages[bloodType]
+        
         // Do any additional setup after loading the view.
     }
 
@@ -36,6 +53,12 @@ class ConfirmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onBack(sender: AnyObject) {
+        
+        navigationController?.popViewControllerAnimated(true)
+        
+    }
+
 
     /*
     // MARK: - Navigation
