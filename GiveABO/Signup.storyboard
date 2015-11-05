@@ -460,7 +460,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4kX-lX-o6C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yqS-8K-qAC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignUpNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yqS-8K-qAC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eld-Fr-yPQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
