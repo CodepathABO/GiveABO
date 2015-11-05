@@ -75,6 +75,9 @@ class BlobTransition: BaseTransition {
         let requestView = requestDetialVC.requestView
         
         
+        
+        // FADE OUT CONTENTS
+        
         var delay = 0.0
         
         for content in requestDetialVC.requestContents {
@@ -85,6 +88,7 @@ class BlobTransition: BaseTransition {
                 options: UIViewAnimationOptions.CurveEaseIn,
                 animations: { () -> Void in
                     content.alpha = 0
+                    requestDetialVC.donateButton.alpha = 0
                 },
                 completion: nil
             )
