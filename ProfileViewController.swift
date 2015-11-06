@@ -27,8 +27,7 @@ class ProfileViewController: UIViewController {
         
         finishButton.layer.cornerRadius = 25
         finishButton.layer.borderWidth = 1
-        finishButton.layer.backgroundColor =
-            UIColor.redColor().CGColor
+        finishButton.backgroundColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         finishButton.layer.borderColor = UIColor.redColor().CGColor
         // Do any additional setup after loading the view.
     }
@@ -60,6 +59,31 @@ class ProfileViewController: UIViewController {
     sender.inputView = datePickerView
     datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     }
+    
+    @IBAction func onPhoneEditFinished(sender: AnyObject) {
+        
+       // formatAsPhoneNumber()
+    }
+    /*
+    func formatAsPhoneNumber() -> String {
+        let len = count(self)
+        var pattern: String
+        var replacement: String
+        switch len {
+        case 11:
+            pattern = "(\\d)(\\d{3})(\\d{3})(\\d{4})"
+            replacement = "$1 ($2) $3-$4"
+        case 10:
+            pattern = "(\\d{3})(\\d{3})(\\d{4})"
+            replacement = "($1) $2-$3"
+        default:
+            return self
+        }
+        
+        let nsText = self as NSString
+        return nsText.stringByReplacingOccurrencesOfString(pattern, withString: replacement, options: .RegularExpressionSearch, range: NSMakeRange(0, len))
+    }
+*/
 
     @IBAction func didTap(sender: UITapGestureRecognizer) {
         
