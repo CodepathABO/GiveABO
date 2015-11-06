@@ -9,14 +9,6 @@
 import UIKit
 
 class UserAccountViewController: UIViewController {
-    
-    var screenOriginalCenter: CGPoint!
-    
-    var screenUp: CGPoint!
-    var screenDown: CGPoint!
-    
-    var friction: CGFloat!
-
 
 
     @IBOutlet weak var containerView: UIView!
@@ -25,6 +17,26 @@ class UserAccountViewController: UIViewController {
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     
     
+    @IBOutlet var buttons: [UIButton]!
+    
+    
+    var userProfileViewController: UIViewController!
+    var userRewardsViewController: UIViewController!
+    var userEventsViewController: UIViewController!
+    var userStoriesViewController: UIViewController!
+    
+    var viewControllers: [UIViewController]!
+    
+    var selectedIndex: Int = 0
+    
+    
+    var screenOriginalCenter: CGPoint!
+    
+    var screenUp: CGPoint!
+    var screenDown: CGPoint!
+    
+    var friction: CGFloat!
+
     
     
     override func viewDidLoad() {
@@ -37,20 +49,71 @@ class UserAccountViewController: UIViewController {
         // settingsScrollView.alpha = 0
         
         screenUp = CGPoint(x: 0, y: 20)
-        screenDown = CGPoint(x: 0, y: 580)
+        screenDown = CGPoint(x: 290, y: 20)
         
         contentView.frame.origin = screenUp
         contentView.layer.shadowOpacity = 0.4
-        contentView.layer.shadowOffset = CGSizeMake(0, -2)
+        contentView.layer.shadowOffset = CGSizeMake(-2, 0)
         contentView.layer.shadowRadius = 2
-        
-        
         
         friction = 10
 
 
-        // Do any additional setup after loading the view.
+        let storyboard = UIStoryboard(name: "Main", bundle:  nil)
+        
+        userProfileViewController = storyboard.instantiateViewControllerWithIdentifier("UserProfileViewController")
+        userRewardsViewController = storyboard.instantiateViewControllerWithIdentifier("UserRewardsViewController")
+        userEventsViewController = storyboard.instantiateViewControllerWithIdentifier("UserEventsViewController")
+        userStoriesViewController = storyboard.instantiateViewControllerWithIdentifier("UserStoriesViewController")
+        
+        
+        viewControllers = [userProfileViewController, userRewardsViewController, userEventsViewController, userStoriesViewController]
+        
+        buttons[selectedIndex].selected = true
+        navButtons(buttons[selectedIndex])
+
     }
+    
+    @IBAction func navButtons(sender: UIButton) {
+        
+        
+        let previousIndex = selectedIndex
+        
+        selectedIndex = sender.tag
+        
+        buttons[previousIndex].selected = false
+        
+        let previousVC = viewControllers[previousIndex]
+        
+        previousVC.willMoveToParentViewController(nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParentViewController()
+        
+        sender.selected = true
+        
+        let vc = viewControllers[selectedIndex]
+        
+        addChildViewController(vc)
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        
+        vc.didMoveToParentViewController(self)
+        
+        UIView.animateWithDuration(0.5, delay: 0.65, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            
+            self.contentView.frame.origin = self.screenUp
+            
+            }) { (Bool) -> Void in
+                // ..
+        }
+
+        
+        
+    }
+    
+    
+    
+    // MARK: View Slide to Expose Nav Gesture Recognizer
     
     @IBAction func panGestureRecognizer(sender: UIPanGestureRecognizer) {
             
@@ -59,9 +122,9 @@ class UserAccountViewController: UIViewController {
         
         let velocity = sender.velocityInView(view)
         
-        let contentScale = convertValue(contentView.frame.origin.y, r1Min: 20, r1Max: 580, r2Min: 0.9, r2Max: 1.0)
+        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 290, r2Min: 0.9, r2Max: 1.0)
         
-        let contentFade = convertValue(contentView.frame.origin.y, r1Min: 20, r1Max: 580, r2Min: 0, r2Max: 1.0)
+        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 290, r2Min: 0, r2Max: 1.0)
         
         if sender.state == UIGestureRecognizerState.Began {
             
@@ -69,19 +132,19 @@ class UserAccountViewController: UIViewController {
             
         } else if sender.state == UIGestureRecognizerState.Changed {
             
-            if contentView.frame.origin.y < screenUp.y {
+            if contentView.frame.origin.x < screenUp.x {
                 
-                translation.y /= friction
+                translation.x /= friction
                 
                 
             }
             print(contentView.frame.origin.y)
             
-            
-            contentView.frame.origin = CGPoint(x: screenOriginalCenter.x, y: screenOriginalCenter.y + translation.y)
+            contentView.frame.origin = CGPoint(x: screenOriginalCenter.x + translation.x, y: screenOriginalCenter.y)
+            // contentView.frame.origin = CGPoint(x: screenOriginalCenter.x, y: screenOriginalCenter.y + translation.y)
             
             self.contentView.layer.shadowOpacity = 0.2
-            self.contentView.layer.shadowOffset = CGSizeMake(0, -4)
+            self.contentView.layer.shadowOffset = CGSizeMake(-4, 0)
             self.contentView.layer.shadowRadius = 4
             
             menuScrollView.alpha = contentFade
@@ -93,7 +156,7 @@ class UserAccountViewController: UIViewController {
         } else if sender.state == UIGestureRecognizerState.Ended {
             
             if velocity.y > 0 {
-                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.7, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                     self.contentView.frame.origin = self.screenDown
                     UIView.animateWithDuration(0.2, animations: { () -> Void in
                        // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(180 * M_PI / 180))
@@ -106,7 +169,7 @@ class UserAccountViewController: UIViewController {
                 })
                 
             } else {
-                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.7, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                     self.contentView.frame.origin = self.screenUp
                     UIView.animateWithDuration(0.2, animations: { () -> Void in
                        // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
@@ -117,7 +180,7 @@ class UserAccountViewController: UIViewController {
                 
             }
             
-            if contentView.frame.origin.y == 580 {
+            if contentView.frame.origin.x == 290 {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.containerView.alpha = 1
                     self.menuScrollView.alpha = 1
@@ -125,7 +188,7 @@ class UserAccountViewController: UIViewController {
                 })
             }
             
-        } else if contentView.frame.origin.y == 20 {
+        } else if contentView.frame.origin.x == 20 {
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 self.containerView.alpha = 0
                 self.menuScrollView.alpha = 0
@@ -137,8 +200,23 @@ class UserAccountViewController: UIViewController {
     }
     
     
+    @IBAction func donateButton(sender: UIButton) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
+    @IBAction func requestButton(sender: UIButton) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 
+    @IBAction func privacyButton(sender: UIButton) {
+        performSegueWithIdentifier("privacySegue", sender: self)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

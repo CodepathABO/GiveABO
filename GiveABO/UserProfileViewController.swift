@@ -17,6 +17,9 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var yearlyDonationsView: UIView!
     @IBOutlet weak var donationStreakView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableTitleView: UIView!
+    @IBOutlet weak var statsView: UIView!
+    @IBOutlet weak var userDataView: UIView!
     
 
     override func viewDidLoad() {
@@ -44,8 +47,49 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         totalDonationsView.layer.borderColor = UIColor(red:0.97, green:0.95, blue:0.95, alpha:1.0).CGColor
         totalDonationsView.layer.borderWidth = 8
         
+        tableView.alpha = 0
+        tableTitleView.alpha = 0
+        statsView.alpha = 0
+        userDataView.alpha = 0
+        
+        
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+            
+            UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+                self.userDataView.alpha = 1
+                self.statsView.alpha = 1
+                self.tableTitleView.alpha = 1
+                self.tableView.alpha = 1
+                }) { (Bool) -> Void in
+ 
+            }
+        }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+            self.userDataView.alpha = 0
+            self.statsView.alpha = 0
+            self.tableTitleView.alpha = 0
+            self.tableView.alpha = 0
+            }) { (Bool) -> Void in
+                
+        }
+    }
+    
+    
+    // MAEK: ACTIONS
+    
+    @IBAction func closeButton(sender: UIButton) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -64,9 +108,18 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = data[indexPath.row]
+        
         cell.accessoryType = .Checkmark
         
+         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+       
         
     }
     
