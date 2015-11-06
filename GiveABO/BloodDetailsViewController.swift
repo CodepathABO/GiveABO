@@ -18,6 +18,8 @@ class BloodDetailsViewController: UIViewController {
     var bloodType: Int = 0
     var arrayOfImages: [UIImage]!
     
+    var sign: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +64,20 @@ class BloodDetailsViewController: UIViewController {
         
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    @IBAction func onTypePressed(sender: UIButton) {
+        
+        //print("\(sender.tag)")
+        
+        sign = sender.tag
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(sign, forKey: "sign")
+        defaults.synchronize()
+        
+        
+    }
+    
 
     /*
     // MARK: - Navigation
