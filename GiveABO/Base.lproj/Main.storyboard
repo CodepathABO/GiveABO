@@ -514,7 +514,7 @@ rewards it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ACF65BE7-F7AE-44D7-9E9C-215D6FE8696D" id="hlu-bV-t4U">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="89F697B3-AD59-4A94-9096-8E816D5D4969" id="hlu-bV-t4U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -664,8 +664,8 @@ rewards it.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uJh-sv-0ky">
-                                                <rect key="frame" x="49" y="467" width="109" height="33"/>
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uJh-sv-0ky">
+                                                <rect key="frame" x="50" y="452" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -678,18 +678,6 @@ rewards it.</string>
                                                 <connections>
                                                     <action selector="privacyButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="LlM-al-vMm"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEQ-Do-o3g">
-                                                <rect key="frame" x="49" y="531" width="60" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <size key="titleShadowOffset" width="1" height="1"/>
-                                                <state key="normal" title="Log out">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10417546452702703" colorSpace="calibratedRGB"/>
-                                                </state>
                                             </button>
                                             <view alpha="0.25" contentMode="scaleToFill" id="bCq-VC-Rwe">
                                                 <rect key="frame" x="35" y="131" width="320" height="1"/>
@@ -739,8 +727,8 @@ rewards it.</string>
                                                 <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0LQ-bV-pIl">
-                                                <rect key="frame" x="50" y="85" width="94" height="33"/>
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0LQ-bV-pIl">
+                                                <rect key="frame" x="50" y="72" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -754,8 +742,8 @@ rewards it.</string>
                                                     <action selector="donateButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="iPs-Ov-vIG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JFg-yf-0sf">
-                                                <rect key="frame" x="50" y="149" width="134" height="33"/>
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JFg-yf-0sf">
+                                                <rect key="frame" x="50" y="132" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -769,8 +757,8 @@ rewards it.</string>
                                                     <action selector="requestButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="ht9-dP-TzM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wiN-cW-HbI">
-                                                <rect key="frame" x="50" y="213" width="105" height="33"/>
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wiN-cW-HbI">
+                                                <rect key="frame" x="50" y="197" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -787,8 +775,8 @@ rewards it.</string>
                                                     <action selector="navButtons:" destination="Wun-PE-CiM" eventType="touchUpInside" id="kJT-7G-92U"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.75" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XRr-T2-bS0">
-                                                <rect key="frame" x="49" y="277" width="68" height="33"/>
+                                            <button opaque="NO" alpha="0.75" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XRr-T2-bS0">
+                                                <rect key="frame" x="50" y="262" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -805,8 +793,8 @@ rewards it.</string>
                                                     <action selector="navButtons:" destination="Wun-PE-CiM" eventType="touchUpInside" id="2f7-m1-0d1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.75" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kGg-9d-4iS">
-                                                <rect key="frame" x="49" y="341" width="188" height="33"/>
+                                            <button opaque="NO" alpha="0.75" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kGg-9d-4iS">
+                                                <rect key="frame" x="50" y="326" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -823,8 +811,8 @@ rewards it.</string>
                                                     <action selector="navButtons:" destination="Wun-PE-CiM" eventType="touchUpInside" id="mGR-u7-RzO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.75" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myv-cQ-M9n">
-                                                <rect key="frame" x="49" y="405" width="124" height="33"/>
+                                            <button opaque="NO" alpha="0.75" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myv-cQ-M9n">
+                                                <rect key="frame" x="50" y="390" width="305" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -840,6 +828,18 @@ rewards it.</string>
                                                 <connections>
                                                     <action selector="navButtons:" destination="Wun-PE-CiM" eventType="touchUpInside" id="fQp-8Y-jeA"/>
                                                 </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEQ-Do-o3g">
+                                                <rect key="frame" x="50" y="517" width="305" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Log out">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10417546452702703" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -1576,7 +1576,7 @@ You only need 9 more donations to unlock your first badge and recieve some goodi
         </scene>
     </scenes>
     <resources>
-        <image name="ACF65BE7-F7AE-44D7-9E9C-215D6FE8696D" width="375" height="667">
+        <image name="89F697B3-AD59-4A94-9096-8E816D5D4969" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
