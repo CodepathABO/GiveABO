@@ -8,7 +8,7 @@
         <!--Home View Controller-->
         <scene sceneID="rQy-Tl-7l9">
             <objects>
-                <viewController storyboardIdentifier="SBTestViewController" id="QrJ-Ov-ioM" customClass="HomeViewController" customModule="GiveABO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SBTestViewController" id="QrJ-Ov-ioM" customClass="HomeViewController" customModule="GiveABO_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSf-4K-pwe">
                         <rect key="frame" x="0.0" y="0.0" width="1665" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,7 +632,7 @@
         <!--Create Request View Controller-->
         <scene sceneID="pw2-Ev-eWr">
             <objects>
-                <viewController id="Qba-ZS-whi" customClass="CreateRequestViewController" customModule="GiveABO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qba-ZS-whi" customClass="CreateRequestViewController" customModule="GiveABO_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yHh-pK-BoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -641,6 +641,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fDv-04-73j" userLabel="Close Button">
+                                <rect key="frame" x="331" y="31" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Close Button"/>
+                                <connections>
+                                    <action selector="didPressClose:" destination="Qba-ZS-whi" eventType="touchUpInside" id="Fdm-NG-ZGh"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeremie Lim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ly1-ix-jfQ">
                                 <rect key="frame" x="38" y="55" width="299" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -667,7 +675,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" id="IKE-1F-7fU">
-                                <rect key="frame" x="33" y="122" width="323" height="247"/>
+                                <rect key="frame" x="33" y="122" width="323" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
@@ -675,7 +683,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oCG-Mo-Ccs" userLabel="Post Button">
-                                <rect key="frame" x="294" y="26" width="68" height="32"/>
+                                <rect key="frame" x="160" y="356" width="68" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Post Button">
                                     <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
@@ -702,7 +710,7 @@
         <!--Request Detail View Controller-->
         <scene sceneID="jEE-Wm-2kc">
             <objects>
-                <viewController id="bRA-Cq-BHp" customClass="RequestDetailViewController" customModule="GiveABO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bRA-Cq-BHp" customClass="RequestDetailViewController" customModule="GiveABO_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNb-Cc-e94">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

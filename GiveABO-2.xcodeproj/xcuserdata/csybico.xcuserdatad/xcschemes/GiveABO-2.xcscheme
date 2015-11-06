@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A82751F1BE53EFB00CF68C7"
-               BuildableName = "GiveABO.app"
-               BlueprintName = "GiveABO"
-               ReferencedContainer = "container:GiveABO.xcodeproj">
+               BuildableName = "GiveABO-2.app"
+               BlueprintName = "GiveABO-2"
+               ReferencedContainer = "container:GiveABO-2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A8275331BE53EFC00CF68C7"
-               BuildableName = "GiveABOTests.xctest"
-               BlueprintName = "GiveABOTests"
-               ReferencedContainer = "container:GiveABO.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A82753E1BE53EFC00CF68C7"
-               BuildableName = "GiveABOUITests.xctest"
-               BlueprintName = "GiveABOUITests"
-               ReferencedContainer = "container:GiveABO.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A82751F1BE53EFB00CF68C7"
-            BuildableName = "GiveABO.app"
-            BlueprintName = "GiveABO"
-            ReferencedContainer = "container:GiveABO.xcodeproj">
+            BuildableName = "GiveABO-2.app"
+            BlueprintName = "GiveABO-2"
+            ReferencedContainer = "container:GiveABO-2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A82751F1BE53EFB00CF68C7"
-            BuildableName = "GiveABO.app"
-            BlueprintName = "GiveABO"
-            ReferencedContainer = "container:GiveABO.xcodeproj">
+            BuildableName = "GiveABO-2.app"
+            BlueprintName = "GiveABO-2"
+            ReferencedContainer = "container:GiveABO-2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A82751F1BE53EFB00CF68C7"
-            BuildableName = "GiveABO.app"
-            BlueprintName = "GiveABO"
-            ReferencedContainer = "container:GiveABO.xcodeproj">
+            BuildableName = "GiveABO-2.app"
+            BlueprintName = "GiveABO-2"
+            ReferencedContainer = "container:GiveABO-2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
