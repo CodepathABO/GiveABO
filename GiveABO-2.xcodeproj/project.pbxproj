@@ -56,6 +56,7 @@
 		C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */; };
 		C3C950C11BE6DAA700D04638 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C950C01BE6DAA700D04638 /* Signup.storyboard */; };
 		C3C950C31BE6DF2000D04638 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C950C21BE6DF2000D04638 /* HelloViewController.swift */; };
+		C3CF89521BEC3EEF0082E02C /* SignUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF89511BEC3EEF0082E02C /* SignUpProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		C3C950C01BE6DAA700D04638 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		C3C950C21BE6DF2000D04638 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		C3CF89511BEC3EEF0082E02C /* SignUpProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				3A8275271BE53EFC00CF68C7 /* Main.storyboard */,
 				3A0292581BEA115900576300 /* RequestViewController.swift */,
 				C3C950C01BE6DAA700D04638 /* Signup.storyboard */,
+				C3CF89511BEC3EEF0082E02C /* SignUpProfileViewController.swift */,
 				C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */,
 				C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */,
 				C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */,
@@ -443,6 +446,8 @@
 				C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */,
 				3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */,
 				3A71817D1BEB491B0054BB47 /* UserEventsViewController.swift in Sources */,
+				C3CF89521BEC3EEF0082E02C /* SignUpProfileViewController.swift in Sources */,
+				3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */,
 				C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */,
 				3A7181791BEB48B90054BB47 /* UserAccountViewController.swift in Sources */,
 			);

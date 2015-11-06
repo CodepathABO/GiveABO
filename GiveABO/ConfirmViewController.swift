@@ -18,6 +18,9 @@ class ConfirmViewController: UIViewController {
     
     @IBOutlet weak var typeImage: UIImageView!
     
+    @IBOutlet weak var signLabel: UILabel!
+    
+    
     var bloodType: Int = 0
     var arrayOfImages: [UIImage]!
     
@@ -33,8 +36,7 @@ class ConfirmViewController: UIViewController {
         
         confirmButton.layer.cornerRadius = 25
         confirmButton.layer.borderWidth = 1
-        confirmButton.layer.backgroundColor =
-            UIColor.redColor().CGColor
+        confirmButton.backgroundColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         confirmButton.layer.borderColor = UIColor.redColor().CGColor
 
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -50,10 +52,10 @@ class ConfirmViewController: UIViewController {
         
         if (sign == 1){
             
-            typeImage.image = UIImage(named: "photo_icon")
+           signLabel.text = "-"
         }
         else{
-            typeImage.image = UIImage(named: "quote_icon")
+            signLabel.text = "+"
         }
         
         // Do any additional setup after loading the view.

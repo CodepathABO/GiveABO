@@ -37,8 +37,7 @@ class BloodDetailsViewController: UIViewController {
         
         continueButton.layer.cornerRadius = 25
         continueButton.layer.borderWidth = 1
-        continueButton.layer.backgroundColor =
-            UIColor.redColor().CGColor
+        continueButton.backgroundColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         continueButton.layer.borderColor = UIColor.redColor().CGColor
         
         bloodType = defaults.objectForKey("index") as! Int
