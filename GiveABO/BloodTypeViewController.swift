@@ -37,7 +37,7 @@ class BloodTypeViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let firstName = defaults.objectForKey("first_name") as! String
         
-        messageLabel.text = "Okay \(firstName),"
+        messageLabel.text = "\(firstName),"
         messageLabel.textColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         
         continueButton.layer.cornerRadius = 25

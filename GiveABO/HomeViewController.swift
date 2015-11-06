@@ -353,6 +353,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    @IBAction func didPressProfile(sender: AnyObject) {
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("UserAccountViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

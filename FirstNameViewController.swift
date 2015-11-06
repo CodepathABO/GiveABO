@@ -22,6 +22,8 @@ class FirstNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.firstNameField.becomeFirstResponder()
+        
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false
         

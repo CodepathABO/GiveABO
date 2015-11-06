@@ -43,7 +43,8 @@ class ConfirmViewController: UIViewController {
         let firstName = defaults.objectForKey("first_name") as! String
         let sign = defaults.objectForKey("sign") as! Int
         
-        messageLabel.text = "Great! \(firstName),"
+        messageLabel.text = "\(firstName),"
+        messageLabel.textColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         
         
         bloodType = defaults.objectForKey("index") as! Int

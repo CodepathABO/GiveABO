@@ -16,8 +16,24 @@ class SignUpProfileViewController: UIViewController {
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     
+    var initialY: CGFloat!
+    var offset: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.usernameField.becomeFirstResponder()
+        
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        UIApplication.sharedApplication().statusBarHidden = false
+        
+        initialY = signupButton.frame.origin.y
+        offset = -240
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
 
         signupButton.layer.cornerRadius = 25
         signupButton.layer.borderWidth = 1
@@ -31,6 +47,20 @@ class SignUpProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        
+        signupButton.frame.origin.y = initialY + offset
+        
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        
+        signupButton.frame.origin.y = initialY
+        
+    }
+
     
     @IBAction func didTap(sender: UITapGestureRecognizer) {
         
