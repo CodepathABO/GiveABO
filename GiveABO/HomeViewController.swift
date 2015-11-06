@@ -21,15 +21,22 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 //    @IBOutlet weak var timRequestView: UIView!
     @IBOutlet weak var jeremieRequestView: UIView!
     @IBOutlet weak var annabelRequestView: UIView!
-//    @IBOutlet weak var carolineRequestView: UIView!
-//    @IBOutlet weak var markRequestView: UIView!
-//    @IBOutlet weak var ucsfRequestView: UIView!
+    @IBOutlet weak var americanRCRequestView: UIView!
+    @IBOutlet weak var carolineRequestView: UIView!
+    @IBOutlet weak var ucsfRequestView: UIView!
+    @IBOutlet weak var gioRequestView: UIView!
+    @IBOutlet weak var markRequestView: UIView!
+    @IBOutlet weak var helenRequestView: UIView!
+    @IBOutlet weak var oaklandRequestView: UIView!
+    @IBOutlet weak var newRequestView: UIView!
     
     
     // BLOBS
     var blob: UIImageView!
     var blobCoat: UIImageView!
     
+    @IBOutlet weak var blurredBlob1: UIImageView!
+    @IBOutlet weak var blurredBlob2: UIImageView!
     
     // SELECTED REQUESTS
     var selectedView: UIView!
@@ -38,6 +45,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var selectedBlobImage: UIImage!
     var selectedBloblFrame: CGRect!
     var selectedNameLabel: UILabel!
+    var selectedMessageLabel: UILabel!
+    var selectedBloodTypeLabel: UILabel!
     
     
     // CUSTOM TRANSITION
@@ -55,11 +64,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         
-        // SETUP STATUS BAR
-        UIApplication.sharedApplication().statusBarStyle = .Default
-        UIApplication.sharedApplication().statusBarHidden = false
-        
-        
         // SETUP HOME SCROLLVIEW
         homeScrollView.contentSize = CGSize(width: 1665, height: 381)
         homeScrollView.delegate = self
@@ -67,48 +71,127 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         
         // SET UP TAP GESTURE RECOGNISER
-//        let timtap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let jeremieTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         let annabelTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-//        let carolineTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-//        let markTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
-//        let ucsfTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let americanRCTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let carolineTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let ucsfTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let gioTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let markTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let helenTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let oaklandTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
+        let newRequesTap = UITapGestureRecognizer(target: self, action: "didTapRequest:")
         
         
         // SET UP TAPS FOR REQUESTS
-//        timRequestView.addGestureRecognizer(timtap)
         jeremieRequestView.addGestureRecognizer(jeremieTap)
         annabelRequestView.addGestureRecognizer(annabelTap)
-//        carolineRequestView.addGestureRecognizer(carolineTap)
-//        markRequestView.addGestureRecognizer(markTap)
-//        ucsfRequestView.addGestureRecognizer(ucsfTap)
-        
-        
-
-        
+        americanRCRequestView.addGestureRecognizer(americanRCTap)
+        carolineRequestView.addGestureRecognizer(carolineTap)
+        ucsfRequestView.addGestureRecognizer(ucsfTap)
+        gioRequestView.addGestureRecognizer(gioTap)
+        markRequestView.addGestureRecognizer(markTap)
+        helenRequestView.addGestureRecognizer(helenTap)
+        oaklandRequestView.addGestureRecognizer(oaklandTap)
+        newRequestView.addGestureRecognizer(newRequesTap)
         
     }
     
+    // VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
 
 //        showBlobs(timRequestView)
-        showBlobs(jeremieRequestView)
-        showBlobs(annabelRequestView)
-//        showBlobs(carolineRequestView)
+        bloblAnimation1(jeremieRequestView)
+        bloblAnimation1(annabelRequestView)
+        bloblAnimation1(carolineRequestView)
+        bloblAnimation1(gioRequestView)
+        bloblAnimation1(helenRequestView)
+        bloblAnimation1(markRequestView)
+        blobAnimation2(americanRCRequestView)
+        blobAnimation2(oaklandRequestView)
+        
+        
 //        showBlobs(markRequestView)
 //        showBlobs(ucsfRequestView)
+        
+        
+        // SETUP STATUS BAR
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        UIApplication.sharedApplication().statusBarHidden = false
+        
+        // CHECK IF THERE'S A NEW REQUEST
+        if newRequestListener == true {
+            
+            // UPDATE NEW REQUEST INFO
+            let nameLabel = newRequestView.viewWithTag(20) as! UILabel
+            nameLabel.text = newRequestName
+            
+            let messageLabel = newRequestView.viewWithTag(30) as! UILabel
+            messageLabel.text = newRequestMessage
+            
+            let bloodTypeLabel = newRequestView.viewWithTag(40) as! UILabel
+            bloodTypeLabel.text = newRequestBloodType
+            
+            
+            // MOVE BLOBS
+            self.newRequestView.alpha = 0
+            self.newRequestView.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            
+            UIView.animateWithDuration(
+                3,
+                delay: 0,
+                usingSpringWithDamping: 0.6,
+                initialSpringVelocity: 0.6,
+                options: UIViewAnimationOptions.CurveEaseInOut,
+                
+                animations: { () -> Void in
+                    
+                    self.jeremieRequestView.transform = CGAffineTransformMakeTranslation(90, -15)
+                    self.americanRCRequestView.transform = CGAffineTransformMakeTranslation(60, 10)
+                    
+                    self.newRequestView.alpha = 1
+                    self.newRequestView.transform = CGAffineTransformMakeTranslation(230, -16)
+                    self.newRequestView.transform = CGAffineTransformScale(self.newRequestView.transform, 1, 1)
+                    
+                },
+                
+                completion: nil)
+            
+            
+            
+        }
+        
+        
+//        super.viewDidAppear(animated)
+        
+//        // AUTO SCROLL
+//        
+//        UIView.animateWithDuration(
+//            
+//            20,
+//            delay: 1,
+//            options: [UIViewAnimationOptions.CurveEaseInOut, UIViewAnimationOptions.AllowUserInteraction],
+//            
+//            animations: { () -> Void in
+//                self.homeScrollView.setContentOffset(CGPointMake(1000, 0), animated: false)
+//            },
+//            
+//            completion: nil
+//        )
+//        
+//        homeScrollView.to
+        
     }
     
-    func showBlobs(requestView: UIView) {
-        
-        
+    
+    // SHOW BLOBS
+    func bloblAnimation1(requestView: UIView) {
         
         let blob = requestView.viewWithTag(10) as! UIImageView
         let blobCoat = requestView.viewWithTag(11) as! UIImageView
         
         let rotation = 180
         blob.alpha = 1
-        
         
         // BLOB SIZE
         UIView.animateWithDuration(
@@ -122,9 +205,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             
             completion: nil
         )
-        
-        
-        
         
         // BLOB COAT ROTATION
         UIView.animateWithDuration(
@@ -140,11 +220,62 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         )
     }
     
+    // SHOW BLOBS
+    func blobAnimation2(requestView: UIView) {
+        
+        let blob = requestView.viewWithTag(10) as! UIImageView
+        let blobCoat = requestView.viewWithTag(11) as! UIImageView
+        
+        let rotation = 90
+        blob.alpha = 1
+        
+        // BLOB SIZE
+        UIView.animateWithDuration(
+            4,
+            delay: 0,
+            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
+            animations: { () -> Void in
+                
+                blob.transform = CGAffineTransformScale(blob.transform, 1.01, 1.03)
+            },
+            
+            completion: nil
+        )
+        
+        // BLOB COAT ROTATION
+        UIView.animateWithDuration(
+            20,
+            delay: 0,
+            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
+            animations: { () -> Void in
+                
+                blobCoat.transform = CGAffineTransformMakeRotation(CGFloat(Double(rotation) * M_PI / 180))
+            },
+            
+            completion: nil
+        )
+    }
+    
+    
+    
     
     // LISTEN TO HOME SCROLL
     func scrollViewDidScroll(scrollView: UIScrollView) {
+        
         homeScrollViewOffsetX = homeScrollView.contentOffset.x
+
+        let translation1 = (homeScrollView.contentOffset.x/10)
+        let translation2 = (homeScrollView.contentOffset.x/40)
+        
+        blurredBlob1.transform = CGAffineTransformMakeTranslation(translation1, 0)
+        blurredBlob2.transform = CGAffineTransformMakeTranslation(translation2, 0)
+    
+        
+        
     }
+    
+    
+    
     
     
     // TAP ON REQUEST
@@ -206,19 +337,22 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             destinationVC.nameText = selectedNameLabel.text!
             
             // SEND MESSAGE
-            let selectedMessage = selectedView.viewWithTag(30) as! UILabel
-            destinationVC.messageText = selectedMessage.text!
+            selectedMessageLabel = selectedView.viewWithTag(30) as! UILabel
+            destinationVC.messageText = selectedMessageLabel.text!
+            
+            // SEND BLOOD TYPE
+            selectedBloodTypeLabel = selectedView.viewWithTag(40) as! UILabel
+            destinationVC.bloodTypeText = selectedBloodTypeLabel.text!
+            
             
             // SETUP BLOB TRANSITION
             blobTransition = BlobTransition()
             destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
             destinationVC.transitioningDelegate = blobTransition
-            
         
         }
-        
-        
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -21,11 +21,13 @@
 		3A0292521BE9F26E00576300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292511BE9F26E00576300 /* libz.tbd */; };
 		3A0292541BE9F27B00576300 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292531BE9F27B00576300 /* libsqlite3.tbd */; };
 		3A0292591BEA115900576300 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0292581BEA115900576300 /* RequestViewController.swift */; };
+
 		3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */; };
 		3A33EB2D1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */; };
 		3A33EB2F1BEB7E380031BAF4 /* StoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */; };
 		3A33EB351BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */; };
 		3A33EB371BEBC5450031BAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A33EB361BEBC5450031BAF4 /* Assets.xcassets */; };
+
 		3A47B20B1BE6E707001016AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A47B20A1BE6E707001016AD /* Home.storyboard */; };
 		3A7181791BEB48B90054BB47 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */; };
 		3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */; };
@@ -92,11 +94,13 @@
 		3A0292531BE9F27B00576300 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3A0292551BE9F2BD00576300 /* GiveABO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiveABO-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A0292581BEA115900576300 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+
 		3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesData.swift; sourceTree = "<group>"; };
 		3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A33EB361BEBC5450031BAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+
 		3A47B20A1BE6E707001016AD /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAccountViewController.swift; path = ../UserAccountViewController.swift; sourceTree = "<group>"; };
 		3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRewardsViewController.swift; sourceTree = "<group>"; };
@@ -211,7 +215,6 @@
 				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
 				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
 				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
-				3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */,
 				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
 			);
 			name = Controllers;
@@ -353,7 +356,7 @@
 				TargetAttributes = {
 					3A82751F1BE53EFB00CF68C7 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = EW3567CNKM;
+						DevelopmentTeam = V32Q7L73GY;
 					};
 					3A8275331BE53EFC00CF68C7 = {
 						CreatedOnToolsVersion = 7.1;

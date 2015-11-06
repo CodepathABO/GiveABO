@@ -51,8 +51,8 @@ class BlobTransition: BaseTransition {
             
             animations: { () -> Void in
                 
-                requestView.center = CGPoint(x: 230, y: 350)
-                requestView.transform = CGAffineTransformMakeScale(5.5, 5.5)
+                requestView.center = CGPoint(x: 140, y: 270)
+                requestView.transform = CGAffineTransformMakeScale(6, 6)
                 
             }
             )
