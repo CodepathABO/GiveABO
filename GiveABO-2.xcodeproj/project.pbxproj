@@ -21,13 +21,10 @@
 		3A0292521BE9F26E00576300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292511BE9F26E00576300 /* libz.tbd */; };
 		3A0292541BE9F27B00576300 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292531BE9F27B00576300 /* libsqlite3.tbd */; };
 		3A0292591BEA115900576300 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0292581BEA115900576300 /* RequestViewController.swift */; };
-
-		3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */; };
 		3A33EB2D1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */; };
 		3A33EB2F1BEB7E380031BAF4 /* StoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */; };
 		3A33EB351BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */; };
 		3A33EB371BEBC5450031BAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A33EB361BEBC5450031BAF4 /* Assets.xcassets */; };
-
 		3A47B20B1BE6E707001016AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A47B20A1BE6E707001016AD /* Home.storyboard */; };
 		3A7181791BEB48B90054BB47 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */; };
 		3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */; };
@@ -94,29 +91,26 @@
 		3A0292531BE9F27B00576300 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3A0292551BE9F2BD00576300 /* GiveABO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiveABO-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A0292581BEA115900576300 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
-
-		3A2D62C21BE6032600D62573 /* NewRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
 		3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesData.swift; sourceTree = "<group>"; };
 		3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A33EB361BEBC5450031BAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-
 		3A47B20A1BE6E707001016AD /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAccountViewController.swift; path = ../UserAccountViewController.swift; sourceTree = "<group>"; };
 		3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRewardsViewController.swift; sourceTree = "<group>"; };
 		3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEventsViewController.swift; sourceTree = "<group>"; };
 		3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoriesViewController.swift; sourceTree = "<group>"; };
 		3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBadgesViewController.swift; sourceTree = "<group>"; };
-		3A8275201BE53EFB00CF68C7 /* GiveABO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiveABO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8275201BE53EFB00CF68C7 /* GiveABO-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GiveABO-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8275251BE53EFC00CF68C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8275281BE53EFC00CF68C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A82752D1BE53EFC00CF68C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A82752F1BE53EFC00CF68C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A8275341BE53EFC00CF68C7 /* GiveABOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiveABOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8275341BE53EFC00CF68C7 /* GiveABO-2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GiveABO-2.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275381BE53EFC00CF68C7 /* GiveABOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveABOTests.swift; sourceTree = "<group>"; };
 		3A82753A1BE53EFC00CF68C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A82753F1BE53EFC00CF68C7 /* GiveABOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiveABOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A82753F1BE53EFC00CF68C7 /* GiveABO-2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GiveABO-2.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275431BE53EFC00CF68C7 /* GiveABOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveABOUITests.swift; sourceTree = "<group>"; };
 		3A8275451BE53EFC00CF68C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTestViewController.swift; sourceTree = "<group>"; };
@@ -234,9 +228,9 @@
 		3A8275211BE53EFB00CF68C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A8275201BE53EFB00CF68C7 /* GiveABO.app */,
-				3A8275341BE53EFC00CF68C7 /* GiveABOTests.xctest */,
-				3A82753F1BE53EFC00CF68C7 /* GiveABOUITests.xctest */,
+				3A8275201BE53EFB00CF68C7 /* GiveABO-2.app */,
+				3A8275341BE53EFC00CF68C7 /* GiveABO-2.xctest */,
+				3A82753F1BE53EFC00CF68C7 /* GiveABO-2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,9 +285,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A82751F1BE53EFB00CF68C7 /* GiveABO */ = {
+		3A82751F1BE53EFB00CF68C7 /* GiveABO-2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8275481BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO" */;
+			buildConfigurationList = 3A8275481BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO-2" */;
 			buildPhases = (
 				3A82751C1BE53EFB00CF68C7 /* Sources */,
 				3A82751D1BE53EFB00CF68C7 /* Frameworks */,
@@ -303,14 +297,14 @@
 			);
 			dependencies = (
 			);
-			name = GiveABO;
+			name = "GiveABO-2";
 			productName = GiveABO;
-			productReference = 3A8275201BE53EFB00CF68C7 /* GiveABO.app */;
+			productReference = 3A8275201BE53EFB00CF68C7 /* GiveABO-2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A8275331BE53EFC00CF68C7 /* GiveABOTests */ = {
+		3A8275331BE53EFC00CF68C7 /* GiveABO-2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A82754B1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABOTests" */;
+			buildConfigurationList = 3A82754B1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO-2Tests" */;
 			buildPhases = (
 				3A8275301BE53EFC00CF68C7 /* Sources */,
 				3A8275311BE53EFC00CF68C7 /* Frameworks */,
@@ -321,14 +315,14 @@
 			dependencies = (
 				3A8275361BE53EFC00CF68C7 /* PBXTargetDependency */,
 			);
-			name = GiveABOTests;
+			name = "GiveABO-2Tests";
 			productName = GiveABOTests;
-			productReference = 3A8275341BE53EFC00CF68C7 /* GiveABOTests.xctest */;
+			productReference = 3A8275341BE53EFC00CF68C7 /* GiveABO-2.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3A82753E1BE53EFC00CF68C7 /* GiveABOUITests */ = {
+		3A82753E1BE53EFC00CF68C7 /* GiveABO-2UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A82754E1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABOUITests" */;
+			buildConfigurationList = 3A82754E1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO-2UITests" */;
 			buildPhases = (
 				3A82753B1BE53EFC00CF68C7 /* Sources */,
 				3A82753C1BE53EFC00CF68C7 /* Frameworks */,
@@ -339,9 +333,9 @@
 			dependencies = (
 				3A8275411BE53EFC00CF68C7 /* PBXTargetDependency */,
 			);
-			name = GiveABOUITests;
+			name = "GiveABO-2UITests";
 			productName = GiveABOUITests;
-			productReference = 3A82753F1BE53EFC00CF68C7 /* GiveABOUITests.xctest */;
+			productReference = 3A82753F1BE53EFC00CF68C7 /* GiveABO-2.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -368,7 +362,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A82751B1BE53EFB00CF68C7 /* Build configuration list for PBXProject "GiveABO" */;
+			buildConfigurationList = 3A82751B1BE53EFB00CF68C7 /* Build configuration list for PBXProject "GiveABO-2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -381,9 +375,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A82751F1BE53EFB00CF68C7 /* GiveABO */,
-				3A8275331BE53EFC00CF68C7 /* GiveABOTests */,
-				3A82753E1BE53EFC00CF68C7 /* GiveABOUITests */,
+				3A82751F1BE53EFB00CF68C7 /* GiveABO-2 */,
+				3A8275331BE53EFC00CF68C7 /* GiveABO-2Tests */,
+				3A82753E1BE53EFC00CF68C7 /* GiveABO-2UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,7 +442,6 @@
 				3A33EB351BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift in Sources */,
 				C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */,
 				3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */,
-				3A2D62C31BE6032600D62573 /* NewRequestViewController.swift in Sources */,
 				3A71817D1BEB491B0054BB47 /* UserEventsViewController.swift in Sources */,
 				C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */,
 				3A7181791BEB48B90054BB47 /* UserAccountViewController.swift in Sources */,
@@ -476,12 +469,12 @@
 /* Begin PBXTargetDependency section */
 		3A8275361BE53EFC00CF68C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A82751F1BE53EFB00CF68C7 /* GiveABO */;
+			target = 3A82751F1BE53EFB00CF68C7 /* GiveABO-2 */;
 			targetProxy = 3A8275351BE53EFC00CF68C7 /* PBXContainerItemProxy */;
 		};
 		3A8275411BE53EFC00CF68C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A82751F1BE53EFB00CF68C7 /* GiveABO */;
+			target = 3A82751F1BE53EFB00CF68C7 /* GiveABO-2 */;
 			targetProxy = 3A8275401BE53EFC00CF68C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -601,8 +594,8 @@
 				INFOPLIST_FILE = GiveABO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theorize.GiveABO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theorize.GiveABO-2";
+				PRODUCT_NAME = "GiveABO-2";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GiveABO/GiveABO-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -623,8 +616,8 @@
 				INFOPLIST_FILE = GiveABO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theorize.GiveABO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theorize.GiveABO-2";
+				PRODUCT_NAME = "GiveABO-2";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GiveABO/GiveABO-Bridging-Header.h";
 			};
@@ -637,8 +630,8 @@
 				INFOPLIST_FILE = GiveABOTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theorize.GiveABOTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiveABO.app/GiveABO";
+				PRODUCT_NAME = "GiveABO-2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiveABO-2.app/GiveABO-2";
 			};
 			name = Debug;
 		};
@@ -649,8 +642,8 @@
 				INFOPLIST_FILE = GiveABOTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theorize.GiveABOTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiveABO.app/GiveABO";
+				PRODUCT_NAME = "GiveABO-2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiveABO-2.app/GiveABO-2";
 			};
 			name = Release;
 		};
@@ -660,7 +653,7 @@
 				INFOPLIST_FILE = GiveABOUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theorize.GiveABOUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GiveABO-2";
 				TEST_TARGET_NAME = GiveABO;
 				USES_XCTRUNNER = YES;
 			};
@@ -672,7 +665,7 @@
 				INFOPLIST_FILE = GiveABOUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theorize.GiveABOUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GiveABO-2";
 				TEST_TARGET_NAME = GiveABO;
 				USES_XCTRUNNER = YES;
 			};
@@ -681,7 +674,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A82751B1BE53EFB00CF68C7 /* Build configuration list for PBXProject "GiveABO" */ = {
+		3A82751B1BE53EFB00CF68C7 /* Build configuration list for PBXProject "GiveABO-2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8275461BE53EFC00CF68C7 /* Debug */,
@@ -690,7 +683,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A8275481BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO" */ = {
+		3A8275481BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO-2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8275491BE53EFC00CF68C7 /* Debug */,
@@ -699,7 +692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A82754B1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABOTests" */ = {
+		3A82754B1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO-2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A82754C1BE53EFC00CF68C7 /* Debug */,
@@ -708,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A82754E1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABOUITests" */ = {
+		3A82754E1BE53EFC00CF68C7 /* Build configuration list for PBXNativeTarget "GiveABO-2UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A82754F1BE53EFC00CF68C7 /* Debug */,

@@ -43,6 +43,9 @@ class CreateRequestViewController: UIViewController, UITextViewDelegate {
                     
                     self.userNameLabel.text = firstname + " " + lastname
                     self.userBloodTypeLabel.text = bloodtype
+                    
+                    
+                    
                 }
             }
         }
@@ -54,6 +57,7 @@ class CreateRequestViewController: UIViewController, UITextViewDelegate {
         messageTextView.alpha = 0.6
         
         messageTextView.delegate = self
+//        messageTextView.becomeFirstResponder()
         
         
     }
@@ -65,10 +69,16 @@ class CreateRequestViewController: UIViewController, UITextViewDelegate {
         }
     }
 
+    
     override func didReceiveMemoryWarning() {
 
         super.didReceiveMemoryWarning()
 
+    }
+    
+    @IBAction func didPressClose(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        newRequestListener = false
     }
     
     // DISMISS CREATE REQUEST SCREEN
