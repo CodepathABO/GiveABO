@@ -69,6 +69,20 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+            self.userDataView.alpha = 0
+            self.statsView.alpha = 0
+            self.tableTitleView.alpha = 0
+            self.tableView.alpha = 0
+            }) { (Bool) -> Void in
+                
+        }
+    }
+    
+    
     // MAEK: ACTIONS
     
     @IBAction func closeButton(sender: UIButton) {

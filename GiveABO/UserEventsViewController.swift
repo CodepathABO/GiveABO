@@ -42,6 +42,18 @@ class UserEventsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+            self.tableView.alpha = 0
+            self.screenTitle.alpha = 0
+            self.eventsText.alpha = 0
+            }) { (Bool) -> Void in
+                // ..
+        }
+    }
+    
     // MARK: ACTIONS
     
     @IBAction func closeButton(sender: UIButton) {
