@@ -17,8 +17,18 @@ class UserEventsViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var eventsText: UILabel!
     
+    var refresher: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refresher = UIRefreshControl()
+        
+        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        
+        tableView.addSubview(refresher)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -93,6 +103,12 @@ class UserEventsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         
+    }
+    
+    
+    func refresh() {
+        
+       refresher.endRefreshing()
     }
     
 
