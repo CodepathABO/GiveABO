@@ -13,11 +13,7 @@ class UserStoriesViewController: UIViewController, UICollectionViewDelegate,
 
     @IBOutlet weak var storiesCollectionView: UICollectionView!
     @IBOutlet weak var successPageTitle: UILabel!
-
-    
     @IBOutlet weak var successTextLabel: UILabel!
-    
-    
     
     private var stories = [Story(storyID: "001", name: "Brenda Cole", city: "San Francisco", state: "CA", featureImage: UIImage(named: "image-1"), summary: "My baby was born with complications that required monthly transfusions. Before I found out about GiveABO, we had to wat lenghty periods of time or travel far distances just to be able to get the bloodtype she needed! Thnks to ABO, we can access a large comunity of donors in the area!", userType: UIImage(named: "heartInNeed")),
         Story(storyID: "002", name: "Andrew Smythe", city: "San Francisco", state: "CA", featureImage: UIImage(named: "image-2"), summary: "I required an emargency surgery that without this ABO app, I would have had to be sent to a hospital nowhere near my family. Special Thanks to my friend who found out about ABO and connected my to several great donors!", userType: UIImage(named: "heartInNeed")),
@@ -25,6 +21,7 @@ class UserStoriesViewController: UIViewController, UICollectionViewDelegate,
         Story(storyID: "005", name: "Craig Myers", city: "Humboldt", state: "CA", featureImage: UIImage(named: "image-4"), summary: "I've been a pretty regular donor forever. When I got ABO it made it real easy to donate to not just blood banks, bot directly to other users in need. I became that needy user when one of my kids required surgery. ABO and its commuity came through! Thanks!", userType: UIImage(named: "heartO-n"))
     ]
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +32,7 @@ class UserStoriesViewController: UIViewController, UICollectionViewDelegate,
         storiesCollectionView.alpha = 0
         successTextLabel.alpha = 0
         successPageTitle.alpha = 0
-        
+
     }
 
     override func viewWillAppear(animated: Bool) {

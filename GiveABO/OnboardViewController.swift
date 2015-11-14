@@ -27,6 +27,8 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
     var scale = CGFloat(1.0)
     var rotation = CGFloat(0)
     
+    var platelet = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,7 +75,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         
         for i in 0...18 {
             
-            let platelet = UIView()
+            platelet = UIView()
             platelet.frame = CGRect(x: 55, y: 300, width: 100, height: 100)
             platelet.backgroundColor = UIColor(red:0.39, green:0.00, blue:0.14, alpha:1.0)
             platelet.layer.cornerRadius = 50
@@ -130,10 +132,15 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+       platelet.hidden = false
         
     }
     
-    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+      endAnim()
+    }
     
     
     // MARK: ACTIONS
@@ -362,6 +369,11 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         
         self.presentViewController(controller, animated: true, completion: nil)
         
+    }
+    
+    func endAnim() {
+        
+        self.platelet.hidden = true
     }
     
 

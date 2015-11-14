@@ -155,8 +155,8 @@ class UserAccountViewController: UIViewController {
             
         } else if sender.state == UIGestureRecognizerState.Ended {
             
-            if velocity.y > 0 {
-                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            if velocity.x > 0 {
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                     self.contentView.frame.origin = self.screenDown
                     UIView.animateWithDuration(0.2, animations: { () -> Void in
                        // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(180 * M_PI / 180))
@@ -169,7 +169,7 @@ class UserAccountViewController: UIViewController {
                 })
                 
             } else {
-                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
                     self.contentView.frame.origin = self.screenUp
                     UIView.animateWithDuration(0.2, animations: { () -> Void in
                        // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
