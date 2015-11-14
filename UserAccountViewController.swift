@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserAccountViewController: UIViewController {
+class UserAccountViewController: UIViewController, UIScrollViewDelegate {
 
 
     @IBOutlet weak var containerView: UIView!
@@ -17,6 +17,7 @@ class UserAccountViewController: UIViewController {
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     @IBOutlet weak var menuRevealButton: UIButton!
     @IBOutlet weak var menuHideButton: UIButton!
+    @IBOutlet weak var aboLogo: UIButton!
     
     @IBOutlet var buttons: [UIButton]!
     
@@ -55,13 +56,14 @@ class UserAccountViewController: UIViewController {
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false
         
+        menuScrollView.delegate = self
         menuScrollView.alpha = 1
-        // settingsScrollView.alpha = 0
+        aboLogo.alpha = 0.7
         
         menuHideButton.hidden = true
         
         screenUp = CGPoint(x: 0, y: 20)
-        screenDown = CGPoint(x: 280, y: 20)
+        screenDown = CGPoint(x: 250, y: 20)
         
         contentView.frame.origin = screenUp
         contentView.layer.shadowOpacity = 0.4
@@ -123,6 +125,48 @@ class UserAccountViewController: UIViewController {
         
         
     }
+    
+    // MARK: ScrollView Functions
+    
+    func scrollViewDidScroll(menuScrollView: UIScrollView) {
+        
+        let currentOffset = menuScrollView.contentOffset.y
+        
+        let finalOffset = menuScrollView.contentSize.width - menuScrollView.frame.width
+        
+        print("Current Offset \(currentOffset) Final Offset \(finalOffset)")
+        
+        if currentOffset > 0 {
+            
+            let introOneX = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: 0)
+            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: -20)
+            
+            let scale = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 1, r2Max: 0.8)
+            
+            
+            let bubbleAlpha = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0.7, r2Max: 0)
+            
+            aboLogo.transform = CGAffineTransformMakeTranslation(introOneX, introOneY)
+            aboLogo.transform = CGAffineTransformScale(aboLogo.transform, CGFloat(scale), CGFloat(scale))
+            
+            aboLogo.alpha = bubbleAlpha
+        }
+        
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView,
+        willDecelerate decelerate: Bool) {
+            // This method is called right as the user lifts their finger
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        // This method is called when the scrollview finally stops scrolling.
+    }
+
 
     
     
@@ -135,9 +179,9 @@ class UserAccountViewController: UIViewController {
         
         let velocity = sender.velocityInView(view)
         
-        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 280, r2Min: 0.9, r2Max: 1.0)
+        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 0, r1Max: 250, r2Min: 0.9, r2Max: 1.0)
         
-        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 280, r2Min: 0, r2Max: 1.0)
+        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 0, r1Max: 250, r2Min: 0, r2Max: 1.0)
         
         if sender.state == UIGestureRecognizerState.Began {
             
@@ -163,6 +207,8 @@ class UserAccountViewController: UIViewController {
             menuScrollView.alpha = contentFade
             
             menuScrollView.transform = CGAffineTransformMakeScale(contentScale, contentScale)
+            
+            aboLogo.transform = CGAffineTransformMakeScale(contentScale, contentScale)
             
             containerView.alpha = contentFade
             
@@ -198,18 +244,22 @@ class UserAccountViewController: UIViewController {
                 
             }
             
-            if contentView.frame.origin.x == 280 {
+            if contentView.frame.origin.x == 250 {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.containerView.alpha = 1
                     self.menuScrollView.alpha = 1
+                    self.aboLogo.alpha = 0.7
+                    self.aboLogo.transform = CGAffineTransformMakeScale(1.0, 1.0)
                     self.menuScrollView.transform = CGAffineTransformMakeScale(1.0, 1.0)
                 })
             }
             
-        } else if contentView.frame.origin.x == 20 {
+        } else if contentView.frame.origin.x == 0 {
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 self.containerView.alpha = 0
                 self.menuScrollView.alpha = 0
+                self.aboLogo.alpha = 0
+                self.aboLogo.transform = CGAffineTransformMakeScale(0.9, 0.9)
                 self.menuScrollView.transform = CGAffineTransformMakeScale(0.9, 0.9)
             })
         }
@@ -227,6 +277,8 @@ class UserAccountViewController: UIViewController {
                 self.contentView.layer.shadowRadius = 1
                 self.containerView.alpha = 1
                 self.menuScrollView.alpha = 1
+                self.aboLogo.alpha = 0.7
+                self.aboLogo.transform = CGAffineTransformMakeScale(1.0, 1.0)
                 self.menuScrollView.transform = CGAffineTransformMakeScale(1.0, 1.0)
             }, completion: { (Bool) -> Void in
                 self.menuRevealButton.hidden = true
@@ -244,6 +296,8 @@ class UserAccountViewController: UIViewController {
             self.contentView.layer.shadowRadius = 2
             self.containerView.alpha = 0
             self.menuScrollView.alpha = 0
+            self.aboLogo.alpha = 0
+            self.aboLogo.transform = CGAffineTransformMakeScale(0.9, 0.9)
             self.menuScrollView.transform = CGAffineTransformMakeScale(0.9, 0.9)
             }, completion: { (Bool) -> Void in
                 self.menuRevealButton.hidden = false

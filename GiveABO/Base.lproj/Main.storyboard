@@ -519,7 +519,7 @@ rewards it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="AA8F5682-341D-49B5-B49D-FD8844808E49" id="hlu-bV-t4U">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="686757E2-0D56-4E8A-B8E5-4D658BFCE281" id="hlu-bV-t4U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -857,19 +857,19 @@ rewards it.</string>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10417546452702703" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gGY-VI-kbv" userLabel="ABO Logo">
-                                                <rect key="frame" x="38" y="40" width="34" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <animations/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" image="GiveABO-Logo"/>
-                                                <connections>
-                                                    <action selector="menuHideButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="lqv-3h-jaC"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <animations/>
                                     </scrollView>
+                                    <button opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gGY-VI-kbv" userLabel="ABO Logo">
+                                        <rect key="frame" x="40" y="40" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="GiveABO-Logo"/>
+                                        <connections>
+                                            <action selector="menuHideButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="lqv-3h-jaC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -885,7 +885,7 @@ rewards it.</string>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEM-Mg-gAB">
-                                <rect key="frame" x="280" y="30" width="46" height="31"/>
+                                <rect key="frame" x="250" y="30" width="46" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="tintColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -922,6 +922,7 @@ rewards it.</string>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="750" height="667"/>
                     <connections>
+                        <outlet property="aboLogo" destination="gGY-VI-kbv" id="Tp2-vv-HwH"/>
                         <outlet property="containerView" destination="tid-d5-WIP" id="pFb-bc-JXP"/>
                         <outlet property="contentView" destination="v4b-yC-VPw" id="jRD-0P-IZ5"/>
                         <outlet property="menuHideButton" destination="BEM-Mg-gAB" id="MTA-c8-3gq"/>
@@ -1597,7 +1598,7 @@ You only need 9 more donations to unlock your first badge and recieve some goodi
         </scene>
     </scenes>
     <resources>
-        <image name="AA8F5682-341D-49B5-B49D-FD8844808E49" width="375" height="667">
+        <image name="686757E2-0D56-4E8A-B8E5-4D658BFCE281" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
