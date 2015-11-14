@@ -61,7 +61,7 @@ class UserAccountViewController: UIViewController {
         menuHideButton.hidden = true
         
         screenUp = CGPoint(x: 0, y: 20)
-        screenDown = CGPoint(x: 320, y: 20)
+        screenDown = CGPoint(x: 280, y: 20)
         
         contentView.frame.origin = screenUp
         contentView.layer.shadowOpacity = 0.4
@@ -135,9 +135,9 @@ class UserAccountViewController: UIViewController {
         
         let velocity = sender.velocityInView(view)
         
-        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 320, r2Min: 0.9, r2Max: 1.0)
+        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 280, r2Min: 0.9, r2Max: 1.0)
         
-        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 320, r2Min: 0, r2Max: 1.0)
+        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 280, r2Min: 0, r2Max: 1.0)
         
         if sender.state == UIGestureRecognizerState.Began {
             
@@ -198,7 +198,7 @@ class UserAccountViewController: UIViewController {
                 
             }
             
-            if contentView.frame.origin.x == 320 {
+            if contentView.frame.origin.x == 280 {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.containerView.alpha = 1
                     self.menuScrollView.alpha = 1
