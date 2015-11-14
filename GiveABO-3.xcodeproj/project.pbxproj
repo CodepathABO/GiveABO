@@ -129,6 +129,7 @@
 		3ADEB9441BEBE37C00DEB632 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		3ADEB9461BEBFF4300DEB632 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsTableViewCell.swift; path = ../EventsTableViewCell.swift; sourceTree = "<group>"; };
 		3ADEB9481BEC1B6B00DEB632 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		3AF4ABF91BF414F20057A02B /* GiveABO-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GiveABO-3.entitlements"; sourceTree = "<group>"; };
 		A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRequestViewController.swift; sourceTree = "<group>"; };
 		C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstNameViewController.swift; path = ../FirstNameViewController.swift; sourceTree = "<group>"; };
 		C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodTypeViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +226,7 @@
 		3A8275171BE53EFB00CF68C7 = {
 			isa = PBXGroup;
 			children = (
+				3AF4ABF91BF414F20057A02B /* GiveABO-3.entitlements */,
 				C37FC9D41BE9904F00671427 /* ProfileViewController.swift */,
 				3A8275221BE53EFC00CF68C7 /* GiveABO */,
 				3A8275371BE53EFC00CF68C7 /* GiveABOTests */,
@@ -360,6 +362,14 @@
 					3A82751F1BE53EFB00CF68C7 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 5Z75W2QT9C;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					3A8275331BE53EFC00CF68C7 = {
 						CreatedOnToolsVersion = 7.1;
