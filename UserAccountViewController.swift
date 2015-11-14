@@ -42,6 +42,10 @@ class UserAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.addUniqueObject("GiveABO", forKey: "channels")
+        currentInstallation.saveInBackground()
+        
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false
         
