@@ -339,6 +339,26 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func settingButton(sender: UIButton) {
+    }
+    
+    
+    @IBAction func logoutButton(sender: UIButton) {
+        
+        PFUser.logOut()
+        
+    }
+    
+    func bringLogin() {
+        
+        if (PFUser.currentUser() == nil) {
+            
+            print("No User")
+            
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
