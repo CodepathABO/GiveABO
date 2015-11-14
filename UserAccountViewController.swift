@@ -347,6 +347,10 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
         
         PFUser.logOut()
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("LogOutViewController") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+        
     }
     
     func bringLogin() {
