@@ -105,13 +105,13 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = data[indexPath.row]
         
-        cell.accessoryType = .Checkmark
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         
-         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.accessoryType = .Checkmark
         
         return cell
         
