@@ -73,6 +73,8 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         
         pageControl.alpha = 0
         
+       // MARK: Platelets loop
+        
         for i in 0...18 {
             
             platelet = UIView()
