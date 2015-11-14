@@ -139,7 +139,7 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
         if currentOffset > 0 {
             
             let introOneX = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: 0)
-            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: -20)
+            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: -30)
             
             let scale = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 1, r2Max: 0.8)
             
@@ -151,6 +151,20 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
             
             aboLogo.alpha = bubbleAlpha
         }
+        
+        if currentOffset < 0 {
+            
+            let introOneX = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 0, r2Max: 0)
+            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 0, r2Max: 30)
+            
+            let scale = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 1, r2Max: 1.2)
+            
+            
+            aboLogo.transform = CGAffineTransformMakeTranslation(introOneX, introOneY)
+            aboLogo.transform = CGAffineTransformScale(aboLogo.transform, CGFloat(scale), CGFloat(scale))
+            
+        }
+
         
     }
     
