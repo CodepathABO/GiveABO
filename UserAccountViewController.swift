@@ -345,12 +345,31 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func logoutButton(sender: UIButton) {
         
-        PFUser.logOut()
+        let alertController = UIAlertController(title: "", message: "Are you sure you want to log out?", preferredStyle: .ActionSheet)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("LogOutViewController") as UIViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
+        }
+        alertController.addAction(cancelAction)
         
+        let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
+            
+            PFUser.logOut()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("LogOutViewController") as UIViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Slide)
+
+        
+        }
+        alertController.addAction(logoutAction)
+        
+        self.presentViewController(alertController, animated: true) {
+
+
+        }
+
     }
     
     func bringLogin() {

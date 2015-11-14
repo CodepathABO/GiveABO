@@ -37,6 +37,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.sharedApplication().statusBarHidden = true
 
         loginButton.layer.cornerRadius = 25
         
@@ -267,6 +270,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
         
         self.presentViewController(controller, animated: true, completion: nil)
+        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Slide)
         
     }
     
@@ -278,7 +282,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpNavigationViewController") as UIViewController
         
         self.presentViewController(controller, animated: true, completion: nil)
-        
+        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Slide)
     }
 
     

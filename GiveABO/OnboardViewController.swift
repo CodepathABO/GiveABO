@@ -32,7 +32,8 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.sharedApplication().statusBarHidden = false
         
         scrollView.delegate = self
         scrollView.contentSize = CGSize(width: 1500, height: 667)
