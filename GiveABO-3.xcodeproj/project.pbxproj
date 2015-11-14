@@ -134,7 +134,7 @@
 		C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstNameViewController.swift; path = ../FirstNameViewController.swift; sourceTree = "<group>"; };
 		C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodTypeViewController.swift; sourceTree = "<group>"; };
 		C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodDetailsViewController.swift; sourceTree = "<group>"; };
-		C37FC9D41BE9904F00671427 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C37FC9D41BE9904F00671427 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
 		C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		C3C950C01BE6DAA700D04638 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		C3C950C21BE6DF2000D04638 /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
@@ -199,9 +199,10 @@
 			name = Parse;
 			sourceTree = "<group>";
 		};
-		3A47B1CF1BE6E2FF001016AD /* Controllers */ = {
+		3A47B1CF1BE6E2FF001016AD /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A0292581BEA115900576300 /* RequestViewController.swift */,
 				3ADEB9461BEBFF4300DEB632 /* EventsTableViewCell.swift */,
 				3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */,
 				3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */,
@@ -211,14 +212,71 @@
 				3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */,
 				3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */,
 				3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */,
-				A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */,
-				C3C950C21BE6DF2000D04638 /* HelloViewController.swift */,
 				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
 				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
 				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
+				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
+			);
+			name = MainControllers;
+			sourceTree = "<group>";
+		};
+		3A5BDA4A1BF6B6BB0008501E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3AC2AEB81BE5CE77003D5E88 /* Common.swift */,
+				3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */,
+				3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */,
+				3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3A5BDA4B1BF6B7300008501E /* SignupControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3C950C21BE6DF2000D04638 /* HelloViewController.swift */,
+				C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */,
+				C37FC9D41BE9904F00671427 /* ProfileViewController.swift */,
+				C3CF89511BEC3EEF0082E02C /* SignUpProfileViewController.swift */,
+				C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */,
+				C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */,
+				C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */,
+			);
+			name = SignupControllers;
+			sourceTree = "<group>";
+		};
+		3A5BDA4C1BF6B7C00008501E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3A5BDA4D1BF6B7CD0008501E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3A5BDA4E1BF6B7FF0008501E /* HomControllers */ = {
+			isa = PBXGroup;
+			children = (
 				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
 				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
-				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
+				A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */,
+			);
+			name = HomControllers;
+			sourceTree = "<group>";
+		};
+		3A5BDA4F1BF6B8750008501E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A5BDA4B1BF6B7300008501E /* SignupControllers */,
+				3A5BDA4E1BF6B7FF0008501E /* HomControllers */,
+				3A47B1CF1BE6E2FF001016AD /* MainControllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -227,7 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				3AF4ABF91BF414F20057A02B /* GiveABO-3.entitlements */,
-				C37FC9D41BE9904F00671427 /* ProfileViewController.swift */,
 				3A8275221BE53EFC00CF68C7 /* GiveABO */,
 				3A8275371BE53EFC00CF68C7 /* GiveABOTests */,
 				3A8275421BE53EFC00CF68C7 /* GiveABOUITests */,
@@ -248,26 +305,17 @@
 		3A8275221BE53EFC00CF68C7 /* GiveABO */ = {
 			isa = PBXGroup;
 			children = (
-				3A02923E1BE9F1AB00576300 /* Parse */,
 				3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */,
 				3A8275251BE53EFC00CF68C7 /* ViewController.swift */,
 				3A8275271BE53EFC00CF68C7 /* Main.storyboard */,
-				3A0292581BEA115900576300 /* RequestViewController.swift */,
 				C3C950C01BE6DAA700D04638 /* Signup.storyboard */,
-				C3CF89511BEC3EEF0082E02C /* SignUpProfileViewController.swift */,
-				C37FC9D61BE9911B00671427 /* ConfirmViewController.swift */,
-				C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */,
-				C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */,
 				3A47B20A1BE6E707001016AD /* Home.storyboard */,
-				C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */,
-				3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */,
-				3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */,
+				3A5BDA4C1BF6B7C00008501E /* Model */,
+				3A5BDA4D1BF6B7CD0008501E /* View */,
+				3A5BDA4F1BF6B8750008501E /* Controllers */,
 				3A33EB361BEBC5450031BAF4 /* Assets.xcassets */,
-				3A47B1CF1BE6E2FF001016AD /* Controllers */,
-				3AC2AEB81BE5CE77003D5E88 /* Common.swift */,
-				3AC2AEBA1BE5D563003D5E88 /* FadeTransition.swift */,
-				3AC2AEBB1BE5D563003D5E88 /* BaseTransition.swift */,
-				3AC2AEBC1BE5D563003D5E88 /* BlobTransition.swift */,
+				3A5BDA4A1BF6B6BB0008501E /* Helpers */,
+				3A02923E1BE9F1AB00576300 /* Parse */,
 				3A82752C1BE53EFC00CF68C7 /* LaunchScreen.storyboard */,
 				3A82752F1BE53EFC00CF68C7 /* Info.plist */,
 				3A0292551BE9F2BD00576300 /* GiveABO-Bridging-Header.h */,
