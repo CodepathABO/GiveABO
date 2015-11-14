@@ -24,7 +24,7 @@ class UserEventsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         refresher = UIRefreshControl()
         
-        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresher.attributedTitle = NSAttributedString(string: "")
         
         refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         
