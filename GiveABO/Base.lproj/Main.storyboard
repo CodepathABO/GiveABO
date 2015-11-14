@@ -519,7 +519,7 @@ rewards it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="D9F8790D-ED84-4D21-9B54-87AE573526C3" id="hlu-bV-t4U">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="CDA36A83-A0EE-4381-B16D-CB2EBA6E6736" id="hlu-bV-t4U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -844,6 +844,9 @@ rewards it.</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1041754645" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="settingButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="dLK-gk-iqX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEQ-Do-o3g">
                                                 <rect key="frame" x="38" y="557" width="310" height="50"/>
@@ -856,6 +859,9 @@ rewards it.</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.10417546452702703" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="logoutButton:" destination="Wun-PE-CiM" eventType="touchUpInside" id="646-JF-uY5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -1598,8 +1604,7 @@ You only need 9 more donations to unlock your first badge and recieve some goodi
         </scene>
     </scenes>
     <resources>
-        <image name="Close Button" width="24" height="24"/>
-        <image name="D9F8790D-ED84-4D21-9B54-87AE573526C3" width="375" height="667">
+        <image name="CDA36A83-A0EE-4381-B16D-CB2EBA6E6736" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -18328,6 +18333,7 @@ AA9OQAAPTkgAD05LAA9OUAAPTl8AD05jAA9OagAPTnIAD05/AA9OhAAPToYAD06IAA9OjQAPTpUAD06Y
 AA9OnQAPTqUAD06oAA9OugAPTr0AD07CAAAAAAAABAEAAAAAAAAAQQAAAAAAAAAAAAAAAAAPTsQ
 </mutableData>
         </image>
+        <image name="Close Button" width="24" height="24"/>
         <image name="GiveABO-Logo" width="98" height="86"/>
         <image name="HB-context" width="80" height="48"/>
         <image name="Initial Screen" width="375" height="667"/>
