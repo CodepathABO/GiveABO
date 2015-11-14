@@ -199,23 +199,29 @@
 			name = Parse;
 			sourceTree = "<group>";
 		};
+		3A1107361BF7ACCD00406D9C /* UserAccountControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */,
+				3ADEB9441BEBE37C00DEB632 /* UserProfileViewController.swift */,
+				3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */,
+				3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */,
+				3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */,
+				3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */,
+				3ADEB9481BEC1B6B00DEB632 /* PrivacyViewController.swift */,
+			);
+			name = UserAccountControllers;
+			sourceTree = "<group>";
+		};
 		3A47B1CF1BE6E2FF001016AD /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
 				3A0292581BEA115900576300 /* RequestViewController.swift */,
-				3ADEB9461BEBFF4300DEB632 /* EventsTableViewCell.swift */,
-				3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */,
-				3A7181781BEB48B90054BB47 /* UserAccountViewController.swift */,
-				3ADEB9481BEC1B6B00DEB632 /* PrivacyViewController.swift */,
-				3ADEB9441BEBE37C00DEB632 /* UserProfileViewController.swift */,
-				3A71817A1BEB48E40054BB47 /* UserRewardsViewController.swift */,
-				3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */,
-				3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */,
-				3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */,
+				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
+				3A1107361BF7ACCD00406D9C /* UserAccountControllers */,
 				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
 				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
 				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
-				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
 			);
 			name = MainControllers;
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 		3A5BDA4D1BF6B7CD0008501E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3ADEB9461BEBFF4300DEB632 /* EventsTableViewCell.swift */,
+				3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */,
 				3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */,
 			);
 			name = View;
