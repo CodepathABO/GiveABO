@@ -21,6 +21,7 @@
 		3A0292521BE9F26E00576300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292511BE9F26E00576300 /* libz.tbd */; };
 		3A0292541BE9F27B00576300 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0292531BE9F27B00576300 /* libsqlite3.tbd */; };
 		3A0292591BEA115900576300 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0292581BEA115900576300 /* RequestViewController.swift */; };
+		3A1542891BF7B795004E6C74 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1542881BF7B795004E6C74 /* LogOutViewController.swift */; };
 		3A33EB2D1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */; };
 		3A33EB2F1BEB7E380031BAF4 /* StoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */; };
 		3A33EB351BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */; };
@@ -94,6 +95,7 @@
 		3A0292531BE9F27B00576300 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3A0292551BE9F2BD00576300 /* GiveABO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiveABO-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A0292581BEA115900576300 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		3A1542881BF7B795004E6C74 /* LogOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3A33EB2E1BEB7E380031BAF4 /* StoriesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesData.swift; sourceTree = "<group>"; };
 		3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
 				3A1107361BF7ACCD00406D9C /* UserAccountControllers */,
 				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
+				3A1542881BF7B795004E6C74 /* LogOutViewController.swift */,
 				3AC2AEB41BE5C280003D5E88 /* SignUpViewController.swift */,
 				3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */,
 			);
@@ -269,21 +272,21 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		3A5BDA4E1BF6B7FF0008501E /* HomControllers */ = {
+		3A5BDA4E1BF6B7FF0008501E /* HomeControllers */ = {
 			isa = PBXGroup;
 			children = (
 				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
 				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
 				A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */,
 			);
-			name = HomControllers;
+			name = HomeControllers;
 			sourceTree = "<group>";
 		};
 		3A5BDA4F1BF6B8750008501E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3A5BDA4B1BF6B7300008501E /* SignupControllers */,
-				3A5BDA4E1BF6B7FF0008501E /* HomControllers */,
+				3A5BDA4E1BF6B7FF0008501E /* HomeControllers */,
 				3A47B1CF1BE6E2FF001016AD /* MainControllers */,
 			);
 			name = Controllers;
@@ -506,6 +509,7 @@
 				3AC2AEB51BE5C280003D5E88 /* SignUpViewController.swift in Sources */,
 				3AC2AEB31BE5C260003D5E88 /* OnboardViewController.swift in Sources */,
 				3A7181811BEB49640054BB47 /* UserBadgesViewController.swift in Sources */,
+				3A1542891BF7B795004E6C74 /* LogOutViewController.swift in Sources */,
 				C37FC9D11BE922A200671427 /* BloodTypeViewController.swift in Sources */,
 				3AC2AEBF1BE5D563003D5E88 /* BlobTransition.swift in Sources */,
 				3A8275261BE53EFC00CF68C7 /* ViewController.swift in Sources */,
