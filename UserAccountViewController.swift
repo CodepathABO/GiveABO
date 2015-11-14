@@ -15,7 +15,8 @@ class UserAccountViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var menuScrollView: UIScrollView!
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
-    
+    @IBOutlet weak var menuRevealButton: UIButton!
+    @IBOutlet weak var menuHideButton: UIButton!
     
     @IBOutlet var buttons: [UIButton]!
     
@@ -46,14 +47,21 @@ class UserAccountViewController: UIViewController {
         currentInstallation.addUniqueObject("GiveABO", forKey: "channels")
         currentInstallation.saveInBackground()
         
+        if currentInstallation.badge != 0 {
+            currentInstallation.badge = 0
+            currentInstallation.saveEventually()
+        }
+        
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false
         
         menuScrollView.alpha = 1
         // settingsScrollView.alpha = 0
         
+        menuHideButton.hidden = true
+        
         screenUp = CGPoint(x: 0, y: 20)
-        screenDown = CGPoint(x: 290, y: 20)
+        screenDown = CGPoint(x: 320, y: 20)
         
         contentView.frame.origin = screenUp
         contentView.layer.shadowOpacity = 0.4
@@ -108,13 +116,14 @@ class UserAccountViewController: UIViewController {
             self.contentView.frame.origin = self.screenUp
             
             }) { (Bool) -> Void in
-                // ..
+                self.menuHideButton.hidden = true
+                self.menuRevealButton.hidden = false
         }
 
         
         
     }
-    
+
     
     
     // MARK: View Slide to Expose Nav Gesture Recognizer
@@ -126,9 +135,9 @@ class UserAccountViewController: UIViewController {
         
         let velocity = sender.velocityInView(view)
         
-        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 290, r2Min: 0.9, r2Max: 1.0)
+        let contentScale = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 320, r2Min: 0.9, r2Max: 1.0)
         
-        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 290, r2Min: 0, r2Max: 1.0)
+        let contentFade = convertValue(contentView.frame.origin.x, r1Min: 20, r1Max: 320, r2Min: 0, r2Max: 1.0)
         
         if sender.state == UIGestureRecognizerState.Began {
             
@@ -169,7 +178,8 @@ class UserAccountViewController: UIViewController {
                         self.contentView.layer.shadowRadius = 1
                     })
                     }, completion: { (Bool) -> Void in
-                        // ..
+                        self.menuRevealButton.hidden = true
+                        self.menuHideButton.hidden = false
                 })
                 
             } else {
@@ -177,14 +187,18 @@ class UserAccountViewController: UIViewController {
                     self.contentView.frame.origin = self.screenUp
                     UIView.animateWithDuration(0.2, animations: { () -> Void in
                        // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
+                        self.contentView.layer.shadowOpacity = 0.4
+                        self.contentView.layer.shadowOffset = CGSizeMake(-2, 0)
+                        self.contentView.layer.shadowRadius = 2
                     })
                     }, completion: { (Bool) -> Void in
-                        // ..
+                        self.menuRevealButton.hidden = false
+                        self.menuHideButton.hidden = true
                 })
                 
             }
             
-            if contentView.frame.origin.x == 290 {
+            if contentView.frame.origin.x == 320 {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.containerView.alpha = 1
                     self.menuScrollView.alpha = 1
@@ -203,6 +217,42 @@ class UserAccountViewController: UIViewController {
             
     }
     
+    
+    @IBAction func menuRevealButton(sender: UIButton) {
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.contentView.frame.origin = self.screenDown
+                // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(180 * M_PI / 180))
+                self.contentView.layer.shadowOpacity = 0.2
+                self.contentView.layer.shadowOffset = CGSizeMake(0, -1)
+                self.contentView.layer.shadowRadius = 1
+                self.containerView.alpha = 1
+                self.menuScrollView.alpha = 1
+                self.menuScrollView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            }, completion: { (Bool) -> Void in
+                self.menuRevealButton.hidden = true
+                self.menuHideButton.hidden = false
+        })
+
+    }
+    
+    @IBAction func menuHideButton(sender: UIButton) {
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.contentView.frame.origin = self.screenUp
+            // self.arrow.transform = CGAffineTransformMakeRotation(CGFloat(180 * M_PI / 180))
+            self.contentView.layer.shadowOpacity = 0.4
+            self.contentView.layer.shadowOffset = CGSizeMake(-2, 0)
+            self.contentView.layer.shadowRadius = 2
+            self.containerView.alpha = 0
+            self.menuScrollView.alpha = 0
+            self.menuScrollView.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            }, completion: { (Bool) -> Void in
+                self.menuRevealButton.hidden = false
+                self.menuHideButton.hidden = true
+        })
+
+
+    
+    }
     
     @IBAction func donateButton(sender: UIButton) {
         
