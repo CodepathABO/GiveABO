@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="QrJ-Ov-ioM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="QrJ-Ov-ioM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -8,7 +8,7 @@
         <!--Home View Controller-->
         <scene sceneID="rQy-Tl-7l9">
             <objects>
-                <viewController storyboardIdentifier="SBTestViewController" id="QrJ-Ov-ioM" customClass="HomeViewController" customModule="GiveABO_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SBTestViewController" id="QrJ-Ov-ioM" customClass="HomeViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSf-4K-pwe">
                         <rect key="frame" x="0.0" y="0.0" width="1665" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -668,11 +668,11 @@
                                 <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Everyone Near Me" id="5Pd-NH-3HI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ws7-9R-WeT">
                                 <rect key="frame" x="101" y="593" width="172" height="46"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
-                            </imageView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Everyone Near Me"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -685,6 +685,8 @@
                         <outlet property="blurredBlob1" destination="yqv-7a-Dfu" id="0CS-If-bKJ"/>
                         <outlet property="blurredBlob2" destination="eKt-Tj-E1d" id="AjP-fX-7ha"/>
                         <outlet property="carolineRequestView" destination="hoP-Xx-XvQ" id="Orq-Kg-NAn"/>
+                        <outlet property="createRequestButton" destination="gcp-ZV-kEF" id="zyI-jv-pMC"/>
+                        <outlet property="filterButton" destination="Ws7-9R-WeT" id="faN-gx-0nd"/>
                         <outlet property="gioRequestView" destination="ppJ-x8-x0g" id="pks-qW-a4v"/>
                         <outlet property="helenRequestView" destination="e4M-3u-Wic" id="udC-Na-j6l"/>
                         <outlet property="homeScrollView" destination="FJd-k2-ih9" id="xJZ-CD-3e3"/>
@@ -692,6 +694,8 @@
                         <outlet property="markRequestView" destination="QYP-4Y-u2x" id="feZ-ZL-8aH"/>
                         <outlet property="newRequestView" destination="lcL-0T-SD3" id="bbF-JQ-liM"/>
                         <outlet property="oaklandRequestView" destination="B2P-JQ-1bq" id="N4r-Xt-duw"/>
+                        <outlet property="profileButton" destination="BIF-eF-Ipc" id="QD0-67-lzZ"/>
+                        <outlet property="requestLabel" destination="rcw-LO-teD" id="YBD-sN-85G"/>
                         <outlet property="ucsfRequestView" destination="lbt-5K-Wl0" id="mSd-VX-czs"/>
                         <segue destination="bRA-Cq-BHp" kind="modal" identifier="requestDetailSegue" id="cox-nb-zyb"/>
                         <segue destination="Qba-ZS-whi" kind="modal" identifier="createRequestSegue" id="jIH-UW-KjD"/>
@@ -704,7 +708,7 @@
         <!--Create Request View Controller-->
         <scene sceneID="pw2-Ev-eWr">
             <objects>
-                <viewController id="Qba-ZS-whi" customClass="CreateRequestViewController" customModule="GiveABO_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qba-ZS-whi" customClass="CreateRequestViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yHh-pK-BoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -790,7 +794,7 @@
         <!--Request Detail View Controller-->
         <scene sceneID="jEE-Wm-2kc">
             <objects>
-                <viewController id="bRA-Cq-BHp" customClass="RequestDetailViewController" customModule="GiveABO_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bRA-Cq-BHp" customClass="RequestDetailViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNb-Cc-e94">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
