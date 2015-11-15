@@ -16,6 +16,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var homeScrollView: UIScrollView!
     var homeScrollViewOffsetX: CGFloat!
     
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var requestLabel: UILabel!
+    @IBOutlet weak var createRequestButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
     
     // REQUESTS
 //    @IBOutlet weak var timRequestView: UIView!
@@ -34,9 +38,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     // BLOBS
     var blob: UIImageView!
     var blobCoat: UIImageView!
+    var requests: [UIView]!
+    
     
     @IBOutlet weak var blurredBlob1: UIImageView!
     @IBOutlet weak var blurredBlob2: UIImageView!
+    var blurredBlobs: [UIImageView]!
+    
     
     // SELECTED REQUESTS
     var selectedView: UIView!
@@ -49,6 +57,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var selectedBloodTypeLabel: UILabel!
     
     
+    
     // CUSTOM TRANSITION
     var blobTransition: BlobTransition!
     
@@ -58,7 +67,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     var query = PFQuery(className:"Simple")
     
     
-    // DID LOAD
+    
+    
+    // DID LOAD -----------------------------------------------------------------------------------------------------
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -95,12 +108,50 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         oaklandRequestView.addGestureRecognizer(oaklandTap)
         newRequestView.addGestureRecognizer(newRequesTap)
         
+        
+        // SET UP ARRAYS
+        requests = [jeremieRequestView, americanRCRequestView]
+        blurredBlobs = [blurredBlob1, blurredBlob2]
+        
+        
+        // SET UP INTRO
+        profileButton.alpha = 0
+        requestLabel.alpha = 0
+        createRequestButton.alpha = 0
+        filterButton.alpha = 0
+        
+        blurredBlob1.alpha = 0
+        blurredBlob1.transform = CGAffineTransformMakeTranslation(20, 0)
+        
+        blurredBlob2.alpha = 0
+        blurredBlob2.transform = CGAffineTransformMakeTranslation(40, 0)
+        
+        jeremieRequestView.alpha = 0
+        jeremieRequestView.transform = CGAffineTransformMakeTranslation(200, 0)
+        
+        americanRCRequestView.alpha = 0
+        americanRCRequestView.transform = CGAffineTransformMakeTranslation(200, 0)
+        
+        
+        // TIMER
+//        NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: "onTimer", userInfo: nil, repeats: true)
+        
     }
     
-    // VIEW DID APPEAR
+    
+    func onTimer() {
+//        blurredBlob1.center.x -= 0.1
+//        blurredBlob2.center.x -= 0.1
+//        print(blurredBlob1.center.x)
+    }
+    
+  
+    
+    // VIEW DID APPEAR -----------------------------------------------------------------------------------------------
+    
+  
     override func viewDidAppear(animated: Bool) {
 
-//        showBlobs(timRequestView)
         bloblAnimation1(jeremieRequestView)
         bloblAnimation1(annabelRequestView)
         bloblAnimation1(carolineRequestView)
@@ -111,13 +162,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         blobAnimation2(oaklandRequestView)
         
         
-//        showBlobs(markRequestView)
-//        showBlobs(ucsfRequestView)
+        
+        // CALL HOME INTRO
+        homeIntro()
         
         
         // SETUP STATUS BAR
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false
+        
         
         // CHECK IF THERE'S A NEW REQUEST
         if newRequestListener == true {
@@ -133,7 +186,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             bloodTypeLabel.text = newRequestBloodType
             
             
-            // MOVE BLOBS
+            // NEW BLOB REQUEST COMES IN
             self.newRequestView.alpha = 0
             self.newRequestView.transform = CGAffineTransformMakeScale(0.9, 0.9)
             
@@ -150,41 +203,120 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                     self.americanRCRequestView.transform = CGAffineTransformMakeTranslation(60, 10)
                     
                     self.newRequestView.alpha = 1
-                    self.newRequestView.transform = CGAffineTransformMakeTranslation(230, -16)
+                    self.newRequestView.transform = CGAffineTransformMakeTranslation(300, 0)
                     self.newRequestView.transform = CGAffineTransformScale(self.newRequestView.transform, 1, 1)
                     
                 },
                 
-                completion: nil)
-            
-            
-            
+                completion: nil
+            )
         }
-        
-        
-//        super.viewDidAppear(animated)
-        
-//        // AUTO SCROLL
-//        
-//        UIView.animateWithDuration(
-//            
-//            20,
-//            delay: 1,
-//            options: [UIViewAnimationOptions.CurveEaseInOut, UIViewAnimationOptions.AllowUserInteraction],
-//            
-//            animations: { () -> Void in
-//                self.homeScrollView.setContentOffset(CGPointMake(1000, 0), animated: false)
-//            },
-//            
-//            completion: nil
-//        )
-//        
-//        homeScrollView.to
         
     }
     
     
-    // SHOW BLOBS
+    
+    
+    // HOME INTRO FUNCTON ---------------------------------------------------------------------------------------------
+    
+    
+    
+    func homeIntro() {
+        
+        // ANIMATE NAVBAR
+        UIView.animateWithDuration(
+            2.4,
+            delay: 0,
+            usingSpringWithDamping: 0.6,
+            initialSpringVelocity: 0.2,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            
+            animations: { () -> Void in
+                
+                self.profileButton.alpha = 1
+                self.requestLabel.alpha = 1
+                self.createRequestButton.alpha = 1
+            },
+            
+            completion: nil
+        )
+        
+        // ANIMATE BLOBS
+        var requestDelay = 0.5
+        for request in requests {
+            
+            UIView.animateWithDuration(
+                2.4,
+                delay: requestDelay,
+                usingSpringWithDamping: 0.6,
+                initialSpringVelocity: 0.2,
+                options: UIViewAnimationOptions.CurveEaseInOut,
+                
+                animations: { () -> Void in
+                    
+                    let translate = CGAffineTransformMakeTranslation(0, 0)
+                    let scale = CGAffineTransformMakeScale(1, 1)
+                    
+                    request.alpha = 1
+                    request.transform = CGAffineTransformConcat(translate, scale)
+                    
+                },
+                
+                completion: nil
+            )
+            requestDelay += 0.1
+        }
+        
+        // ANIMATE FILTER
+        UIView.animateWithDuration(
+            2.4,
+            delay: 1.6,
+            usingSpringWithDamping: 0.6,
+            initialSpringVelocity: 0.2,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            
+            animations: { () -> Void in
+                
+                self.filterButton.alpha = 1
+            },
+            
+            completion: nil
+        )
+        
+        // ANIMATE BLURRED BLOBS
+        var blurredBlobsDelay = 0.4
+        for blob in blurredBlobs {
+            
+            UIView.animateWithDuration(
+                5.0,
+                delay: blurredBlobsDelay,
+                usingSpringWithDamping: 0.6,
+                initialSpringVelocity: 0.2,
+                options: UIViewAnimationOptions.CurveEaseInOut,
+                
+                animations: { () -> Void in
+                    
+                    let translate = CGAffineTransformMakeTranslation(0, 0)
+                    let scale = CGAffineTransformMakeScale(1, 1)
+                    
+                    blob.alpha = 1
+                    blob.transform = CGAffineTransformConcat(translate, scale)
+                    
+                },
+                
+                completion: nil
+            )
+            blurredBlobsDelay += 0.4
+        }
+        
+        
+        
+    }
+    
+    
+    // BLOB ANIMATION FUNCTION ----------------------------------------------------------------------------------------
+    
+    
     func bloblAnimation1(requestView: UIView) {
         
         let blob = requestView.viewWithTag(10) as! UIImageView
@@ -220,7 +352,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         )
     }
     
-    // SHOW BLOBS
+    
+    // BLOB ANIMATION 2 -----------------------------------------------------------------------------------------------
+    
+    
     func blobAnimation2(requestView: UIView) {
         
         let blob = requestView.viewWithTag(10) as! UIImageView
@@ -259,7 +394,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     
     
-    // LISTEN TO HOME SCROLL
+    
+    
+    // HOME SCROLL ------------------------------------------------------------------------------------------------
+    
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
         homeScrollViewOffsetX = homeScrollView.contentOffset.x
@@ -269,16 +408,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         blurredBlob1.transform = CGAffineTransformMakeTranslation(translation1, 0)
         blurredBlob2.transform = CGAffineTransformMakeTranslation(translation2, 0)
-    
-        
         
     }
     
     
     
     
+    // TAP ON REQUEST ------------------------------------------------------------------------------------------------
     
-    // TAP ON REQUEST
+    
     func didTapRequest(sender: UITapGestureRecognizer) {
         
         // STORE SELECTED VIEW
@@ -295,7 +433,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    // TAP ON CREATE NEW REQUEST
+    // TAP ON CREATE NEW REQUEST ------------------------------------------------------------------------------------
+    
+    
     @IBAction func didPressCreateRequest(sender: AnyObject) {
         
         // IF LOGGED IN, GO TO CREATE NEW REQUEST
@@ -310,7 +450,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
-    // GO TO SIGNUP STORYBOARD
+    
+    
+    
+    // GO TO SIGNUP STORYBOARD -------------------------------------------------------------------------------
+    
+    
     func goToSignup() {
         
         let storyboard = UIStoryboard(name: "Signup", bundle: nil)
@@ -322,7 +467,32 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    // PREPARE FOR SEGUE
+    
+    // TAP ON PROFILE  -------------------------------------------------------------------------------
+    
+    
+    @IBAction func didPressProfile(sender: AnyObject) {
+        
+        
+        // IF LOGGED IN, GO TO PROFILE
+        if user != nil  {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewControllerWithIdentifier("UserAccountViewController") as UIViewController
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+            
+            // IF LOGGED OUT, GO TO SIGN UP
+        else {
+            goToSignup()
+        }
+    }
+    
+    
+    
+    
+    // PREPARE FOR SEGUE  -------------------------------------------------------------------------------
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
         if (segue.identifier == "requestDetailSegue") {
@@ -352,19 +522,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         }
     }
-    
-    @IBAction func didPressProfile(sender: AnyObject) {
-        
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let controller = storyboard.instantiateViewControllerWithIdentifier("UserAccountViewController") as UIViewController
-        
-        self.presentViewController(controller, animated: true, completion: nil)
-        
-        
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
