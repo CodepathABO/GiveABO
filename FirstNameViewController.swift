@@ -113,7 +113,7 @@ class FirstNameViewController: UIViewController {
         
         */
         
-        self.performSegueWithIdentifier("NameToBlood", sender: nil)
+        self.performSegueWithIdentifier("toBloodtypeSegue", sender: nil)
         
     }
     
