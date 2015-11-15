@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -84,7 +85,15 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonDidTouch(sender: UIButton) {
-        performSegueWithIdentifier("onboardSegue", sender: self)
+       // performSegueWithIdentifier("onboardSegue", sender: self)
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SBTestViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+
+        
     
     }
     
