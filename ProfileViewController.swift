@@ -20,7 +20,9 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberField: UITextField!
     
-    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var notificationContainer: UIView!
+    
+  //  @IBOutlet weak var emailField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class ProfileViewController: UIViewController {
         finishButton.layer.borderWidth = 1
         finishButton.backgroundColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         finishButton.layer.borderColor = UIColor.redColor().CGColor
+        
+        notificationContainer.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
     }
 

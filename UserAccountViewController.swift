@@ -18,6 +18,7 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var menuRevealButton: UIButton!
     @IBOutlet weak var menuHideButton: UIButton!
     @IBOutlet weak var aboLogo: UIButton!
+    @IBOutlet weak var logoContainer: UIView!
     
     @IBOutlet var buttons: [UIButton]!
     
@@ -58,7 +59,7 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
         
         menuScrollView.delegate = self
         menuScrollView.alpha = 1
-        aboLogo.alpha = 0.7
+        logoContainer.alpha = 1
         
         menuHideButton.hidden = true
         
@@ -139,31 +140,31 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
         if currentOffset > 0 {
             
             let introOneX = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: 0)
-            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: -30)
+            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0, r2Max: -20)
             
             let scale = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 1, r2Max: 0.8)
             
             
-            let bubbleAlpha = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 0.7, r2Max: 0)
+            let bubbleAlpha = convertValue(currentOffset, r1Min: 0, r1Max: 70, r2Min: 1, r2Max: 0)
             
-            aboLogo.transform = CGAffineTransformMakeTranslation(introOneX, introOneY)
-            aboLogo.transform = CGAffineTransformScale(aboLogo.transform, CGFloat(scale), CGFloat(scale))
+            logoContainer.transform = CGAffineTransformMakeTranslation(introOneX, introOneY)
+            logoContainer.transform = CGAffineTransformScale(logoContainer.transform, CGFloat(scale), CGFloat(scale))
             
-            aboLogo.alpha = bubbleAlpha
+            logoContainer.alpha = bubbleAlpha
         }
         
-        if currentOffset < 0 {
+//        if currentOffset < 0 {
+//            
+//            let introOneX = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 0, r2Max: 0)
+//            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 0, r2Max: 30)
+//            
+//            let scale = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 1, r2Max: 1.2)
+//            
+        
+            // logoContainer.transform = CGAffineTransformMakeTranslation(introOneX, introOneY)
+            // logoContainer.transform = CGAffineTransformScale(logoContainer.transform, CGFloat(scale), CGFloat(scale))
             
-            let introOneX = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 0, r2Max: 0)
-            let introOneY = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 0, r2Max: 30)
-            
-            let scale = convertValue(currentOffset, r1Min: 0, r1Max: -70, r2Min: 1, r2Max: 1.2)
-            
-            
-            aboLogo.transform = CGAffineTransformMakeTranslation(introOneX, introOneY)
-            aboLogo.transform = CGAffineTransformScale(aboLogo.transform, CGFloat(scale), CGFloat(scale))
-            
-        }
+ //       }
 
         
     }
@@ -222,9 +223,10 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
             
             menuScrollView.transform = CGAffineTransformMakeScale(contentScale, contentScale)
             
-            aboLogo.transform = CGAffineTransformMakeScale(contentScale, contentScale)
+            logoContainer.transform = CGAffineTransformMakeScale(contentScale, contentScale)
             
             containerView.alpha = contentFade
+            logoContainer.alpha = contentFade
             
         } else if sender.state == UIGestureRecognizerState.Ended {
             
@@ -262,8 +264,8 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
                 UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.containerView.alpha = 1
                     self.menuScrollView.alpha = 1
-                    self.aboLogo.alpha = 0.7
-                    self.aboLogo.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                    self.logoContainer.alpha = 1
+                    self.logoContainer.transform = CGAffineTransformMakeScale(1.0, 1.0)
                     self.menuScrollView.transform = CGAffineTransformMakeScale(1.0, 1.0)
                 })
             }
@@ -272,8 +274,8 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 self.containerView.alpha = 0
                 self.menuScrollView.alpha = 0
-                self.aboLogo.alpha = 0
-                self.aboLogo.transform = CGAffineTransformMakeScale(0.9, 0.9)
+                self.logoContainer.alpha = 0
+                self.logoContainer.transform = CGAffineTransformMakeScale(0.9, 0.9)
                 self.menuScrollView.transform = CGAffineTransformMakeScale(0.9, 0.9)
             })
         }
@@ -291,8 +293,8 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
                 self.contentView.layer.shadowRadius = 1
                 self.containerView.alpha = 1
                 self.menuScrollView.alpha = 1
-                self.aboLogo.alpha = 0.7
-                self.aboLogo.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                self.logoContainer.alpha = 1
+                self.logoContainer.transform = CGAffineTransformMakeScale(1.0, 1.0)
                 self.menuScrollView.transform = CGAffineTransformMakeScale(1.0, 1.0)
             }, completion: { (Bool) -> Void in
                 self.menuRevealButton.hidden = true
@@ -310,8 +312,8 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
             self.contentView.layer.shadowRadius = 2
             self.containerView.alpha = 0
             self.menuScrollView.alpha = 0
-            self.aboLogo.alpha = 0
-            self.aboLogo.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            self.logoContainer.alpha = 0
+            self.logoContainer.transform = CGAffineTransformMakeScale(0.9, 0.9)
             self.menuScrollView.transform = CGAffineTransformMakeScale(0.9, 0.9)
             }, completion: { (Bool) -> Void in
                 self.menuRevealButton.hidden = false
