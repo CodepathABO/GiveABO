@@ -71,6 +71,10 @@ class SignUpProfileViewController: UIViewController {
         self.performSegueWithIdentifier("SignupToFirstName", sender: nil)
     }
 
+    @IBAction func dismissButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
