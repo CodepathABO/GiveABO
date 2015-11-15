@@ -474,13 +474,17 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didPressProfile(sender: AnyObject) {
         
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let controller = storyboard.instantiateViewControllerWithIdentifier("UserAccountViewController") as UIViewController
-        
-        self.presentViewController(controller, animated: true, completion: nil)
-        
-        
+        // IF LOGGED IN, GO TO PROFILE
+        if user != nil  {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewControllerWithIdentifier("UserAccountViewController") as UIViewController
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+            
+            // IF LOGGED OUT, GO TO SIGN UP
+        else {
+            goToSignup()
+        }
     }
     
     
