@@ -64,7 +64,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     // PARSE USERS
     var user = PFUser.currentUser()
-    var query = PFQuery(className:"Simple")
+    var query = PFQuery(className:"Accounts")
     
     
     
@@ -438,6 +438,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func didPressCreateRequest(sender: AnyObject) {
         
+        
+        // CHECK IF USER IS LOGGED IN
+        var user = PFUser.currentUser()
+        
         // IF LOGGED IN, GO TO CREATE NEW REQUEST
         if user != nil  {
             performSegueWithIdentifier("createRequestSegue", sender: nil)
@@ -474,15 +478,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func didPressProfile(sender: AnyObject) {
         
+        // CHECK IF USER IS LOGGED IN
+        var user = PFUser.currentUser()
         
-        // IF LOGGED IN, GO TO PROFILE
         if user != nil  {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewControllerWithIdentifier("UserAccountViewController") as UIViewController
             self.presentViewController(controller, animated: true, completion: nil)
         }
             
-            // IF LOGGED OUT, GO TO SIGN UP
         else {
             goToSignup()
         }

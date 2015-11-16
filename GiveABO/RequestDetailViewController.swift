@@ -230,10 +230,8 @@ class RequestDetailViewController: UIViewController {
         var user = PFUser.currentUser()
         
         if user != nil  {
-            
             hideRequestContent()
             showConfirmContent()
-            
         }
             
         else {
