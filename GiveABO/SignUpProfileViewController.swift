@@ -31,7 +31,7 @@ class SignUpProfileViewController: UIViewController {
         UIApplication.sharedApplication().statusBarHidden = false
         
         initialY = signupButton.frame.origin.y
-        offset = -224
+        offset = -204
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -73,7 +73,7 @@ class SignUpProfileViewController: UIViewController {
 
     @IBAction func onSignupPressed(sender: UIButton) {
         
-        if usernameField.text == "" || passwordField.text == "" {
+        if usernameField.text == "" || passwordField.text == "" || confirmPasswordField.text == "" {
             
             displayAlert("Login Error", message: "One or more required fields have been left blank")
             
@@ -82,11 +82,11 @@ class SignUpProfileViewController: UIViewController {
             
             activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             
-            activityIndicator.center.y = 100
-            activityIndicator.center.x = self.view.center.x
+            activityIndicator.center.y = 390
+            activityIndicator.center.x = 320
             
             activityIndicator.hidesWhenStopped = true
-            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
             
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             

@@ -22,13 +22,15 @@ class BloodTypeSelectionViewController: UIViewController {
     @IBOutlet weak var splitOne: UIView!
     @IBOutlet weak var splitTwo: UIView!
     
+    var firstName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let firstName = defaults.objectForKey("first_name") as! String
+        // let defaults = NSUserDefaults.standardUserDefaults()
+        // let firstName = defaults.objectForKey("first_name") as! String
         
-        messageLabel.text = "\(firstName),"
+        messageLabel.text = firstName
         messageLabel.textColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         
         segmentedControl.selectedSegmentIndex = 0
@@ -109,6 +111,7 @@ class BloodTypeSelectionViewController: UIViewController {
             
             UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .CurveEaseIn, animations: { () -> Void in
                 self.posNegLabel.frame.origin.x = 230
+            self.bloodTypeLabel.frame.origin.x = 57
                 }, completion: { (Bool) -> Void in
                     // ..
             })
@@ -118,6 +121,7 @@ class BloodTypeSelectionViewController: UIViewController {
             bloodTypeLabel.text = "B"
             UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .CurveEaseIn, animations: { () -> Void in
                 self.posNegLabel.frame.origin.x = 230
+                self.bloodTypeLabel.frame.origin.x = 57
                 }, completion: { (Bool) -> Void in
                     // ..
             })
@@ -127,7 +131,8 @@ class BloodTypeSelectionViewController: UIViewController {
             
             bloodTypeLabel.text = "AB"
             UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .CurveEaseIn, animations: { () -> Void in
-                self.posNegLabel.frame.origin.x = 280
+                self.posNegLabel.frame.origin.x = 260
+                self.bloodTypeLabel.frame.origin.x = 37
                 }, completion: { (Bool) -> Void in
                     // ..
             })
@@ -138,6 +143,7 @@ class BloodTypeSelectionViewController: UIViewController {
             bloodTypeLabel.text = "O"
             UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .CurveEaseIn, animations: { () -> Void in
                 self.posNegLabel.frame.origin.x = 240
+                self.bloodTypeLabel.frame.origin.x = 57
                 }, completion: { (Bool) -> Void in
                     // ..
             })
@@ -174,7 +180,8 @@ class BloodTypeSelectionViewController: UIViewController {
     
     @IBAction func confirmButtonDidTouch(sender: UIButton) {
         
-        performSegueWithIdentifier("nextSegue", sender: self)
+        performSegueWithIdentifier("toProfileSegue", sender: self)
+        
         
     }
     
@@ -188,11 +195,14 @@ class BloodTypeSelectionViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "nextSegue" {
+        if segue.identifier == "toProfileSegue" {
             
-         //   let typeViewController = segue.destinationViewController as! TypeViewController
+            let profileViewController = segue.destinationViewController as! ProfileViewController
             
-          //  typeViewController.bloodType = bloodTypeLabel.text! + posNegLabel.text!
+            profileViewController.bloodType = bloodTypeLabel.text! + posNegLabel.text!
+            
+            profileViewController.userFirstName = messageLabel.text!
+            
             
         }
     }
