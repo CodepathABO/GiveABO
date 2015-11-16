@@ -997,7 +997,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" id="Crq-v1-Trf" userLabel="Filter Content">
+                                        <view contentMode="scaleToFill" id="Crq-v1-Trf" userLabel="Content">
                                             <rect key="frame" x="18" y="45" width="339" height="454"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -1169,7 +1169,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <view contentMode="scaleToFill" id="3TR-WO-BRU" userLabel="Done Bg">
+                                        <view contentMode="scaleToFill" id="3TR-WO-BRU" userLabel="Done">
                                             <rect key="frame" x="0.0" y="612" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -1180,6 +1180,9 @@
                                                     <state key="normal" title="DONE">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didPressDone:" destination="8io-nX-Gy1" eventType="touchUpInside" id="xWg-E0-e3Q"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.080000000000000002" colorSpace="calibratedRGB"/>
@@ -1194,6 +1197,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="668"/>
+                    <connections>
+                        <outlet property="filterContentView" destination="Crq-v1-Trf" id="yyG-oc-SXe"/>
+                        <outlet property="filterDoneView" destination="3TR-WO-BRU" id="Pwv-Nx-YKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-CA-0nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
