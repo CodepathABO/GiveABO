@@ -672,6 +672,9 @@
                                 <rect key="frame" x="101" y="593" width="172" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Everyone Near Me"/>
+                                <connections>
+                                    <segue destination="8io-nX-Gy1" kind="modal" id="Eqt-QL-dg7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -979,6 +982,223 @@
             </objects>
             <point key="canvasLocation" x="674.5" y="1357"/>
         </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="uZQ-Vj-yhg">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="8io-nX-Gy1" customClass="FilterViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1tv-kw-dU6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" id="VAK-Ce-uYi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="V6o-gf-TH6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="Crq-v1-Trf" userLabel="Filter Content">
+                                            <rect key="frame" x="18" y="45" width="339" height="454"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="le4-P6-5CW">
+                                                    <rect key="frame" x="20" y="20" width="148" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kRk-MZ-VSL">
+                                                    <rect key="frame" x="20" y="107" width="250" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l8m-Is-Skr">
+                                                    <rect key="frame" x="20" y="143" width="85" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <state key="normal" title="Nearby" backgroundImage="filter_nearby">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qdy-Di-dtB">
+                                                    <rect key="frame" x="118" y="143" width="103" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <state key="normal" title="Enter City" backgroundImage="filter_city">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HoX-TA-u9o">
+                                                    <rect key="frame" x="20" y="244" width="250" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="DJ4-F7-jXe">
+                                                    <rect key="frame" x="20" y="291" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="A+" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="Q0T-KP-ZWN"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="eXJ-XC-qBK">
+                                                    <rect key="frame" x="98" y="291" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="A-" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="ajo-ax-Thm"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="Nhk-IN-YNE">
+                                                    <rect key="frame" x="176" y="291" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="B+" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="A1h-2f-BrK"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="imU-X4-qGZ">
+                                                    <rect key="frame" x="254" y="291" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="B-" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="ho7-8c-UM6"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="wKx-fT-yx8">
+                                                    <rect key="frame" x="20" y="369" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="AB+" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="7xe-SV-FoP"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="XeP-CQ-dMC">
+                                                    <rect key="frame" x="98" y="369" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="AB-" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="ZR2-IP-2i0"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="lqD-VQ-L9X">
+                                                    <rect key="frame" x="176" y="369" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="O+" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="7ek-8H-w0E"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="eGb-6Q-2wl">
+                                                    <rect key="frame" x="254" y="369" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="tintColor" red="0.93725490199999995" green="0.7830569919" blue="0.00053022155969999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="O-" backgroundImage="filter_bloodType_inactive">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="filter_bloodType_active">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="filter_bloodType_active"/>
+                                                    <connections>
+                                                        <action selector="didPressBloodType:" destination="8io-nX-Gy1" eventType="touchUpInside" id="36t-Mj-tvE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="3TR-WO-BRU" userLabel="Done Bg">
+                                            <rect key="frame" x="0.0" y="612" width="375" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AZR-40-kn5">
+                                                    <rect key="frame" x="313" y="13" width="42" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <state key="normal" title="DONE">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.080000000000000002" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.18431372549019609" green="0.18431372549019609" blue="0.20000000000000001" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="668"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-CA-0nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1319.5" y="465"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Account Icon" width="36" height="36"/>
@@ -1002,5 +1222,9 @@
         <image name="blob_3_coat" width="192" height="190"/>
         <image name="blurred_blob_1" width="72" height="72"/>
         <image name="blurred_blob_2" width="101" height="106"/>
+        <image name="filter_bloodType_active" width="65" height="65"/>
+        <image name="filter_bloodType_inactive" width="65" height="65"/>
+        <image name="filter_city" width="103" height="36"/>
+        <image name="filter_nearby" width="85" height="36"/>
     </resources>
 </document>
