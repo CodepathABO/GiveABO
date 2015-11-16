@@ -56,6 +56,8 @@ class ProfileViewController: UIViewController {
         payoffNameText.text = userFirstName
         payoffBloodtypeText.text = bloodType
         
+        payoffView.frame.origin.x = 0
+        payoffView.frame.origin.y = 0
         payoffView.alpha = 0
         payoffLogo.alpha = 0
         payoffThanksText.alpha = 0
@@ -214,9 +216,11 @@ class ProfileViewController: UIViewController {
                                 
                         })
                         
-                        delay(1.4, closure: { () -> () in
+                        delay(2.5, closure: { () -> () in
                             
-                            self.goToHome()
+                           // self.goToHome()
+                            
+                            self.dismissViewControllerAnimated(true, completion: nil)
                             
                         })
 

@@ -541,7 +541,7 @@ rewards it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="DDCC18BA-FF88-47C0-A3B6-6EAD650451DF" id="hlu-bV-t4U">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="7AD25485-8089-40A9-976F-47A0371C958A" id="hlu-bV-t4U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -1864,8 +1864,7 @@ You only need 9 more donations to unlock your first badge and recieve some goodi
         </scene>
     </scenes>
     <resources>
-        <image name="Close Button" width="24" height="24"/>
-        <image name="DDCC18BA-FF88-47C0-A3B6-6EAD650451DF" width="375" height="667">
+        <image name="7AD25485-8089-40A9-976F-47A0371C958A" width="375" height="667">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -18594,6 +18593,7 @@ AA9OQAAPTkgAD05LAA9OUAAPTl8AD05jAA9OagAPTnIAD05/AA9OhAAPToYAD06IAA9OjQAPTpUAD06Y
 AA9OnQAPTqUAD06oAA9OugAPTr0AD07CAAAAAAAABAEAAAAAAAAAQQAAAAAAAAAAAAAAAAAPTsQ
 </mutableData>
         </image>
+        <image name="Close Button" width="24" height="24"/>
         <image name="GiveABO-Logo" width="98" height="86"/>
         <image name="HB-context" width="80" height="48"/>
         <image name="Initial Screen" width="375" height="667"/>
