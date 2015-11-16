@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="GUi-kc-w8a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="V3Z-1E-KzT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -64,7 +64,7 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <action selector="onEditFirstName:" destination="GUi-kc-w8a" eventType="editingChanged" id="nAH-LI-UhJ"/>
                                 </connections>
@@ -129,7 +129,7 @@
                                 <animations/>
                                 <color key="textColor" red="0.75652754929999999" green="0.13306949009999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="onEditFirstName:" destination="GUi-kc-w8a" eventType="editingChanged" id="PMa-vz-BPP"/>
                                 </connections>
@@ -160,7 +160,7 @@
                                 <animations/>
                                 <color key="textColor" red="0.75652754929999999" green="0.13306949009999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="onEditFirstName:" destination="GUi-kc-w8a" eventType="editingChanged" id="TtA-ZK-foT"/>
                                 </connections>
@@ -213,7 +213,7 @@
                                 <animations/>
                                 <color key="textColor" red="0.75652754929999999" green="0.13306949009999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <action selector="onEditFirstName:" destination="GUi-kc-w8a" eventType="editingChanged" id="BPX-5Q-ORB"/>
                                 </connections>
@@ -249,7 +249,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="780.5" y="392.5"/>
+            <point key="canvasLocation" x="533.5" y="406.5"/>
         </scene>
         <!--Blood Type Selection View Controller-->
         <scene sceneID="iTR-Em-1S9">
@@ -402,19 +402,19 @@
                                     <action selector="onContinue:" destination="GUi-kc-w8a" eventType="touchUpInside" id="NbW-no-TNw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fVG-p6-ZdL">
+                                <rect key="frame" x="271" y="229" width="84" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="120"/>
+                                <color key="textColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wh0-ZY-gkH">
                                 <rect key="frame" x="57" y="221" width="260" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="160"/>
-                                <color key="textColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fVG-p6-ZdL">
-                                <rect key="frame" x="271" y="221" width="84" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="120"/>
                                 <color key="textColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -823,7 +823,7 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <view contentMode="scaleToFill" id="Aeb-gO-11d">
                                 <rect key="frame" x="24" y="223" width="327" height="1"/>
@@ -843,15 +843,15 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" id="m5d-OJ-T5p">
-                                <rect key="frame" x="30" y="287" width="316" height="47"/>
+                                <rect key="frame" x="31" y="287" width="316" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                 <connections>
                                     <action selector="onPhoneEditFinished:" destination="TiQ-H2-uVa" eventType="editingDidEnd" id="VcK-UT-Vuu"/>
                                 </connections>
@@ -968,6 +968,69 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="i1P-Tr-kH2">
+                                <rect key="frame" x="188" y="84" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="zT1-1i-lwB">
+                                <rect key="frame" x="267" y="84" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" id="8du-Tr-2n8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for signing up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZIg-Hg-6AD">
+                                        <rect key="frame" x="73" y="240" width="206" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's donate some" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WOF-s5-nUN">
+                                        <rect key="frame" x="54" y="314" width="244" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FKC-d8-8zS">
+                                        <rect key="frame" x="54" y="344" width="264" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dcS-IA-BNE">
+                                        <rect key="frame" x="141" y="170" width="73" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="GiveABO-Logo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UPZ-0l-mdq">
+                                        <rect key="frame" x="36" y="276" width="282" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -979,12 +1042,21 @@
                     <navigationItem key="navigationItem" id="fHV-Lz-Mcn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bloodTypeField" destination="zT1-1i-lwB" id="XoK-u0-c1p"/>
                         <outlet property="dobField" destination="Abw-cz-EQK" id="Ivm-sx-6f4"/>
                         <outlet property="finishButton" destination="T8U-a5-0JJ" id="hCt-L2-LMK"/>
+                        <outlet property="firstnameField" destination="i1P-Tr-kH2" id="LNv-eC-lXX"/>
                         <outlet property="lastnameField" destination="O3y-Bd-UiG" id="PJF-XQ-TDA"/>
                         <outlet property="locationField" destination="7hZ-vC-W5X" id="AG2-g8-I26"/>
                         <outlet property="notificationContainer" destination="0Cn-Ub-SOd" id="guC-3r-HKV"/>
+                        <outlet property="payoffBloodtypeText" destination="FKC-d8-8zS" id="uGV-OC-8Cs"/>
+                        <outlet property="payoffGetStartedText" destination="WOF-s5-nUN" id="L3K-6U-eIl"/>
+                        <outlet property="payoffLogo" destination="dcS-IA-BNE" id="4vI-r2-z7r"/>
+                        <outlet property="payoffNameText" destination="UPZ-0l-mdq" id="zF6-bf-gjV"/>
+                        <outlet property="payoffThanksText" destination="ZIg-Hg-6AD" id="lcg-bh-0gm"/>
+                        <outlet property="payoffView" destination="8du-Tr-2n8" id="jeu-ss-OUX"/>
                         <outlet property="phoneNumberField" destination="m5d-OJ-T5p" id="P4d-dd-1re"/>
+                        <outlet property="textSwitch" destination="lX0-QT-FQR" id="URs-Hx-gOu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7f-Vk-nVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1014,11 +1086,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gem-h4-tcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="392"/>
+            <point key="canvasLocation" x="-22.5" y="413.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="Close Button" width="24" height="24"/>
+        <image name="GiveABO-Logo" width="98" height="86"/>
         <image name="navbar" width="750" height="88"/>
     </resources>
 </document>
