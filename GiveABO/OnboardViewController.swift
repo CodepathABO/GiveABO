@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class OnboardViewController: UIViewController, UIScrollViewDelegate {
 
@@ -73,8 +74,53 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         getStartedButton.transform = CGAffineTransformMakeRotation(CGFloat(20 * M_PI / 180))
         
         pageControl.alpha = 0
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-       // MARK: Platelets loop
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.sharedApplication().statusBarHidden = false
+        
+//        var user = PFUser.currentUser()
+//        
+//        if user != nil  {
+//            goToHome()
+//            print(user)
+//            
+//        }
+//            
+//        else {
+//            // goToHome()
+//        }
+//        
+        
+        UIView.animateWithDuration(0.7) { () -> Void in
+            self.introContentOneView.alpha = 1
+        }
+        
+        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            
+            self.introContentOneView.center.y = 280
+            self.introContentOneView.transform = CGAffineTransformMakeScale(1, 1)
+            self.introContentOneView.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
+            
+            }, completion: { (Bool) -> Void in
+                
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.pageControl.alpha = 1
+                })
+        })
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.sharedApplication().statusBarHidden = false
+        
+        // MARK: Platelets loop
         
         for i in 0...18 {
             
@@ -107,42 +153,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             self.view.sendSubviewToBack(platelet)
             
         }
-
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         
-        UIView.animateWithDuration(0.7) { () -> Void in
-            self.introContentOneView.alpha = 1
-        }
-        
-        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-            
-            self.introContentOneView.center.y = 280
-            self.introContentOneView.transform = CGAffineTransformMakeScale(1, 1)
-            self.introContentOneView.transform = CGAffineTransformMakeRotation(CGFloat(0 * M_PI / 180))
-            
-            }, completion: { (Bool) -> Void in
-                
-                UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.pageControl.alpha = 1
-                })
-        })
-        
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-       platelet.hidden = false
-        
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-      endAnim()
     }
     
     
@@ -378,6 +389,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         
         self.platelet.hidden = true
     }
+    
     
 
     /*
