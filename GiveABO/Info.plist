@@ -43,5 +43,24 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.codepathABO.CheckEvents</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Blood Drives &amp; Events</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Check up on nearby blood drives</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.codepathABO.NewRequest</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>New Request</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Creates a new request</string>
+		</dict>
+	</array>
 </dict>
 </plist>
