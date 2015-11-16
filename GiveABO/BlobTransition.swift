@@ -119,6 +119,15 @@ class BlobTransition: BaseTransition {
             (finished: Bool) -> Void in
             
                 homeVC.selectedView.alpha = 1
+            
+            
+                // CHECK IF JEREMIE IS DONATED
+                if jeremieDonated == true {
+                    let blobUIImage = homeVC.jeremieRequestView.viewWithTag(10) as! UIImageView
+                    
+                    blobUIImage.image = UIImage(named: "blob_green")
+                }
+            
                 self.finish()
             
         }
