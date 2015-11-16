@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class UserProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let data = ["Blood bank: Cal Pacific Blood bank", "Direct Request", "Direct Request", "Blood bank: SF General", "Blood drive: American Red Cross"]
-
+    
+    var user = PFUser.currentUser()
+    var query = PFQuery(className:"Accounts")
 
     @IBOutlet weak var totalDonationsView: UIView!
     @IBOutlet weak var yearlyDonationsView: UIView!
@@ -20,6 +23,8 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableTitleView: UIView!
     @IBOutlet weak var statsView: UIView!
     @IBOutlet weak var userDataView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bloodTypeLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -31,6 +36,31 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
+        // PARSE USER INFO
+        
+        query.whereKey("user", equalTo: (user?.objectId)!)
+        
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            
+            if let objects = objects {
+                
+                for object in objects {
+                    
+                    var firstname = object["firstname"] as! String
+                    var lastname = object["lastname"] as! String
+                    var bloodtype = object["bloodtype"] as! String
+                    
+                    // print(firstname)
+                    
+                    self.nameLabel.text = firstname + " " + lastname
+                    self.bloodTypeLabel.text = bloodtype
+                    
+                    
+                    
+                }
+            }
+
+        }
         
         donationStreakView.layer.cornerRadius = donationStreakView.frame.size.width / 2
         
