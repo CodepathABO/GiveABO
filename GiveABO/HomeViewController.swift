@@ -151,7 +151,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
   
     override func viewDidAppear(animated: Bool) {
-
+        
+       
         bloblAnimation1(jeremieRequestView)
         bloblAnimation1(annabelRequestView)
         bloblAnimation1(carolineRequestView)
@@ -211,7 +212,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                 completion: nil
             )
         }
-        
     }
     
     

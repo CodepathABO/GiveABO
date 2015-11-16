@@ -914,7 +914,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="0xG-ZR-XeU" userLabel="I">
+                            <view contentMode="scaleToFill" id="0xG-ZR-XeU" userLabel="Confirm Button">
                                 <rect key="frame" x="38" y="545" width="299" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -922,15 +922,50 @@
                                         <rect key="frame" x="0.0" y="20" width="298" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" backgroundImage="Confirm - Button"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="CONFIRM" backgroundImage="Button 298">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="didPressConfirm:" destination="bRA-Cq-BHp" eventType="touchUpInside" id="wIQ-gM-2ow"/>
-                                            <segue destination="TTY-dG-4SK" kind="modal" id="Fzz-nk-w4u"/>
+                                            <action selector="didPressConfirm:" destination="bRA-Cq-BHp" eventType="touchUpInside" id="R0N-xF-WkY"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" id="y42-uq-KnA">
+                                <rect key="frame" x="178" y="282" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="success_message_1" id="2nc-QD-ZXQ">
+                                <rect key="frame" x="38" y="213" width="120" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="success_message_2" id="Hcs-Uy-egF">
+                                <rect key="frame" x="36" y="245" width="191" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="success_message_3" id="BKb-nj-x4b">
+                                <rect key="frame" x="234" y="245" width="93" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="success_message_4" id="ckI-Q4-NLo">
+                                <rect key="frame" x="36" y="304" width="302" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e7R-cU-oXh" userLabel="Success OK Button">
+                                <rect key="frame" x="38" y="565" width="298" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="OK" backgroundImage="Button 298">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressSuccessOK:" destination="bRA-Cq-BHp" eventType="touchUpInside" id="QkS-kQ-t0L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.90980392156862744" green="0.33725490196078434" blue="0.19215686274509805" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -948,9 +983,16 @@
                         <outlet property="confirm_phoneView" destination="fVl-ms-VJU" id="T1c-NL-MUy"/>
                         <outlet property="dateLabel" destination="ujF-Q9-9Kj" id="RIK-bi-ale"/>
                         <outlet property="donateButton" destination="Lwu-l6-rXe" id="fU1-Jx-eEp"/>
+                        <outlet property="loader" destination="y42-uq-KnA" id="DjQ-t4-Jyt"/>
                         <outlet property="messageLabel" destination="vmv-LC-VNl" id="ULZ-jk-TQf"/>
                         <outlet property="nameLabel" destination="PKx-uG-GqN" id="IUE-G0-1bW"/>
                         <outlet property="needsLabel" destination="9ur-aa-j5a" id="mcY-zx-MSs"/>
+                        <outlet property="success_message_1" destination="2nc-QD-ZXQ" id="Zic-vw-pzA"/>
+                        <outlet property="success_message_2" destination="Hcs-Uy-egF" id="gmQ-40-OeU"/>
+                        <outlet property="success_message_3" destination="BKb-nj-x4b" id="p6Y-xN-AW9"/>
+                        <outlet property="success_message_4" destination="ckI-Q4-NLo" id="2T2-Ti-haH"/>
+                        <outlet property="success_ok_button" destination="e7R-cU-oXh" id="Jk6-bd-TMz"/>
+                        <outlet property="xButton" destination="g5s-M1-IB7" id="Mda-NT-ea1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpA-Jp-cqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1023,7 +1065,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThK-Uj-tse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674.5" y="1357"/>
+            <point key="canvasLocation" x="842.5" y="1289.5"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="uZQ-Vj-yhg">
@@ -1252,9 +1294,9 @@
     </scenes>
     <resources>
         <image name="Account Icon" width="36" height="36"/>
+        <image name="Button 298" width="598" height="128"/>
         <image name="Close Button" width="24" height="24"/>
         <image name="Confirm - Blood Type" width="289" height="72"/>
-        <image name="Confirm - Button" width="298" height="64"/>
         <image name="Confirm - Message" width="299" height="88"/>
         <image name="Confirm - Phone Number" width="299" height="96"/>
         <image name="Create New Request Bg" width="375" height="667"/>
@@ -1276,5 +1318,9 @@
         <image name="filter_bloodType_inactive" width="65" height="65"/>
         <image name="filter_city" width="103" height="36"/>
         <image name="filter_nearby" width="85" height="36"/>
+        <image name="success_message_1" width="120" height="25"/>
+        <image name="success_message_2" width="191" height="25"/>
+        <image name="success_message_3" width="93" height="25"/>
+        <image name="success_message_4" width="302" height="105"/>
     </resources>
 </document>

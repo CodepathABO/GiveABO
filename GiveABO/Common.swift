@@ -14,6 +14,7 @@ var newRequestName = ""
 var newRequestBloodType = ""
 var newRequestMessage = ""
 var fromCreateAccount = false
+var jeremieDonated = false
 
 func CGAffineTransformMakeDegreeRotation(rotation: CGFloat) -> CGAffineTransform {
     return CGAffineTransformMakeRotation(rotation * CGFloat(M_PI / 180))

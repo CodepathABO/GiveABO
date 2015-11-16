@@ -11,6 +11,7 @@ import Parse
 
 class RequestDetailViewController: UIViewController {
     
+    @IBOutlet weak var xButton: UIButton!
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -18,19 +19,33 @@ class RequestDetailViewController: UIViewController {
     @IBOutlet weak var needsLabel: UILabel!
     @IBOutlet weak var bloodTypeLabel: UILabel!
     @IBOutlet weak var donateButton: UIButton!
+    var requestContents: [UILabel]!
     
     
     // CONFIRM DETAILS
-
-
+    
     @IBOutlet weak var confirm_messageView: UIView!
     @IBOutlet weak var confirm_bloodTypeView: UIView!
     @IBOutlet weak var confirm_bloodTypeLabel: UILabel!
     @IBOutlet weak var confirm_phoneView: UIView!
     @IBOutlet weak var confirm_phoneLabel: UILabel!
-    
     @IBOutlet weak var confirm_buttonView: UIView!
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    var confirmContents: [UIView]!
+    
+    
+    // SUCCESS MESSAGE
+    
+    @IBOutlet weak var success_message_1: UIImageView!
+    @IBOutlet weak var success_message_2: UIImageView!
+    @IBOutlet weak var success_message_3: UIImageView!
+    @IBOutlet weak var success_message_4: UIImageView!
+    var successContents: [UIImageView]!
+    
+    @IBOutlet weak var success_ok_button: UIButton!
+    
+    
     
     var requestView: UIView!
     var initialCenter: CGPoint!
@@ -45,8 +60,8 @@ class RequestDetailViewController: UIViewController {
     var bloodTypeText = ""
     
     
-    var requestContents: [UILabel]!
-    var confirmContents: [UIView]!
+
+
     
     
     // PARSE USERS
@@ -57,6 +72,9 @@ class RequestDetailViewController: UIViewController {
     // VIEW DID LOAD
     override func viewDidLoad() {
         
+        
+        // HIDE LOADER
+        loader.alpha = 0
         
         // HIDE STATUS BAR
         UIApplication.sharedApplication().statusBarHidden = true
@@ -91,6 +109,22 @@ class RequestDetailViewController: UIViewController {
             content.alpha = 0
             content.frame.origin.x += 300
         }
+        
+        
+        // SUCCES CONTENT ARRAY
+        successContents = [success_message_1, success_message_2, success_message_3]
+
+        for content in successContents {
+            content.alpha = 0
+            content.transform = CGAffineTransformMakeTranslation(0, 40)
+        }
+        
+        success_ok_button.alpha = 0
+        success_ok_button.transform = CGAffineTransformMakeTranslation(0, 120)
+        
+        success_message_4.alpha = 0
+        success_message_4.transform = CGAffineTransformMakeTranslation(0, 40)
+
     }
     
     
@@ -253,7 +287,139 @@ class RequestDetailViewController: UIViewController {
         
     }
     
-    @IBAction func didPressConfirm(sender: AnyObject) {
+    
+    
+    // DID PRESS CONFIRM -----------------------------------------------------------------------------------------------
+    
+    
+    @IBAction func didPressConfirm(sender: UIButton) {
+        
+//        sender.setTitle("", forState: UIControlState.Selected)
+//        sender.selected = !sender.selected
+        loader.alpha = 1
+        loader.startAnimating()
+        xButton.alpha = 0
+        
+        // FADE OUT CONFIRM CONTENTS
+        var confirmDelay = 0.0
+        
+        for content in self.confirmContents {
+            
+            UIView.animateWithDuration(
+                
+                0.8,
+                delay: confirmDelay,
+                usingSpringWithDamping: 0.8,
+                initialSpringVelocity: 0.2,
+                options: UIViewAnimationOptions.CurveEaseInOut,
+                animations: { () -> Void in
+                    content.alpha = 0
+                },
+                
+                completion: nil
+            )
+            
+            confirmDelay += 0.08
+        }
+        
+        
+        // ANIMATE IN SUCCESS CONTENTS
+        
+        delay(3) { () -> () in
+            self.loader.alpha = 0
+            
+            var successDelay = 0.0
+            
+            for content in self.successContents {
+                
+                UIView.animateWithDuration(
+                    0.6,
+                    delay: 0,
+                    usingSpringWithDamping: 0.8,
+                    initialSpringVelocity: 0.2,
+                    options: UIViewAnimationOptions.CurveEaseInOut,
+                    
+                    animations: { () -> Void in
+                        content.alpha = 1
+                        content.transform = CGAffineTransformMakeTranslation(0, 0)
+                    }
+                )
+                {
+                    (finished: Bool) -> Void in
+                        
+                }
+                successDelay += 0.4
+                
+            }
+            
+            
+            // ANIMATE BUTTON
+            
+            UIView.animateWithDuration(
+                0.6,
+                delay: 2.0,
+                usingSpringWithDamping: 0.8,
+                initialSpringVelocity: 0.2,
+                options: UIViewAnimationOptions.CurveEaseInOut,
+                
+                animations: { () -> Void in
+                    self.success_message_4.alpha = 1
+                    self.success_message_4.transform = CGAffineTransformMakeTranslation(0, 0)
+                }
+                )
+                
+                {
+                    (finished: Bool) -> Void in
+                    
+            }
+            
+            
+            // ANIMATE BUTTON
+            
+            UIView.animateWithDuration(
+                0.6,
+                delay: 2.4,
+                usingSpringWithDamping: 0.8,
+                initialSpringVelocity: 0.2,
+                options: UIViewAnimationOptions.CurveEaseInOut,
+            
+                animations: { () -> Void in
+                    self.success_ok_button.alpha = 1
+                    self.success_ok_button.transform = CGAffineTransformMakeTranslation(0, 0)
+                }
+            )
+            
+            {
+                (finished: Bool) -> Void in
+                
+            }
+        }
+        
+        // ANIMATE GREEN BG
+        
+        self.blobImage = UIImage(named: "blob_green")
+        let blobImageView = UIImageView (image: self.blobImage)
+        self.requestView.addSubview(blobImageView)
+        blobImageView.alpha = 0
+        
+        UIView.animateWithDuration(
+            
+            7,
+            delay: 0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.2,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: { () -> Void in
+                blobImageView.alpha = 1
+            },
+            
+            completion: nil
+        )
+        
+        jeremieDonated = true
+        print("in request detail \(jeremieDonated)")
+        
+        
         
     }
     
@@ -261,7 +427,15 @@ class RequestDetailViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // GO TO SIGNUP STORYBOARD
+    @IBAction func didPressSuccessOK(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    // GO TO SIGNUP STORYBOARD -----------------------------------------------------------------------------------------
+    
+    
     func goToSignup() {
         
         let storyboard = UIStoryboard(name: "Signup", bundle: nil)
@@ -271,7 +445,9 @@ class RequestDetailViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
-
+    
+    
+    
     // PAN ON REQUEST
     func didPanRequest(sender: UIPanGestureRecognizer) {
     
