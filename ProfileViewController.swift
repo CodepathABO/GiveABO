@@ -222,6 +222,9 @@ class ProfileViewController: UIViewController {
                             
                             self.dismissViewControllerAnimated(true, completion: nil)
                             
+                            // TOGGLE
+                            fromCreateAccount = true
+                            
                         })
 
                 })

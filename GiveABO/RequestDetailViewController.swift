@@ -125,21 +125,20 @@ class RequestDetailViewController: UIViewController {
         )
         
         
-        // CHECK IF USER IS LOGGED IN
-        var user = PFUser.currentUser()
         
-        if user != nil  {
-
-            print("Request Detail logged in ")
-            hideRequestContent()
-            showConfirmContent()
+        // CHECK IF USER CAME FROM CREATE ACCOUNT
+        if fromCreateAccount == true {
             
-        }
+            var user = PFUser.currentUser()
             
-        else {
-            print("Request Detail logged out")
+            if user != nil  {
+                
+                print("Request Detail logged in ")
+                hideRequestContent()
+                showConfirmContent()
+                fromCreateAccount = false
+            }
         }
-        
     }
     
     

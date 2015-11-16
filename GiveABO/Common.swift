@@ -13,6 +13,7 @@ var newRequestListener = false
 var newRequestName = ""
 var newRequestBloodType = ""
 var newRequestMessage = ""
+var fromCreateAccount = false
 
 func CGAffineTransformMakeDegreeRotation(rotation: CGFloat) -> CGAffineTransform {
     return CGAffineTransformMakeRotation(rotation * CGFloat(M_PI / 180))
