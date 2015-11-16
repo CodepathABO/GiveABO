@@ -218,9 +218,9 @@ class ProfileViewController: UIViewController {
                         
                         delay(2.1, closure: { () -> () in
                             
-                           self.goToHome()
+//                           self.goToHome()
                             
-                           // self.dismissViewControllerAnimated(true, completion: nil)
+                            self.dismissViewControllerAnimated(true, completion: nil)
                             
                         })
 

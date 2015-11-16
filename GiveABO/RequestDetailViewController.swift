@@ -46,7 +46,7 @@ class RequestDetailViewController: UIViewController {
     
     // PARSE USERS
     var user = PFUser.currentUser()
-    var query = PFQuery(className:"Simple")
+    var query = PFQuery(className:"Accounts")
 
     
     // VIEW DID LOAD
@@ -123,6 +123,22 @@ class RequestDetailViewController: UIViewController {
             },
             completion: nil
         )
+        
+        
+        // CHECK IF USER IS LOGGED IN
+        var user = PFUser.currentUser()
+        
+        if user != nil  {
+
+            print("Request Detail logged in ")
+            hideRequestContent()
+            showConfirmContent()
+            
+        }
+            
+        else {
+            print("Request Detail logged out")
+        }
         
     }
     
@@ -211,15 +227,18 @@ class RequestDetailViewController: UIViewController {
     // ON PRESS DONATE
     @IBAction func didPressDonate(sender: AnyObject) {
         
+        // CHECK IF USER IS LOGGED IN
+        var user = PFUser.currentUser()
+        
         if user != nil  {
             
             hideRequestContent()
             showConfirmContent()
             
-        } else {
+        }
             
+        else {
             goToSignup()
-            
         }
         
     }
