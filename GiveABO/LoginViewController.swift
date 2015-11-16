@@ -74,7 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
         
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
             
-            self.loginView.frame.origin.y = 220
+            self.loginView.frame.origin.y = 110
             
             
             }) { (Bool) -> Void in
@@ -200,7 +200,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
             signupButton.setTitle("Log In", forState: UIControlState.Normal)
             
             signupActive = true
-
             
             goToSignup()
             

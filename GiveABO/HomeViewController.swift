@@ -440,8 +440,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         
         // IF LOGGED IN, GO TO CREATE NEW REQUEST
         if user != nil  {
-            // performSegueWithIdentifier("createRequestSegue", sender: nil)
-            print(user)
+            performSegueWithIdentifier("createRequestSegue", sender: nil)
+            // print(user)
         }
             
         // IF LOGGED OUT, GO TO SIGN UP
