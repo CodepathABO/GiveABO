@@ -47,7 +47,7 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
         
         usernameField.becomeFirstResponder()
         
-        usernameField.attributedPlaceholder = NSAttributedString(string:"Username",
+        usernameField.attributedPlaceholder = NSAttributedString(string:"Email",
             attributes:[NSForegroundColorAttributeName: UIColor(red:0.53, green:0.05, blue:0.00, alpha:1.0)])
         
         passwordField.attributedPlaceholder = NSAttributedString(string:"Password",
@@ -200,9 +200,13 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
             
             signupActive = true
             
-            dismissViewControllerAnimated(true, completion: nil)
+            
             
             goToSignup()
+            
+            // dismissViewControllerAnimated(true, completion: nil)
+            
+            
             
             
         } else {
