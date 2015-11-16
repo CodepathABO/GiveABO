@@ -203,7 +203,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
                     self.americanRCRequestView.transform = CGAffineTransformMakeTranslation(60, 10)
                     
                     self.newRequestView.alpha = 1
-                    self.newRequestView.transform = CGAffineTransformMakeTranslation(300, 0)
+                    self.newRequestView.transform = CGAffineTransformMakeTranslation(240, 0)
                     self.newRequestView.transform = CGAffineTransformScale(self.newRequestView.transform, 1, 1)
                     
                 },
@@ -325,18 +325,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         let rotation = 180
         blob.alpha = 1
         
-        // BLOB SIZE
-        UIView.animateWithDuration(
-            2,
-            delay: 0,
-            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
-            animations: { () -> Void in
-                
-                blob.transform = CGAffineTransformScale(blob.transform, 1.05, 1.03)
-            },
-            
-            completion: nil
-        )
+//        // BLOB SIZE
+//        UIView.animateWithDuration(
+//            2,
+//            delay: 0,
+//            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
+//            animations: { () -> Void in
+//                
+//                blob.transform = CGAffineTransformScale(blob.transform, 1.05, 1.03)
+//            },
+//            
+//            completion: nil
+//        )
         
         // BLOB COAT ROTATION
         UIView.animateWithDuration(
@@ -364,18 +364,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         let rotation = 90
         blob.alpha = 1
         
-        // BLOB SIZE
-        UIView.animateWithDuration(
-            4,
-            delay: 0,
-            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
-            animations: { () -> Void in
-                
-                blob.transform = CGAffineTransformScale(blob.transform, 1.01, 1.03)
-            },
-            
-            completion: nil
-        )
+//        // BLOB SIZE
+//        UIView.animateWithDuration(
+//            4,
+//            delay: 0,
+//            options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.AllowUserInteraction],
+//            animations: { () -> Void in
+//                
+//                blob.transform = CGAffineTransformScale(blob.transform, 1.01, 1.03)
+//            },
+//            
+//            completion: nil
+//        )
         
         // BLOB COAT ROTATION
         UIView.animateWithDuration(
