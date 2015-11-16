@@ -53,6 +53,7 @@
 		3ADEB9491BEC1B6B00DEB632 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADEB9481BEC1B6B00DEB632 /* PrivacyViewController.swift */; };
 		3AE06A871BF9461A005BE095 /* BloodTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE06A861BF9461A005BE095 /* BloodTypeSelectionViewController.swift */; };
 		A71D036D1BEB435F00351C26 /* CreateRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */; };
+		A7A1D8C01BF95744006C9AC0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D8BF1BF95744006C9AC0 /* FilterViewController.swift */; };
 		C37FC9CF1BE90EA300671427 /* FirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */; };
 		C37FC9D11BE922A200671427 /* BloodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */; };
 		C37FC9D31BE9336800671427 /* BloodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */; };
@@ -135,6 +136,7 @@
 		3AE06A861BF9461A005BE095 /* BloodTypeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodTypeSelectionViewController.swift; sourceTree = "<group>"; };
 		3AF4ABF91BF414F20057A02B /* GiveABO-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GiveABO-3.entitlements"; sourceTree = "<group>"; };
 		A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRequestViewController.swift; sourceTree = "<group>"; };
+		A7A1D8BF1BF95744006C9AC0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		C37FC9CE1BE90EA300671427 /* FirstNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstNameViewController.swift; path = ../FirstNameViewController.swift; sourceTree = "<group>"; };
 		C37FC9D01BE922A200671427 /* BloodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodTypeViewController.swift; sourceTree = "<group>"; };
 		C37FC9D21BE9336800671427 /* BloodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodDetailsViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		3A5BDA4E1BF6B7FF0008501E /* HomeControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A7A1D8BF1BF95744006C9AC0 /* FilterViewController.swift */,
 				3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */,
 				3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */,
 				A71D036C1BEB435F00351C26 /* CreateRequestViewController.swift */,
@@ -511,6 +514,7 @@
 				3AC2AEB71BE5C29E003D5E88 /* LoginViewController.swift in Sources */,
 				3A71817F1BEB49330054BB47 /* UserStoriesViewController.swift in Sources */,
 				3AC2AEB51BE5C280003D5E88 /* SignUpViewController.swift in Sources */,
+				A7A1D8C01BF95744006C9AC0 /* FilterViewController.swift in Sources */,
 				3AC2AEB31BE5C260003D5E88 /* OnboardViewController.swift in Sources */,
 				3A7181811BEB49640054BB47 /* UserBadgesViewController.swift in Sources */,
 				3A1542891BF7B795004E6C74 /* LogOutViewController.swift in Sources */,
