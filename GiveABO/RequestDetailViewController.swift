@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class RequestDetailViewController: UIViewController {
     
@@ -21,11 +22,15 @@ class RequestDetailViewController: UIViewController {
     
     // CONFIRM DETAILS
 
-    @IBOutlet weak var confirmMessageImageView: UIImageView!
-    @IBOutlet weak var bloodTypeImageView: UIImageView!
-    @IBOutlet weak var phoneNumberImageView: UIImageView!
-    @IBOutlet weak var confirmButton: UIButton!
 
+    @IBOutlet weak var confirm_messageView: UIView!
+    @IBOutlet weak var confirm_bloodTypeView: UIView!
+    @IBOutlet weak var confirm_bloodTypeLabel: UILabel!
+    @IBOutlet weak var confirm_phoneView: UIView!
+    @IBOutlet weak var confirm_phoneLabel: UILabel!
+    
+    @IBOutlet weak var confirm_buttonView: UIView!
+    @IBOutlet weak var confirmButton: UIButton!
     
     var requestView: UIView!
     var initialCenter: CGPoint!
@@ -41,7 +46,7 @@ class RequestDetailViewController: UIViewController {
     
     
     var requestContents: [UILabel]!
-    var confirmContents: [UIImageView]!
+    var confirmContents: [UIView]!
     
     
     // PARSE USERS
@@ -51,6 +56,7 @@ class RequestDetailViewController: UIViewController {
     
     // VIEW DID LOAD
     override func viewDidLoad() {
+        
         
         // HIDE STATUS BAR
         UIApplication.sharedApplication().statusBarHidden = true
@@ -79,16 +85,12 @@ class RequestDetailViewController: UIViewController {
         
         
         // CONFIRM CONTENT ARRAY
-        confirmContents = [confirmMessageImageView, bloodTypeImageView, phoneNumberImageView]
+        confirmContents = [confirm_messageView, confirm_bloodTypeView, confirm_phoneView, confirm_buttonView]
         
         for content in confirmContents {
             content.alpha = 0
             content.frame.origin.x += 300
         }
-        
-        confirmButton.alpha = 0
-        confirmButton.frame.origin.x += 300
-        
     }
     
     
@@ -146,14 +148,13 @@ class RequestDetailViewController: UIViewController {
     func hideRequestContent(){
         
         // ANIMATE REQUEST CONTENTS
-        var delay = 0.0
         
         for content in requestContents {
             
             UIView.animateWithDuration(
                 
                 0.4,
-                delay: delay,
+                delay: 0,
                 usingSpringWithDamping: 0.9,
                 initialSpringVelocity: 0.1,
                 options: UIViewAnimationOptions.CurveEaseInOut,
@@ -168,7 +169,7 @@ class RequestDetailViewController: UIViewController {
         // ANIMATE BUTTON
         UIView.animateWithDuration(
             0.2,
-            delay: 0.4,
+            delay: 0,
             options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
                 self.donateButton.alpha = 0
@@ -182,6 +183,35 @@ class RequestDetailViewController: UIViewController {
     // SHOW CONFIRM CONTENTS
     func showConfirmContent() {
         
+        
+        // PARSE
+        var user = PFUser.currentUser()
+        var query = PFQuery(className:"Accounts")
+        
+        // PARSE USER INFO
+        query.whereKey("user", equalTo: (user?.objectId)!)
+        
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            
+            if let objects = objects {
+                
+                for object in objects {
+                    
+                    var firstname = object["firstname"] as! String
+                    var lastname = object["lastname"] as! String
+                    var bloodtype = object["bloodtype"] as! String
+                    var phonenumber = object["phone"] as! String
+                    
+                    // print(firstname)
+                    
+                    self.confirm_bloodTypeLabel.text = bloodtype
+                    self.confirm_phoneLabel.text = phonenumber
+                    
+                }
+            }
+        }
+        
+        
         // ANIMATE CONFIRM CONTENTS
         var delay = 0.0
         
@@ -191,7 +221,7 @@ class RequestDetailViewController: UIViewController {
                 
                 0.8,
                 delay: delay,
-                usingSpringWithDamping: 0.6,
+                usingSpringWithDamping: 0.8,
                 initialSpringVelocity: 0.2,
                 options: UIViewAnimationOptions.CurveEaseInOut,
                 animations: { () -> Void in
@@ -204,23 +234,6 @@ class RequestDetailViewController: UIViewController {
             
             delay += 0.08
         }
-        
-        // ANIMATE BUTTON
-        UIView.animateWithDuration(
-            
-            0.8,
-            delay: 0.2,
-            usingSpringWithDamping: 0.6,
-            initialSpringVelocity: 0.2,
-            options: UIViewAnimationOptions.CurveEaseInOut,
-            animations: { () -> Void in
-                self.confirmButton.alpha = 1
-                self.confirmButton.frame.origin.x = 38
-            },
-            
-            completion: nil
-        )
-
     }
     
     // ON PRESS DONATE
