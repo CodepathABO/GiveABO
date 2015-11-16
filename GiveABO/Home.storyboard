@@ -8,7 +8,7 @@
         <!--Home View Controller-->
         <scene sceneID="rQy-Tl-7l9">
             <objects>
-                <viewController storyboardIdentifier="SBTestViewController" id="QrJ-Ov-ioM" customClass="HomeViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SBTestViewController" modalTransitionStyle="crossDissolve" id="QrJ-Ov-ioM" customClass="HomeViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSf-4K-pwe">
                         <rect key="frame" x="0.0" y="0.0" width="1665" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
