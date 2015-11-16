@@ -64,7 +64,7 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <connections>
                                     <action selector="onEditFirstName:" destination="GUi-kc-w8a" eventType="editingChanged" id="nAH-LI-UhJ"/>
                                 </connections>
@@ -214,7 +214,7 @@
                                 <animations/>
                                 <color key="textColor" red="0.75652754929999999" green="0.13306949009999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                 <connections>
                                     <action selector="onEditFirstName:" destination="GUi-kc-w8a" eventType="editingChanged" id="BPX-5Q-ORB"/>
                                 </connections>
@@ -854,7 +854,7 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <view contentMode="scaleToFill" id="Aeb-gO-11d">
                                 <rect key="frame" x="24" y="223" width="327" height="1"/>
@@ -882,7 +882,7 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="onPhoneEditFinished:" destination="TiQ-H2-uVa" eventType="editingDidEnd" id="VcK-UT-Vuu"/>
                                 </connections>
