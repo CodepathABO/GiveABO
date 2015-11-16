@@ -10,6 +10,12 @@ import UIKit
 
 class DonateHistoryTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var bloodTypeLetter: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var typeTextLabel: UILabel!
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

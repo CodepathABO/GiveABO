@@ -13,6 +13,8 @@ class UserRewardsViewController: UIViewController {
     @IBOutlet weak var awardsNumberView: UIView!
     @IBOutlet weak var donationsLabel: UILabel!
     @IBOutlet weak var AwardsvViewContain: UITableViewCell!
+    @IBOutlet weak var counterView: CounterView!
+    @IBOutlet weak var rewardButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +32,9 @@ class UserRewardsViewController: UIViewController {
         donationsLabel.sizeToFit()
        
         AwardsvViewContain.alpha = 0
+        counterView.alpha = 0
         
-       
-        
+        rewardButton.layer.cornerRadius = 25
         
 
     }
@@ -44,15 +46,21 @@ class UserRewardsViewController: UIViewController {
         UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
             self.AwardsvViewContain.alpha = 1
             }) { (Bool) -> Void in
-                // ..
-                 }
+                
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.counterView.alpha = 1
+                })
+
+        }
     }
+
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
         UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
             self.AwardsvViewContain.alpha = 0
+            self.counterView.alpha = 0
             }) { (Bool) -> Void in
                 // ..
         }

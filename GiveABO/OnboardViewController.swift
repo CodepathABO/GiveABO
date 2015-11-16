@@ -74,7 +74,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         getStartedButton.transform = CGAffineTransformMakeRotation(CGFloat(20 * M_PI / 180))
         
         pageControl.alpha = 0
-
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -83,19 +83,7 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         UIApplication.sharedApplication().statusBarHidden = false
         
-//        var user = PFUser.currentUser()
-//        
-//        if user != nil  {
-//            goToHome()
-//            print(user)
-//            
-//        }
-//            
-//        else {
-//            // goToHome()
-//        }
-//        
-        
+   
         UIView.animateWithDuration(0.7) { () -> Void in
             self.introContentOneView.alpha = 1
         }
@@ -113,19 +101,13 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
                 })
         })
         
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        UIApplication.sharedApplication().statusBarHidden = false
         
         // MARK: Platelets loop
         
         for i in 0...18 {
             
             platelet = UIView()
-            platelet.frame = CGRect(x: 55, y: 300, width: 100, height: 100)
+            platelet.frame = CGRect(x: -155, y: 300, width: 100, height: 100)
             platelet.backgroundColor = UIColor(red:0.39, green:0.00, blue:0.14, alpha:1.0)
             platelet.layer.cornerRadius = 50
             
@@ -153,6 +135,14 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             self.view.sendSubviewToBack(platelet)
             
         }
+
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.sharedApplication().statusBarHidden = false
         
     }
     

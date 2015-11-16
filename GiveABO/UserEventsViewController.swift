@@ -10,7 +10,19 @@ import UIKit
 
 class UserEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let data = ["UC Berkeley - November 21, 2015", "San Francisco State University - November 26, 2015", "University Hospital - December 12, 2015", "Fairfield Mall Mobile Donation - Decmber 15, 2015", "San Mateo County City Hall - December 17, 2015", "Cal Pacific - December 21, 2015", "Cow Palace - January 06, 2016", "Oakland Tech High School - January 16, 2016"]
+//    let data = ["UC Berkeley - November 21, 2015", "San Francisco State University - November 26, 2015", "University Hospital - December 12, 2015", "Fairfield Mall Mobile Donation - Decmber 15, 2015", "San Mateo County City Hall - December 17, 2015", "Cal Pacific - December 21, 2015", "Cow Palace - January 06, 2016", "Oakland Tech High School - January 16, 2016"]
+    
+    var events = [
+        ["name" : "UC Berkeley","date" : "November 21, 2015"],
+        ["name" : "San Francisco State University", "date": "November 26, 2015"],
+        ["name" : "University Hospital","date" : "December 12, 2015"],
+        ["name" : "Fairfield Mall Mobile Donation", "date" : "Decmber 15, 2015"],
+        ["name" : "San Mateo County City Hall", "date" : "December 17, 2015"],
+        ["name" : "Cal Pacific", "date" : "December 21, 2015"],
+        ["name" : "Cow Palace", "date" : "January 06, 2016"],
+        ["name" : "Oakland Tech High School", "date" : "January 16, 2016"]
+    ]
+
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -81,19 +93,30 @@ class UserEventsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        //
-        return data.count
+        return events.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! EventsTableViewCell
         
-        cell.textLabel?.text = data[indexPath.row]
+       // cell.textLabel?.text = data[indexPath.row]
+        
+        let event = events[indexPath.row]
+        
+        cell.eventLocationLabel?.text =  event["name"]!
+        cell.eventDateLabel?.text = event["date"]!
         
         cell.selectionStyle = UITableViewCellSelectionStyle.Gray
         
         cell.accessoryType = .DisclosureIndicator
+        
+        cell.textLabel!.lineBreakMode = .ByWordWrapping
+        cell.textLabel!.numberOfLines = 0
+        cell.eventLocationLabel!.sizeToFit()
+        cell.eventDateLabel!.sizeToFit()
+        
         
         return cell
         

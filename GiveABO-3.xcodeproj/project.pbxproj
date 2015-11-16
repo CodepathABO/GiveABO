@@ -32,6 +32,10 @@
 		3A71817D1BEB491B0054BB47 /* UserEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */; };
 		3A71817F1BEB49330054BB47 /* UserStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */; };
 		3A7181811BEB49640054BB47 /* UserBadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */; };
+		3A77ABF61BFA73180089E1DD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77ABF51BFA73180089E1DD /* CounterView.swift */; };
+		3A77ABF81BFA762B0089E1DD /* TotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77ABF71BFA762B0089E1DD /* TotalView.swift */; };
+		3A77ABFA1BFA763F0089E1DD /* YearlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77ABF91BFA763F0089E1DD /* YearlyView.swift */; };
+		3A77ABFC1BFA764C0089E1DD /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77ABFB1BFA764C0089E1DD /* StreakView.swift */; };
 		3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */; };
 		3A8275261BE53EFC00CF68C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275251BE53EFC00CF68C7 /* ViewController.swift */; };
 		3A8275291BE53EFC00CF68C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8275271BE53EFC00CF68C7 /* Main.storyboard */; };
@@ -109,6 +113,10 @@
 		3A71817C1BEB491B0054BB47 /* UserEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEventsViewController.swift; sourceTree = "<group>"; };
 		3A71817E1BEB49330054BB47 /* UserStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoriesViewController.swift; sourceTree = "<group>"; };
 		3A7181801BEB49640054BB47 /* UserBadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBadgesViewController.swift; sourceTree = "<group>"; };
+		3A77ABF51BFA73180089E1DD /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		3A77ABF71BFA762B0089E1DD /* TotalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalView.swift; sourceTree = "<group>"; };
+		3A77ABF91BFA763F0089E1DD /* YearlyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearlyView.swift; sourceTree = "<group>"; };
+		3A77ABFB1BFA764C0089E1DD /* StreakView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
 		3A8275201BE53EFB00CF68C7 /* GiveABO-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GiveABO-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8275231BE53EFC00CF68C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8275251BE53EFC00CF68C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +282,10 @@
 			isa = PBXGroup;
 			children = (
 				3ADEB9461BEBFF4300DEB632 /* EventsTableViewCell.swift */,
+				3A77ABF71BFA762B0089E1DD /* TotalView.swift */,
+				3A77ABF91BFA763F0089E1DD /* YearlyView.swift */,
+				3A77ABFB1BFA764C0089E1DD /* StreakView.swift */,
+				3A77ABF51BFA73180089E1DD /* CounterView.swift */,
 				3A33EB341BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift */,
 				3A33EB2C1BEB77590031BAF4 /* DonateHistoryTableViewCell.swift */,
 			);
@@ -503,10 +515,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A77ABFC1BFA764C0089E1DD /* StreakView.swift in Sources */,
 				3AC2AEB91BE5CE77003D5E88 /* Common.swift in Sources */,
 				3ADEB9451BEBE37C00DEB632 /* UserProfileViewController.swift in Sources */,
 				3AE06A871BF9461A005BE095 /* BloodTypeSelectionViewController.swift in Sources */,
 				3ADEB9471BEBFF4300DEB632 /* EventsTableViewCell.swift in Sources */,
+				3A77ABFA1BFA763F0089E1DD /* YearlyView.swift in Sources */,
 				3AC2AEBE1BE5D563003D5E88 /* BaseTransition.swift in Sources */,
 				3A0292591BEA115900576300 /* RequestViewController.swift in Sources */,
 				C37FC9CF1BE90EA300671427 /* FirstNameViewController.swift in Sources */,
@@ -514,6 +528,7 @@
 				3A8B960B1BE6F6C100CF49A9 /* SBTestViewController.swift in Sources */,
 				3AC2AEBD1BE5D563003D5E88 /* FadeTransition.swift in Sources */,
 				C37FC9D51BE9904F00671427 /* ProfileViewController.swift in Sources */,
+				3A77ABF81BFA762B0089E1DD /* TotalView.swift in Sources */,
 				3AC2AEB71BE5C29E003D5E88 /* LoginViewController.swift in Sources */,
 				3A71817F1BEB49330054BB47 /* UserStoriesViewController.swift in Sources */,
 				3AC2AEB51BE5C280003D5E88 /* SignUpViewController.swift in Sources */,
@@ -532,6 +547,7 @@
 				3A33EB2F1BEB7E380031BAF4 /* StoriesData.swift in Sources */,
 				3A8275241BE53EFC00CF68C7 /* AppDelegate.swift in Sources */,
 				3AC2AEB11BE5C20B003D5E88 /* HomeViewController.swift in Sources */,
+				3A77ABF61BFA73180089E1DD /* CounterView.swift in Sources */,
 				3A33EB351BEB84AC0031BAF4 /* StoriesCollectionViewCell.swift in Sources */,
 				C37FC9D71BE9911B00671427 /* ConfirmViewController.swift in Sources */,
 				3A71817B1BEB48E40054BB47 /* UserRewardsViewController.swift in Sources */,
