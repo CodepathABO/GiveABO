@@ -72,6 +72,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.sharedApplication().statusBarHidden = true
+        
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.4, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
             
             self.loginView.frame.origin.y = 110
@@ -81,11 +84,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
                 // ..
         }
         
-        
-        
-        
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(true)
+        UIApplication.sharedApplication().statusBarHidden = false
+    }
+    
 
+    
     @IBAction func loginButtonDidTouch(sender: UIButton) {
         
         // On Empty Fields

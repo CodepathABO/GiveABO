@@ -557,7 +557,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNN-Aa-nIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633.5" y="1311.5"/>
+            <point key="canvasLocation" x="1609.5" y="1691.5"/>
         </scene>
         <!--Blood Details View Controller-->
         <scene sceneID="JVb-Bx-tfT">
@@ -683,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4j-De-PcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060.5" y="1310.5"/>
+            <point key="canvasLocation" x="2036.5" y="1690.5"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="A1U-uh-3HL">
@@ -786,14 +786,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZe-3p-rO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2493.5" y="1310.5"/>
+            <point key="canvasLocation" x="2469.5" y="1690.5"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qup-aL-Dqi">
             <objects>
                 <viewController id="TiQ-H2-uVa" customClass="ProfileViewController" customModule="GiveABO_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4G-gF-Osc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="n92-pD-I5V">
@@ -983,19 +983,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" id="8du-Tr-2n8">
-                                <rect key="frame" x="0.0" y="635" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for signing up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZIg-Hg-6AD">
-                                        <rect key="frame" x="73" y="240" width="206" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's donate some" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WOF-s5-nUN">
-                                        <rect key="frame" x="54" y="314" width="244" height="36"/>
+                                        <rect key="frame" x="83" y="240" width="206" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
@@ -1003,7 +995,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FKC-d8-8zS">
-                                        <rect key="frame" x="54" y="344" width="264" height="98"/>
+                                        <rect key="frame" x="55" y="344" width="264" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
@@ -1011,7 +1003,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dcS-IA-BNE">
-                                        <rect key="frame" x="141" y="170" width="73" height="64"/>
+                                        <rect key="frame" x="151" y="168" width="73" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1020,10 +1012,18 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UPZ-0l-mdq">
-                                        <rect key="frame" x="36" y="276" width="282" height="36"/>
+                                        <rect key="frame" x="45" y="276" width="282" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's donate some" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WOF-s5-nUN">
+                                        <rect key="frame" x="64" y="316" width="244" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1040,7 +1040,8 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="fHV-Lz-Mcn"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1334"/>
                     <connections>
                         <outlet property="bloodTypeField" destination="zT1-1i-lwB" id="XoK-u0-c1p"/>
                         <outlet property="dobField" destination="Abw-cz-EQK" id="Ivm-sx-6f4"/>

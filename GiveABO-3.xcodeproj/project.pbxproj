@@ -39,6 +39,7 @@
 		3A8275391BE53EFC00CF68C7 /* GiveABOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275381BE53EFC00CF68C7 /* GiveABOTests.swift */; };
 		3A8275441BE53EFC00CF68C7 /* GiveABOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8275431BE53EFC00CF68C7 /* GiveABOUITests.swift */; };
 		3A8B960B1BE6F6C100CF49A9 /* SBTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */; };
+		3A9AEF631BF99736003AD06C /* LoadAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AEF621BF99736003AD06C /* LoadAppViewController.swift */; };
 		3AC2AEAF1BE5C103003D5E88 /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */; };
 		3AC2AEB11BE5C20B003D5E88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */; };
 		3AC2AEB31BE5C260003D5E88 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */; };
@@ -121,6 +122,7 @@
 		3A8275431BE53EFC00CF68C7 /* GiveABOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveABOUITests.swift; sourceTree = "<group>"; };
 		3A8275451BE53EFC00CF68C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTestViewController.swift; sourceTree = "<group>"; };
+		3A9AEF621BF99736003AD06C /* LoadAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAppViewController.swift; sourceTree = "<group>"; };
 		3AC2AEAE1BE5C103003D5E88 /* RequestDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDetailViewController.swift; sourceTree = "<group>"; };
 		3AC2AEB01BE5C20B003D5E88 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3AC2AEB21BE5C260003D5E88 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0292581BEA115900576300 /* RequestViewController.swift */,
+				3A9AEF621BF99736003AD06C /* LoadAppViewController.swift */,
 				3A8B960A1BE6F6C100CF49A9 /* SBTestViewController.swift */,
 				3A1107361BF7ACCD00406D9C /* UserAccountControllers */,
 				3AC2AEB61BE5C29E003D5E88 /* LoginViewController.swift */,
@@ -514,6 +517,7 @@
 				3AC2AEB71BE5C29E003D5E88 /* LoginViewController.swift in Sources */,
 				3A71817F1BEB49330054BB47 /* UserStoriesViewController.swift in Sources */,
 				3AC2AEB51BE5C280003D5E88 /* SignUpViewController.swift in Sources */,
+				3A9AEF631BF99736003AD06C /* LoadAppViewController.swift in Sources */,
 				A7A1D8C01BF95744006C9AC0 /* FilterViewController.swift in Sources */,
 				3AC2AEB31BE5C260003D5E88 /* OnboardViewController.swift in Sources */,
 				3A7181811BEB49640054BB47 /* UserBadgesViewController.swift in Sources */,
