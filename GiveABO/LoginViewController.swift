@@ -197,29 +197,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIViewControll
     
     @IBAction func signUpButtonDidTouch(sender: UIButton) {
         
-        if signupActive == false {
-            
-            
-            loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
-            
-            registeredLabel.text = "Already registered?"
-            
-            signupButton.setTitle("Log In", forState: UIControlState.Normal)
-            
-            signupActive = true
-            
+//        if signupActive == false {
+//            
+//            
+//            loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
+//            
+//            registeredLabel.text = "Already registered?"
+//            
+//            signupButton.setTitle("Log In", forState: UIControlState.Normal)
+//            
+//            signupActive = true
+        
             goToSignup()
             
             
-        } else {
-             loginButton.setTitle("Log In", forState: UIControlState.Normal)
-            
-            registeredLabel.text = "Not registered?"
-            
-            signupButton.setTitle("Sign In", forState: UIControlState.Normal)
-            
-            signupActive = false
-        }
+//        } else {
+//             loginButton.setTitle("Log In", forState: UIControlState.Normal)
+//            
+//            registeredLabel.text = "Not registered?"
+//            
+//            signupButton.setTitle("Sign In", forState: UIControlState.Normal)
+//            
+//            signupActive = false
+//        }
 
     }
     

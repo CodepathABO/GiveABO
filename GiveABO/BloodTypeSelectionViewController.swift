@@ -35,13 +35,20 @@ class BloodTypeSelectionViewController: UIViewController {
         messageLabel.textColor = UIColor(red: 255/255, green: 43/255, blue: 58/255, alpha: 1)
         
         segmentedControl.selectedSegmentIndex = 0
-        
+
+        confirmButton.enabled = false
+        confirmButton.layer.cornerRadius = 25
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         dismissButton.alpha = 0
         posNegLabel.frame.origin.x = 230
         
         bloodTypeLabel.alpha = 0
         bloodTypeLabel.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        bloodTypeLabel.frame.origin.y = 300
         
         orLabel.alpha = 0
         orLabel.transform = CGAffineTransformMakeScale(0.8, 0.8)
@@ -58,10 +65,9 @@ class BloodTypeSelectionViewController: UIViewController {
         negativeButton.alpha = 0
         negativeButton.frame.origin.x = 174
         negativeButton.transform = CGAffineTransformMakeScale(0.8, 0.8)
-        confirmButton.enabled = false
         confirmButton.alpha = 0
         confirmButton.transform = CGAffineTransformMakeScale(0.8, 0.8)
-        confirmButton.layer.cornerRadius = 25
+        
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -71,10 +77,11 @@ class BloodTypeSelectionViewController: UIViewController {
             
             self.bloodTypeLabel.alpha = 1
             self.bloodTypeLabel.transform = CGAffineTransformMakeScale(1, 1)
+            self.bloodTypeLabel.frame.origin.y = 230
             
             }) { (Bool) -> Void in
                 
-                UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .CurveEaseIn, animations: { () -> Void in
+                UIView.animateWithDuration(0.4, delay: 0.4, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .CurveEaseIn, animations: { () -> Void in
                     
                     self.splitOne.alpha = 1
                     self.splitTwo.alpha = 1

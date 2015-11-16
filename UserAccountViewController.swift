@@ -347,7 +347,8 @@ class UserAccountViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func logoutButton(sender: UIButton) {
         
-        let alertController = UIAlertController(title: "", message: "Are you sure you want to log out?", preferredStyle: .ActionSheet)
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
             // ...

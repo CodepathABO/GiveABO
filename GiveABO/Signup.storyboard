@@ -245,6 +245,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="1" green="0.16862745100000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonDidTouch:" destination="puz-ee-Ev4" eventType="touchUpInside" id="Hyo-SJ-fva"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -262,6 +265,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="confirmPasswordField" destination="T18-nV-Qd5" id="QdB-y8-gn4"/>
+                        <outlet property="loginContainer" destination="O7Z-Lh-rfJ" id="TlG-6o-qrF"/>
                         <outlet property="passwordField" destination="995-Lz-6bj" id="E6E-8l-yAq"/>
                         <outlet property="signupButton" destination="B3P-cU-ZuK" id="NEZ-I6-WrJ"/>
                         <outlet property="usernameField" destination="9KA-IN-ndG" id="dL8-QA-1yv"/>
@@ -437,7 +441,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wh0-ZY-gkH">
-                                <rect key="frame" x="57" y="221" width="260" height="182"/>
+                                <rect key="frame" x="57" y="260" width="260" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="160"/>

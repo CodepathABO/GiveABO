@@ -23,6 +23,8 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
     
     var signupActive = false
     
+    var platelet = UIView()
+    
     var initialY: CGFloat!
     let offset: CGFloat = -100
     
@@ -63,8 +65,7 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        
-        
+
         
     }
     
@@ -80,8 +81,47 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
                 // ..
         }
         
+        // MARK: Platelets loop
         
+        for i in 0...18 {
+            
+            platelet = UIView()
+            platelet.frame = CGRect(x: -155, y: 300, width: 100, height: 100)
+            platelet.backgroundColor = UIColor(red:0.39, green:0.00, blue:0.14, alpha:1.0)
+            platelet.layer.cornerRadius = 50
+            
+            self.view.addSubview(platelet)
+            
+            let randomYOffset = CGFloat(arc4random_uniform(150))
+            
+            let path = UIBezierPath()
+            path.moveToPoint(CGPoint(x: -106, y: 439 + randomYOffset))
+            path .addCurveToPoint(CGPoint(x: 481, y: 539 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 473 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 310 + randomYOffset))
+            
+            
+            
+            let anim = CAKeyframeAnimation(keyPath: "position")
+            
+            anim.path = path.CGPath
+            
+            anim.rotationMode = kCAAnimationRotateAuto
+            anim.repeatCount = Float.infinity
+            anim.duration = Double(arc4random_uniform(40)+30) / 7
+            anim.timeOffset = Double(arc4random_uniform(90))
+            
+            platelet.layer.addAnimation(anim, forKey: "animate position along path")
+            
+            self.view.sendSubviewToBack(platelet)
+            
+        }
+
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.sharedApplication().statusBarHidden = true
         
     }
     
@@ -189,17 +229,17 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpButtonDidTouch(sender: UIButton) {
         
-        if signupActive == false {
-            
-            
-            loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
-            
-            registeredLabel.text = "Already registered?"
-            
-            signupButton.setTitle("Log In", forState: UIControlState.Normal)
-            
-            signupActive = true
-            
+//        if signupActive == false {
+//            
+//            
+//            loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
+//            
+//            registeredLabel.text = "Already registered?"
+//            
+//            signupButton.setTitle("Log In", forState: UIControlState.Normal)
+//            
+//            signupActive = true
+        
             
             
             goToSignup()
@@ -208,16 +248,16 @@ class LogOutViewController: UIViewController, UITextFieldDelegate {
             
             
             
-            
-        } else {
-            loginButton.setTitle("Log In", forState: UIControlState.Normal)
-            
-            registeredLabel.text = "Not registered?"
-            
-            signupButton.setTitle("Sign In", forState: UIControlState.Normal)
-            
-            signupActive = false
-        }
+//            
+//        } else {
+//            loginButton.setTitle("Log In", forState: UIControlState.Normal)
+//            
+//            registeredLabel.text = "Not registered?"
+//            
+//            signupButton.setTitle("Sign In", forState: UIControlState.Normal)
+//            
+//            signupActive = false
+//        }
         
     }
     

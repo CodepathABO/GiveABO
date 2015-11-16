@@ -11,7 +11,11 @@ import Parse
 
 class UserProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let data = ["Blood bank: Cal Pacific Blood bank", "Direct Request", "Direct Request", "Blood bank: SF General", "Blood drive: American Red Cross"]
+    var objects = [
+        ["name" : "Group A","desc": "Has only the A antigen on red cells (and B antibody in the plasma)", "type": "A"],
+        ["name" : "Group B","desc": "Has only the B antigen on red cells (and A antibody in the plasma)", "type": "B"],
+        ["name" : "Group AB","desc": "Has both A and B antigens on red cells (but neither A nor B antibody in the plasma)", "type": "AB"],
+        ["name" : "Group O","desc": "Has neither A nor B antigens on red cells (but both A and B antibody are in the plasma)", "type": "O"]]
     
     var user = PFUser.currentUser()
     var query = PFQuery(className:"Accounts")
@@ -25,6 +29,16 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var userDataView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bloodTypeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var lastDonationLabel: UILabel!
+    @IBOutlet weak var totalDonationsLabel: UILabel!
+    @IBOutlet weak var yearDonationsLabel: UILabel!
+    @IBOutlet weak var donationStreakLabel: UILabel!
+    @IBOutlet weak var donationStreakNo: UILabel!
+    @IBOutlet weak var totalView: TotalView!
+    @IBOutlet weak var yearlyView: YearlyView!
+    @IBOutlet weak var streakView: StreakView!
+
     
 
     override func viewDidLoad() {
@@ -81,8 +95,18 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         tableTitleView.alpha = 0
         statsView.alpha = 0
         userDataView.alpha = 0
-        
-        
+        nameLabel.alpha = 0
+        bloodTypeLabel.alpha = 0
+        locationLabel.alpha = 0
+        lastDonationLabel.alpha = 0
+        totalDonationsLabel.alpha = 0
+        yearDonationsLabel.alpha = 0
+        donationStreakLabel.alpha = 0
+        donationStreakNo.alpha = 0
+        donationStreakNo.alpha = 0
+        totalView.alpha = 0
+        yearlyView.alpha = 0
+        streakView.alpha = 0
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -93,23 +117,43 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
                 self.userDataView.alpha = 1
                 self.statsView.alpha = 1
                 self.tableTitleView.alpha = 1
-                self.tableView.alpha = 1
                 }) { (Bool) -> Void in
- 
-            }
+                    UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+                        self.nameLabel.alpha = 1
+                        self.bloodTypeLabel.alpha = 1
+                        self.locationLabel.alpha = 1
+                        self.lastDonationLabel.alpha = 1
+                        self.totalDonationsLabel.alpha = 1
+                        self.yearDonationsLabel.alpha = 1
+                        self.donationStreakLabel.alpha = 1
+                        self.donationStreakNo.alpha = 1
+                        self.tableView.alpha = 1
+                        }) { (Bool) -> Void in
+                            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                                self.totalView.alpha = 1
+                                self.yearlyView.alpha = 1
+                                self.streakView.alpha = 1
+                            })
+                    }
         }
+    }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        UIView.animateWithDuration(0.3, delay: 0.5, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0, options: [], animations: { () -> Void in
             self.userDataView.alpha = 0
             self.statsView.alpha = 0
             self.tableTitleView.alpha = 0
             self.tableView.alpha = 0
+            self.totalView.alpha = 0
+            self.yearlyView.alpha = 0
+            self.streakView.alpha = 0
             }) { (Bool) -> Void in
                 
+                // ..
         }
+        
     }
     
     
@@ -129,19 +173,25 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return data.count
+        return objects.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DonateHistoryTableViewCell
         
-        cell.textLabel?.text = data[indexPath.row]
+        let object = objects[indexPath.row]
         
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.titleLabel?.text =  object["name"]!
+        cell.typeTextLabel?.text = object["desc"]!
+        cell.bloodTypeLetter?.text = object["type"]!
         
-        cell.accessoryType = .Checkmark
+        // cell.imageView?.image = UIImage(named: object["image"]!)
+        
+        cell.typeTextLabel.lineBreakMode = .ByWordWrapping
+        cell.typeTextLabel.numberOfLines = 0
+        cell.typeTextLabel.sizeToFit()
         
         return cell
         
