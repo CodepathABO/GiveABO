@@ -96,6 +96,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="continueButton" destination="nxb-Fh-Q0G" id="p5J-Ln-wP4"/>
+                        <outlet property="dismissButton" destination="h1y-dB-FJM" id="bm5-eO-Cqd"/>
                         <outlet property="firstNameField" destination="9oT-rr-Sf0" id="zyY-az-IJv"/>
                         <segue destination="weM-Ug-W8J" kind="push" identifier="toBloodtypeSegue" id="fBp-dv-Wjc"/>
                     </connections>
@@ -427,6 +428,7 @@
                     <connections>
                         <outlet property="bloodTypeLabel" destination="wh0-ZY-gkH" id="VQf-uG-NQl"/>
                         <outlet property="confirmButton" destination="Qn3-8N-ZxT" id="fXQ-bq-cuP"/>
+                        <outlet property="dismissButton" destination="SrM-8W-dYn" id="1Qx-a0-ZRV"/>
                         <outlet property="messageLabel" destination="PlO-Mc-h94" id="avj-vq-ljy"/>
                         <outlet property="negativeButton" destination="ycj-Oo-omT" id="RQ7-AJ-DLy"/>
                         <outlet property="orLabel" destination="GnZ-sI-BL8" id="gJG-5Z-Wqm"/>
@@ -986,6 +988,11 @@
                                 <rect key="frame" x="0.0" y="667" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Create New Request Bg" id="IIM-MH-PWd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for signing up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZIg-Hg-6AD">
                                         <rect key="frame" x="83" y="240" width="206" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -998,7 +1005,7 @@
                                         <rect key="frame" x="55" y="344" width="264" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="100"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1092,6 +1099,7 @@
     </scenes>
     <resources>
         <image name="Close Button" width="24" height="24"/>
+        <image name="Create New Request Bg" width="375" height="667"/>
         <image name="GiveABO-Logo" width="98" height="86"/>
         <image name="navbar" width="750" height="88"/>
     </resources>

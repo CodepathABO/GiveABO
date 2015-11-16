@@ -21,6 +21,7 @@ class BloodTypeSelectionViewController: UIViewController {
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var splitOne: UIView!
     @IBOutlet weak var splitTwo: UIView!
+    @IBOutlet weak var dismissButton: UIButton!
     
     var firstName: String = ""
     
@@ -35,6 +36,8 @@ class BloodTypeSelectionViewController: UIViewController {
         
         segmentedControl.selectedSegmentIndex = 0
         
+        
+        dismissButton.alpha = 0
         posNegLabel.frame.origin.x = 230
         
         bloodTypeLabel.alpha = 0

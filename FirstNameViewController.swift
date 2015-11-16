@@ -14,6 +14,8 @@ class FirstNameViewController: UIViewController {
     
     @IBOutlet weak var firstNameField: UITextField!
     
+    @IBOutlet weak var dismissButton: UIButton!
+    
     var initialY: CGFloat!
     var offset: CGFloat!
     
@@ -23,6 +25,8 @@ class FirstNameViewController: UIViewController {
         super.viewDidLoad()
         
         firstNameField.becomeFirstResponder()
+        
+        dismissButton.alpha = 0
         
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false

@@ -16,7 +16,7 @@ class CreateRequestViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var messageTextView: UITextView!
     
     var user = PFUser.currentUser()
-    var query = PFQuery(className:"Simple")
+    var query = PFQuery(className:"Accounts")
     
     override func viewDidLoad() {
         
