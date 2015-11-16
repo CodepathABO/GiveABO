@@ -12,21 +12,62 @@ import Parse
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var finishButton: UIButton!
-    
+    @IBOutlet weak var bloodTypeField: UITextField!
+    @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
-    
     @IBOutlet weak var dobField: UITextField!
-    
     @IBOutlet weak var locationField: UITextField!
-    
     @IBOutlet weak var phoneNumberField: UITextField!
-    
     @IBOutlet weak var notificationContainer: UIView!
+    @IBOutlet weak var textSwitch: UISwitch!
+    
+    @IBOutlet weak var payoffView: UIView!
+    @IBOutlet weak var payoffLogo: UIButton!
+    @IBOutlet weak var payoffThanksText: UILabel!
+    @IBOutlet weak var payoffNameText: UILabel!
+    @IBOutlet weak var payoffGetStartedText: UILabel!
+    @IBOutlet weak var payoffBloodtypeText: UILabel!
+    
+    
+    
+    var userFirstName: String!
+    var bloodType: String!
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    var user = PFUser.currentUser()
+    
+    // Add to Simple
+    var account = PFObject(className: "Accounts")
+
     
   //  @IBOutlet weak var emailField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(user)
+        
+        firstnameField.text = userFirstName
+        firstnameField.alpha = 0
+        bloodTypeField.text = bloodType
+        bloodTypeField.alpha = 0
+        
+        payoffNameText.text = userFirstName
+        payoffBloodtypeText.text = bloodType
+        
+        payoffView.alpha = 0
+        payoffLogo.alpha = 0
+        payoffThanksText.alpha = 0
+        payoffNameText.alpha = 0
+        payoffGetStartedText.alpha = 0
+        payoffBloodtypeText.alpha = 0
+        
+        payoffLogo.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        payoffThanksText.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        payoffNameText.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        payoffGetStartedText.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        payoffBloodtypeText.transform = CGAffineTransformMakeScale(0.8, 0.8)
         
         finishButton.layer.cornerRadius = 25
         finishButton.layer.borderWidth = 1
@@ -34,7 +75,8 @@ class ProfileViewController: UIViewController {
         finishButton.layer.borderColor = UIColor.redColor().CGColor
         
         notificationContainer.layer.cornerRadius = 8
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,10 +145,95 @@ class ProfileViewController: UIViewController {
     
     @IBAction func onFinish(sender: AnyObject) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        account["firstname"] = firstnameField.text
+        account["lastname"] = lastnameField.text
+        account["bloodtype"] = bloodTypeField.text
+        account["dob"] = dobField.text
+        account["zipcode"] = locationField.text
+        account["phone"] = phoneNumberField.text
+        
+        account["user"] = PFUser.currentUser()?.objectId
+        
+        
+        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        
+        activityIndicator.center.y = 596
+        activityIndicator.center.x = 320
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+        
+        
+        account.saveInBackgroundWithBlock { (success, error) -> Void in
+            
+            
+            if success == true {
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+               
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.payoffView.alpha = 1
+                    }, completion: { (Bool) -> Void in
+                        UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
+                            self.payoffLogo.alpha = 1
+                            self.payoffLogo.frame.origin.y = 160
+                            
+                            self.payoffThanksText.alpha = 1
+                            self.payoffThanksText.frame.origin.y = 230
+                            
+                            self.payoffNameText.alpha = 1
+                            self.payoffNameText.frame.origin.y = 263
+                            
+                            self.payoffGetStartedText.alpha = 1
+                            self.payoffGetStartedText.frame.origin.y = 304
+                            
+                            self.payoffBloodtypeText.alpha = 1
+                            self.payoffBloodtypeText.frame.origin.y = 334
+                            
+                            UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { () -> Void in
+                        
+                                self.payoffLogo.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                                self.payoffThanksText.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                                self.payoffNameText.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                                self.payoffGetStartedText.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                                self.payoffBloodtypeText.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                                }, completion: { (Bool) -> Void in
+                                    // ..
+                            })
+                            
+                            }, completion: { (Bool) -> Void in
+                                // ..
+                                
+                                
+                        })
+                        
+                        delay(1.4, closure: { () -> () in
+                            
+                            self.goToHome()
+                            
+                        })
+
+                })
+                
+                print("Success!")
+            } else {
+                print("Failed")
+                self.activityIndicator.stopAnimating()
+                print(error)
+            }
+        }
+        
+        // dismissViewControllerAnimated(true, completion: nil)
     }
     
-    /*
+    
     
     func goToHome() {
         
@@ -117,7 +244,7 @@ class ProfileViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
-    */
+    
     
     /*
     // MARK: - Navigation

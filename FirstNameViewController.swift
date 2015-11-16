@@ -22,7 +22,7 @@ class FirstNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.firstNameField.becomeFirstResponder()
+        firstNameField.becomeFirstResponder()
         
         UIApplication.sharedApplication().statusBarStyle = .Default
         UIApplication.sharedApplication().statusBarHidden = false
@@ -80,9 +80,9 @@ class FirstNameViewController: UIViewController {
 
     @IBAction func onContinue(sender: AnyObject) {
         
-        var defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(firstName, forKey: "first_name")
-        defaults.synchronize()
+//        var defaults = NSUserDefaults.standardUserDefaults()
+//        defaults.setObject(firstName, forKey: "first_name")
+//        defaults.synchronize()
         
         /*
         
@@ -131,15 +131,19 @@ class FirstNameViewController: UIViewController {
         view.endEditing(true)
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toBloodtypeSegue" {
+            
+            let typeViewController = segue.destinationViewController as! BloodTypeSelectionViewController
+            
+            typeViewController.firstName = firstNameField.text!
+            
+        }
+    
     }
-    */
 
 }
