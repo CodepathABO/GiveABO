@@ -1069,7 +1069,7 @@ rewards it.</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="71"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Ut-Nd-FD8" id="xap-WR-yDV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SFh-1A-DrB">
@@ -1370,7 +1370,7 @@ rewards it.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="450" height="667"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZ8-DY-2he" id="DWV-9a-vOG">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="yJd-D4-awG">
@@ -1439,14 +1439,14 @@ You only need 9 more donations to unlock your first badge and recieve some goodi
                                                             <state key="normal" title="Claim Reward"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zgd-Sv-cpu">
-                                                            <rect key="frame" x="114" y="83" width="20" height="24"/>
+                                                            <rect key="frame" x="102" y="78" width="20" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <animations/>
                                                             <color key="tintColor" red="0.4941176471" green="0.4431372549" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <state key="normal" image="lock"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Locked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rlY-rH-aHs">
-                                                            <rect key="frame" x="139" y="84" width="131" height="21"/>
+                                                            <rect key="frame" x="127" y="79" width="131" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -1523,7 +1523,7 @@ You only need 9 more donations to unlock your first badge and recieve some goodi
                                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zY-cW-73L" id="MoN-ve-fLY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p8Y-1a-p3Q">
