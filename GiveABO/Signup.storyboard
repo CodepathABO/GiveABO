@@ -882,7 +882,7 @@
                                 <animations/>
                                 <color key="textColor" red="1" green="0.16862745098039217" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="onPhoneEditFinished:" destination="TiQ-H2-uVa" eventType="editingDidEnd" id="VcK-UT-Vuu"/>
                                 </connections>
